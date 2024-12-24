@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SONODA HELP</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Ícones --> 
+    <link rel="stylesheet" href="../Style.css">   
+    <script src="../index.js" defer></script>
+    <link rel="icon" href="../adress/a.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+   
+</head> 
+<style> 
+
+.none {
+    border: none;
+}
+
+img {
+    transition: transform 0.5s ease; /* Suaviza a transição do zoom */
+    z-index: 1; /* Garantir o nível básico */
+    position: relative; /* Necessário para controlar o zoom */
+}
+
+img.zoomed {
+    transform: scale(1.5); /* Amplia a imagem */
+    z-index: 1000; /* Garante que a imagem fique em cima de outros elementos */
+}
+</style>
+<body> 
+    
+    <!-- Header -->
+    <div class="header d-flex justify-content-between align-items-center">
+        <div class="logo">
+            <h4 class="m-0">
+                <img src="../adress/Sonoda Ponto.ico" alt="logo">  <span class="text-primary">SONODA HELP</span>
+            </h4>
+        </div>
+        <div>
+            <span><strong></strong> | <span class="tec-alexandre">Tec Alexandre</span></span>
+        </div>
+    </div>
+
+    <div class="d-flex">
+<!-- Sidebar -->
+<div class="sidebar p-3" style="position: relative;">
+    <ul class="nav flex-column">
+        <li class="nav-item"><a href="../index.html" class="nav-link active"><i class="fas fa-home"></i>Home</a></li> 
+        <li class="nav-item">
+            <a href="#" class="nav-link" id="video-link" onclick="toggleMenu('video')"><i class="fas fa-video"></i> Vídeo <i class="fas fa-chevron-down" id="video-arrow"></i></a>
+            <ul id="video-submenu" class="nav flex-column" style="display: none;">
+                <li class="nav-item"><a href="../Videos/Videos_OFF.html" class="nav-link">Ponto OFF</a></li>
+                <li class="nav-item"><a href="../Videos/Video_Web.html" class="nav-link">Ponto WEB</a></li>
+                <li class="nav-item"><a href="../Videos/Videos_AcadAcesso.html" class="nav-link">Academia / Acesso</a></li>
+            </ul>
+        </li> 
+        <li class="nav-item">
+            <a href="#" class="nav-link" id="relogios-link" onclick="toggleMenu('relogios')"><i class="fas fa-clock"></i> Relógios <i class="fas fa-chevron-down" id="relogios-arrow"></i></a>
+            <ul id="relogios-submenu" class="nav flex-column" style="display: none;">
+                <li class="nav-item"><a href="../Rep/Control_id.html" class="nav-link">Control ID</a></li>
+                <li class="nav-item"><a href="../Rep/Smartpoint.html" class="nav-link">Smart Point</a></li>
+                <li class="nav-item"><a href="../Rep/Miniprint.html" class="nav-link">Miniprint</a></li> 
+                <li class="nav-item"><a href="../Rep/Printpoint2.html" class="nav-link">PrintPoint 2</a></li>
+                <li class="nav-item"><a href="../Rep/Printpoint3.html" class="nav-link">PrintPoint 3</a></li>
+            </ul>
+        </li> 
+        <li class="nav-item"><a href="../Sidebar/Resoluçao.html" class="nav-link"><i class="fas fa-lightbulb"></i> Resoluções</a></li>
+        <li class="nav-item"><a href="../Sidebar/calculadora.html" class="nav-link"><i class="fas fa-calculator"></i> Calculadora</a></li> 
+        <li class="nav-item"><a href="https://sonodaponto.com.br/pis/" target="_blank" class="nav-link"><i class="fas fa-file-alt"></i> Gerar PIS</a></li> 
+    </ul>
+    
+    <!-- "Mensagens Prontas" fixado na parte inferior da sidebar -->
+    <div class="position-absolute" style="bottom: 0; left: 0; width: 100%;">
+        <ul class="nav flex-column">
+            <li class="nav-item"><a href="../Sidebar/Mensagens.html" class="nav-link"><i class="fas fa-comment"></i> Mensagens Prontas</a></li>
+        </ul>
+    </div>
+</div>
+
+
+     <!-- Main Content -->
+     <div class="content">
+        <img src="../adress/Rep/control id.png" alt="Ícone" style="width: 130px; height: 130px; float: right; margin-top: -20px; margin-left: 10px;">
+        <h5 class="font-weight-bold">CONTROL ID</h5><br>
+        <ul class="nav nav-tabs mb-4">
+            <li class="nav-item">
+                <a class="nav-link active" href="#" id="comando-tab" data-toggle="tab" onclick="showTab('comando')">COMANDOS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="videos-tab" data-toggle="tab" onclick="showTab('videos')">VÍDEOS</a>
+            </li> 
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="videosface-tab" data-toggle="tab" onclick="showTab('videos_face')">VÍDEOS CONTROL ID FACE</a>
+            </li>
+        </ul>
+ 
+    
+
+    <!-- Tab Content -->
+    <div class="tab-content">
+        <!-- Comando -->
+        <div id="comando" class="tab-pane active">
+            <div class="command-list">
+                <div class="command-item">
+                    <span><strong>ALTERAR IP:</strong> MENU > CONFIGURAÇÃO > CONFIGURAÇÃO DE REDE.</span>
+                    <button class="btn btn-primary btn-sm" onclick="copyText('ALTERAR IP: MENU > CONFIGURAÇÃO > CONFIGURAÇÃO DE REDE.', this)"> 
+                        <i class="fas fa-copy copy-icon"></i></button>
+                </div>
+                <div class="command-item">
+                    <span><strong>CADASTRAR DIGITAL:</strong> MENU > USUÁRIOS > ESCOLHA O USUÁRIO 1000 > BIOMETRIA > SALVAR.</span>
+                    <button class="btn btn-primary btn-sm" onclick="copyText('CADASTRAR DIGITAL: MENU > USUÁRIOS > ESCOLHA O USUÁRIO 1000 > BIOMETRIA > SALVAR.', this)"> 
+                        <i class="fas fa-copy copy-icon"></i></button>
+                </div>
+                <div class="command-item">
+                    <span><strong>AJUSTAR DATA E HORA:</strong> MENU > CONFIGURAÇÕES > DATA E HORA > SALVAR.</span>
+                    <button class="btn btn-primary btn-sm" onclick="copyText('AJUSTAR DATA E HORA: MENU > CONFIGURAÇÕES > DATA E HORA > SALVAR.', this)">
+                        <i class="fas fa-copy copy-icon"></i></button>
+                </div>
+                <div class="command-item">
+                    <span><strong>EXCLUIR FUNCIONÁRIO:</strong> MENU > USUÁRIOS > EXCLUIR.</span>
+                    <button class="btn btn-primary btn-sm" onclick="copyText('EXCLUIR FUNCIONÁRIO: MENU > USUÁRIOS > EXCLUIR.', this)">
+                        <i class="fas fa-copy copy-icon"></i></button>
+                </div>
+                <div class="command-item">
+                    <span><strong>CADASTRAR CRACHÁ:</strong> MENU > USUÁRIOS > ESCOLHA O USUÁRIO 1000 > CARTÃO > APROXIMA O CARTÃO + SALVAR.</span>
+                    <button class="btn btn-primary btn-sm" onclick="copyText('CADASTRAR CRACHÁ: MENU > USUÁRIOS > ESCOLHA O USUÁRIO 1000 > CARTÃO > APROXIMA O CARTÃO + SALVAR.', this)">
+                        <i class="fas fa-copy copy-icon"></i></button>
+                </div>
+                <div class="command-item">
+                    <span><strong>AFD COMPLETO:</strong> PEN DRIVE PORTA VERMELHA > AGUARDAR EXPORTAÇÃO > RETIRAR PEN DRIVE.</span>
+                    <button class="btn btn-primary btn-sm" onclick="copyText('AFD COMPLETO: PEN DRIVE PORTA VERMELHA > AGUARDAR EXPORTAÇÃO > RETIRAR PEN DRIVE.', this)">
+                        <i class="fas fa-copy copy-icon"></i></button>
+                </div>
+                <div class="command-item">
+                    <span><strong>AFD POR DATA:</strong> MENU > USB > ENVIAR MARCAÇÕES > SELECIONA O PERÍODO NA DATA > EXPORTAR > MENU > USB > REMOVER O PENDRIVE > COLETA FEITA.</span>
+                    <button class="btn btn-primary btn-sm" onclick="copyText('AFD POR DATA: MENU > USB > ENVIAR MARCAÇÕES > SELECIONA O PERÍODO NA DATA > EXPORTAR > MENU > USB > REMOVER O PENDRIVE > COLETA FEITA.', this)"> 
+                        <i class="fas fa-copy copy-icon"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vídeos -->
+        <div id="videos" class="tab-pane">
+            <div class="command-list">
+                <div class="command-item">
+                    <span><strong>CADASTRAR CARTÃO</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1EsBNQASO2EPYbCBInehndrkHSxO8z-VN/view?usp=drive_link', this)"> 
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1EsBNQASO2EPYbCBInehndrkHSxO8z-VN/view?usp=drive_link')">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <span><strong>CADASTRAR DIGITAL</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1bcBWPxLwYB2S01aweHs3dKEJ3lM5HwvJ/view?usp=sharing', this)">
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1bcBWPxLwYB2S01aweHs3dKEJ3lM5HwvJ/view?usp=sharing')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <span><strong>CADASTRAR FUNCIONÁRIO</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1qDFkSFzU2UFYyhC7xL9EhNr21RF2pvTK/view?usp=sharing', this)">
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1qDFkSFzU2UFYyhC7xL9EhNr21RF2pvTK/view?usp=sharing')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <span><strong>CALIBRAR CONTROL ID</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/16RAY_1JeNhpPiG0G8l5uxOyi5jh1Fe11/view?usp=sharing', this)">
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/16RAY_1JeNhpPiG0G8l5uxOyi5jh1Fe11/view?usp=sharing')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <span><strong>DESBLOQUEAR RELÓGIO</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1p-Ooa3MHDr2y0WD0QWdveihySSMB-ZGc/view?usp=sharing', this)">
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1p-Ooa3MHDr2y0WD0QWdveihySSMB-ZGc/view?usp=sharing')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <span><strong>EXCLUIR FUNCIONÁRIO</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1IfOxhdJwzCVmYwKA7XodYIG6MQjVruW8/view?usp=sharing', this)">
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1IfOxhdJwzCVmYwKA7XodYIG6MQjVruW8/view?usp=sharing')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <span><strong>EXPORTAR AFD</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1ojrvDIyxui13LQRJTPqeDAIFXQQHvOgE/view?usp=sharing', this)">
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1ojrvDIyxui13LQRJTPqeDAIFXQQHvOgE/view?usp=sharing')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <span><strong>TROCAR HORA</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1WKojp6bMsVpLsBHKgVuBvF-wRxPIpGzv/view?usp=sharing', this)">
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1WKojp6bMsVpLsBHKgVuBvF-wRxPIpGzv/view?usp=sharing', '_blank')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div> 
+                <div class="command-item">
+                    <span><strong>TROCAR HORA</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1VS2w5Jg-leEsG3qRIwnCg5Wt0kXKCnku/view?usp=sharing', this)">
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1VS2w5Jg-leEsG3qRIwnCg5Wt0kXKCnku/view?usp=sharing')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div> 
+                <div class="command-item">
+                    <span><strong>TROCAR SENHA WEB SERVICE</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1WbgwGpzqU9u2BIPUvGU7Mdrw01-3wYJs/view?usp=sharing', this)">
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1WbgwGpzqU9u2BIPUvGU7Mdrw01-3wYJs/view?usp=sharing')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div> 
+                <div class="command-item">
+                    <span><strong>TROCAR IP</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1G8Ed3nLdtSRmR5KWwEdD2CxafJRgLw_9/view?usp=sharing', this)">
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1G8Ed3nLdtSRmR5KWwEdD2CxafJRgLw_9/view?usp=sharing')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div id="videos_face" class="tab-pane">
+            <div class="command-list">
+                <div class="command-item">
+                    <span><strong>CADASTRO DE FACE:</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1IRYT5_o0jgzUmBGDBzXe6MUtAJUEAgo1/view?usp=sharing', this)">
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1IRYT5_o0jgzUmBGDBzXe6MUtAJUEAgo1/view?usp=sharing', this)">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+        </div> 
+        <div class="command-list">
+                <div class="command-item">
+                    <span><strong>MARCAR PONTO NO ID FACE:</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1yvP1Y8qTp7nqgMHxUd9TscZ71YzkozhX/view?usp=sharing', this)">
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1yvP1Y8qTp7nqgMHxUd9TscZ71YzkozhX/view?usp=sharing')">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+        </div>
+</div>
+
+<script> 
+    document.querySelectorAll("img").forEach((img) => {
+        img.addEventListener("click", () => {
+          // Alterna a classe 'zoomed' ao clicar
+          if (img.classList.contains("zoomed")) {
+            img.classList.remove("zoomed"); // Remove o zoom
+          } else {
+            img.classList.add("zoomed"); // Adiciona o zoom
+          }
+        });
+      });
+</script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
