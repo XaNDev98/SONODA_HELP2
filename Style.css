@@ -42,7 +42,6 @@ body {
     background: linear-gradient(135deg, #3ABEF9, #3572EF, #050C9C, #A7E6FF); /* Gradiente suave e bem distribuído */
     border-right: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil e transparente */
     min-height: 100vh; /* Garante que a sidebar ocupe toda a altura da tela */
-    max-height: 100vh; /* Evita que a sidebar ultrapasse a altura da tela */
     border-radius: 0px 20px 20px 0px; /* Bordas mais arredondadas para um visual mais fluido */
     box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave para um efeito de profundidade */
     position: fixed;
