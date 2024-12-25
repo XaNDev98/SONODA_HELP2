@@ -1,0 +1,451 @@
+/* Global Style */
+body {
+    font-family: 'Poppins', sans-serif; /* Fonte mais bonita */
+    background-color: #e5ebf1;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+} 
+.logo img {
+    height: auto;
+    margin-right: 5px;
+    border-radius: 8px; /* Bordas arredondadas para suavizar a imagem */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a transição de ambos os efeitos */
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Aumenta a imagem suavemente */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra suave e elegante */
+}
+
+
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #3ABEF9, #3572EF, #050C9C, #A7E6FF); /* Gradiente suave e bem distribuído */
+    color: #ffffff;
+    padding: 15px 20px;
+    border-bottom: 1px solid #f8cdda;
+    margin-bottom: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+    font-family: 'Poppins', sans-serif;  
+    
+}
+
+
+.logo img {
+    width: 30px;
+    height: auto;
+}
+
+/* Sidebar */
+.sidebar {
+    background: linear-gradient(135deg, #3ABEF9, #3572EF, #050C9C, #A7E6FF); /* Gradiente suave e bem distribuído */
+    border-right: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil e transparente */
+    min-height: 100vh; /* Garante que a sidebar ocupe toda a altura da tela */
+    border-radius: 0px 20px 20px 0px; /* Bordas mais arredondadas para um visual mais fluido */
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave para um efeito de profundidade */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Largura fixa para a sidebar */
+    z-index: 999;  
+    font-family: 'Poppins', sans-serif; /* Aplicando a fonte Poppins */  
+    width: 14%;
+} 
+
+
+/* Container de navegação dentro da sidebar */
+.sidebar .nav {
+    display: flex; /* Itens na horizontal */
+    flex-direction: row; /* Garantir que fiquem na linha */
+    justify-content: space-between; /* Distribui os itens igualmente */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%; 
+}
+ 
+.active-indicator {
+    display: none;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.nav-link.active .active-indicator {
+    display: inline-block;
+}
+
+/* Nav item dentro da sidebar */
+.sidebar .nav-item {
+    width: auto;
+    position: relative;  
+    font-size: 0.85rem; /* Tamanho de fonte para o menu principal */
+}
+
+.sidebar .nav-link {
+    color: #ffffff;
+    padding: 12px 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    border-left: 3px solid transparent;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer; 
+    font-family: 'Poppins', sans-serif; /* Fonte mais bonita */ 
+}  
+/* Estilo para os links principais */
+.nav-link.main-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Para garantir que o ícone será posicionado em relação ao link */
+}
+
+/* Estilo para a bolinha verde fixada à direita */
+.active-dot {
+    position: absolute;
+    right: 0px; /* Distância do ícone em relação à borda direita */
+    top: 50%; /* Alinha o ícone verticalmente no meio */
+    transform: translateY(-50%); /* Ajusta para centralizar verticalmente */
+    color: #ffffff; /* Cor verde para a bolinha */
+    font-size: 6px; /* Ajuste o tamanho do ícone */ 
+    margin-top: 1px; 
+}
+
+/* Seta para o submenu */
+.sidebar .nav-link.has-submenu::after {
+    content: ' ▼'; /* Seta para baixo */
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.sidebar .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border-left: 3px solid #ffffff;
+    transform: translateX(5px); 
+    font-family: 'Poppins', sans-serif; /* Fonte mais bonita */
+}
+
+.sidebar .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    border-left: 3px solid #ffffff; 
+    font-family: 'Poppins', sans-serif; /* Fonte mais bonita */
+} 
+
+/* Caso queira um estilo mais forte para o hover também */
+.nav-link:hover {
+    background-color: #7fbefc; /* Cor azul escura para o hover */
+    color: white !important;
+}
+
+
+/* Linha de destaque com efeito de gradiente suave */
+.sidebar .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #ffffff, #f8cdda); /* Gradiente suave */
+    opacity: 0.5; /* Opacidade suave para um efeito mais discreto */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transições suaves */
+    transform: scaleX(0); /* Inicialmente a linha está contraída */
+    transform-origin: bottom right; /* A linha expande da direita para a esquerda */
+}
+
+/* Efeito ao passar o mouse */
+.sidebar .nav-link:hover::before {
+    opacity: 1; /* A linha fica totalmente visível ao passar o mouse */
+    transform: scaleX(1); /* A linha se expande para a largura total do link */
+    transform-origin: bottom left; /* A linha expande da esquerda para a direita */
+}
+
+
+.sidebar i {
+    margin-right: 10px;
+} 
+
+
+/* Submenu */
+.sidebar .submenu {
+    display: none; /* Esconde o submenu por padrão */
+    background-color: #2d3e50;
+    padding: 10px 0;
+}
+
+.sidebar .nav-item:hover .submenu {
+    display: block; /* Exibe o submenu ao passar o mouse */
+}
+
+/* Background Between Header and Content */
+.main-background {
+    background: linear-gradient(135deg, #f8cdda, #f0f4f8); /* Background suave para a transição */
+    padding: 50px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Content */
+.content {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0px; /* Espaçamento entre o conteúdo e outros elementos */
+    margin-left: 5px; 
+    width: 100%; 
+} 
+.command-item {
+    background-color: #f8f9fa;
+    margin: 10px 0;
+    border-radius: 5px;
+    padding: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-title {
+    font-weight: bold;
+    color: #333; 
+    font-family: 'Poppins', sans-serif; /* Fonte mais bonita */
+}
+
+.card-number {
+    font-size: 2.5rem;
+    color: #1d2b64;
+    font-weight: bold; 
+    font-family: 'Poppins', sans-serif; /* Fonte mais bonita */
+}
+
+/* Progress Bar */
+.progress {
+    height: 5px;
+}
+
+/* Copy Card */
+.copy-card {
+    background-color: #f8f8f8; /* Cor de fundo do card */
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif; /* Fonte mais bonita */
+    color: #0F7BDE;
+    border: none; /* Remove bordas padrão */
+    border-bottom: 1px solid transparent; /* Define a borda inferior como base */
+    border-image: linear-gradient(to right, #050C9C, #3572EF, #3ABEF9, #A7E6FF);
+    border-image-slice: 1; /* Aplica o degradê à borda inferior */ 
+}
+
+.copy-card-title {
+    text-align: center; /* Centraliza o texto horizontalmente */
+    display: flex; /* Usa o Flexbox para centralização */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: 100%; /* Garantir que ocupe toda a altura disponível */
+}
+
+.copy-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.copy-button {
+    font-size: 0.8rem;
+    background-color: #0F7BDE;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s; 
+    font-family: 'Poppins', sans-serif; /* Fonte mais bonita */
+}
+.copy-button-home {
+    font-size: 0.8rem;
+    background-color: #0F7BDE;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s; 
+    font-family: 'Poppins', sans-serif; /* Fonte mais bonita */
+    margin-right: 15px;
+} 
+
+.copy-button:hover {
+    background-color: #0f1a47;
+}  
+
+/* Mudando a cor do texto da classe .text-primary para branco */
+.text-primary {
+    color: #ffffff !important; /* Garantindo que a cor seja branca */ 
+    font-family: 'Poppins', sans-serif; /* Fonte mais bonita */ 
+    font-weight: 530;
+} 
+.nav-tabs .nav-item .nav-link.active {
+    color: #fff;
+    background-color:  #3ABEF9;  
+    font-family: 'Poppins', sans-serif; /* Aplica a fonte no título */ 
+}   
+.sidebar {
+    background-color: #40343b;
+    border-right: 1px solid #ddd;
+    min-height: 100vh;
+    padding: 15px;
+    border-radius: 0px 13px 0px 0px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.command-item strong {
+    color: #0F7BDE;  
+    font-family: 'Poppins', sans-serif; /* Fonte mais bonita */
+} 
+
+.btn.btn-primary.btn-sm {
+    color: #fff; /* Cor do texto */
+    background-color: #3572EF; /* Cor de fundo */ 
+    font-family: 'Poppins', sans-serif; /* Aplica a fonte no título */
+}  
+ 
+/* TAMANHO DOS SUBMENUS 
+
+    /* Estilo para o submenu de Vídeo */
+    #video-submenu a {
+        font-size: 0.75rem; /* Ajuste o tamanho conforme necessário */
+    }
+
+    /* Estilo para o submenu de Relógios */
+    #relogios-submenu a {
+        font-size: 0.75rem; /* Ajuste o tamanho conforme necessário */
+    }
+    .tab {
+        display: flex; /* Usa flexbox para organizar os elementos */
+        justify-content: space-between; /* Texto à esquerda, seta à direita */
+        align-items: center; /* Centraliza verticalmente */
+        padding-right: 60px; /* Adiciona mais espaço à direita */
+        position: relative; /* Para controlar melhor a seta */
+    }
+    
+    .fa-chevron-down {
+        font-size: 12px; /* Tamanho da seta */
+        transition: transform 0.3s ease; /* Transição suave ao girar */
+        color: #000000; /* Cor inicial da seta */
+        margin-left: auto; /* Empurra a seta para a direita */
+        position: absolute; /* Posiciona a seta de forma independente */
+        right: 20px; /* Define um espaço fixo da borda direita */ 
+        margin-top: 5px;
+    } 
+    
+    .sidebar .nav-link {
+        display: flex; /* Organiza os itens na mesma linha */
+        align-items: center; /* Alinha verticalmente o conteúdo */
+        position: relative; /* Para controlar o posicionamento da seta dentro do item */
+    }
+    
+    .sidebar .fa-chevron-down {
+        position: absolute; /* Posiciona a seta de forma independente */
+        left: 145px; /* Coloca a seta no canto direito */ 
+        transition: color 0.3s ease; /* Transição suave para mudar a cor */
+    }
+    
+    
+
+/* Quando a seta estiver em estado ativo (clicada) */
+.sidebar .nav-link.active .fa-chevron-down {
+    color: white; /* Altera a cor da seta para branco */
+    animation: blink 2.5s infinite; /* Animação de piscar */
+}
+/* Animação de piscar */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1; /* Totalmente visível */
+    }
+    50% {
+        opacity: 0; /* Invisível no meio do ciclo */
+    }
+} 
+
+
+ 
+.btn btn-success btn-sm ml-2 {
+    background-color: #3572EF;
+} 
+.nav-item-mensagem {
+    font-family: 'Poppins', sans-serif; /* Aplica a fonte no título */
+    color: #050C9C;
+}
+
+/* Efeito visual para o ícone após o clique */
+.copy-icon.copied-icon {
+    color: #28a745; /* Muda a cor do ícone para verde (sucesso) */
+    transform: scale(1.2); /* Um pequeno aumento no tamanho do ícone */
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+/* Efeito de transição suave */
+.copy-icon {
+    transition: color 0.3s ease, transform 0.3s ease;
+} 
+
+/* Define a animação de quicar (bounce) e mudança de cor */
+@keyframes bounceColor {
+    0% {
+        transform: translateY(0); /* Começa no estado original */
+        background-color: #007bff; /* Cor original */
+    }
+    30% {
+        transform: translateY(-5px); /* Sobe um pouco */
+    }
+    50% {
+        transform: translateY(0); /* Retorna à posição */
+    }
+    70% {
+        transform: translateY(-3px); /* Sobe um pouco mais */
+    }
+    100% {
+        transform: translateY(0);
+        background-color: #070606; /* Cor durante a animação */
+    }
+}
+
+/* Efeito de piscar */
+@keyframes blinkEffect {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.5; /* Torna o botão semitransparente */
+    }
+    50% {
+        opacity: 1; /* Volta à opacidade normal */
+    }
+    75% {
+        opacity: 0.5; /* Torna o botão semitransparente novamente */
+    }
+    100% {
+        opacity: 1; /* Retorna ao estado normal */
+    }
+}
+
+/* Aplica a animação de quicar e piscar ao botão */
+.blink {
+    animation: bounceColor 0.8s ease-out, blinkEffect 1s ease-in-out; /* Combina bounceColor e blinkEffect */
+    transition: background-color 0.3s ease-in-out;
+} 
+  

@@ -1,0 +1,62 @@
+/* Estilo do botão */
+.btn-tutorial-banco-de-dados {
+    background-color: #3572EF; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: 1px solid #fafafa; /* Cor da borda */
+    border-radius: 12px; /* Bordas arredondadas */
+    padding: 12px 15px; /* Espaçamento interno */
+    font-size: 12px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    width: 20%; /* Largura 100% */
+    max-width: 200px; /* Largura máxima */
+    transition: all 0.3s ease; /* Transição suave para efeitos */
+}
+
+/* Efeito de hover */
+.btn-tutorial-banco-de-dados:hover {
+    background-color: #3ABEF9; /* Cor de fundo ao passar o mouse */
+    border-color: #3ABEF9; /* Cor da borda ao passar o mouse */
+    transform: translateY(-2px); /* Levanta o botão um pouco */
+}
+
+/* Efeito de foco (quando o botão está selecionado) */
+.btn-tutorial-banco-de-dados:focus {
+    outline: none; /* Remove a borda de foco padrão */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra ao focar */
+}
+
+/* Efeito de clique (ao pressionar o botão) */
+.btn-tutorial-banco-de-dados:active {
+    transform: translateY(2px); /* Empurra o botão para baixo ao clicar */
+    background-color: #050C9C; /* Cor de fundo ao clicar */
+    border-color: #050C9C; /* Cor da borda ao clicar */
+}
+
+body strong {
+    color: #0F7BDE;
+    font-family: 'Poppins', sans-serif;
+}
+
+body img {
+    border: 2px solid;;
+    border-radius: 5px;
+    border-image: linear-gradient(135deg, #050C9C, #3572EF, #3ABEF9, #A7E6FF, #f8f8f8, #3572EF, #050C9C) 1;
+
+}
+
+.none {
+    border: none;
+}
+
+img {
+    transition: transform 0.5s ease; /* Suaviza a transição do zoom */
+    z-index: 1; /* Garantir o nível básico */
+    position: relative; /* Necessário para controlar o zoom */
+}
+
+img.zoomed {
+    transform: scale(1.5); /* Amplia a imagem */
+    z-index: 1000; /* Garante que a imagem fique em cima de outros elementos */
+}

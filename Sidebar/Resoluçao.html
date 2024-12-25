@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SONODA HELP</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Ícones -->
+    <link rel="stylesheet" href="../Style.css" />
+    <link rel="stylesheet" href="../style_resoluções.css" />
+    <script src="../index.js" defer></script>
+    <link rel="icon" href="../adress/a.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <audio autoplay loop>
+      <source src="../Music/christmas-spirit-265741.mp3" type="audio/mpeg" />
+      Seu navegador não suporta o elemento <code>audio</code>.
+    </audio>
+    <!-- Header -->
+    <div class="header d-flex justify-content-between align-items-center">
+      <div class="logo">
+        <h4 class="m-0">
+          <img src="../adress/Sonoda Ponto.ico" alt="logo" class="none" />
+          <span class="text-primary">SONODA HELP</span>
+        </h4>
+      </div>
+      <div>
+        <span
+          ><strong></strong> |
+          <span class="tec-alexandre">Tec Alexandre</span></span
+        >
+      </div>
+    </div>
+
+    <div class="d-flex">
+      <!-- Sidebar -->
+      <div class="sidebar p-3" style="position: relative">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link active"
+              ><i class="fas fa-home"></i>Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              href="#"
+              class="nav-link"
+              id="video-link"
+              onclick="toggleMenu('video')"
+              ><i class="fas fa-video"></i> Vídeo
+              <i class="fas fa-chevron-down" id="video-arrow"></i
+            ></a>
+            <ul
+              id="video-submenu"
+              class="nav flex-column"
+              style="display: none"
+            >
+              <li class="nav-item">
+                <a href="../Videos/Videos_OFF.html" class="nav-link"
+                  >Ponto OFF</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="../Videos/Video_Web.html" class="nav-link"
+                  >Ponto WEB</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="../Videos/Videos_AcadAcesso.html" class="nav-link"
+                  >Academia / Acesso</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a
+              href="#"
+              class="nav-link"
+              id="relogios-link"
+              onclick="toggleMenu('relogios')"
+              ><i class="fas fa-clock"></i> Relógios
+              <i class="fas fa-chevron-down" id="relogios-arrow"></i
+            ></a>
+            <ul
+              id="relogios-submenu"
+              class="nav flex-column"
+              style="display: none"
+            >
+              <li class="nav-item">
+                <a href="../Rep/Control_id.html" class="nav-link">Control ID</a>
+              </li>
+              <li class="nav-item">
+                <a href="../Rep/Smartpoint.html" class="nav-link"
+                  >Smart Point</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="../Rep/Miniprint.html" class="nav-link">Miniprint</a>
+              </li>
+              <li class="nav-item">
+                <a href="../Rep/Printpoint2.html" class="nav-link"
+                  >PrintPoint 2</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="../Rep/Printpoint3.html" class="nav-link"
+                  >PrintPoint 3</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="../Sidebar/Resoluçao.html" class="nav-link"
+              ><i class="fas fa-lightbulb"></i> Resoluções</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="../Sidebar/calculadora.html" class="nav-link"
+              ><i class="fas fa-calculator"></i> Calculadora</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              href="https://sonodaponto.com.br/pis/"
+              target="_blank"
+              class="nav-link"
+              ><i class="fas fa-file-alt"></i> Gerar PIS</a
+            >
+          </li>
+        </ul>
+
+        <!-- "Mensagens Prontas" fixado na parte inferior da sidebar -->
+        <div class="position-absolute" style="bottom: 0; left: 0; width: 100%">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a href="../Sidebar/Mensagens.html" class="nav-link"
+                ><i class="fas fa-comment"></i> Mensagens Prontas</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="content container-fluid">
+        <h5 class="font-weight-bold">RESOLUÇÕES DE PROBLEMAS NO SISTEMA</h5>
+        <br />
+        <ul class="nav nav-tabs mb-4">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              id="mens_chamado"
+              onclick="reloadPage('Chamado')"
+              >OFF</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              id="mens_vendedor"
+              onclick="reloadPage('Vendedor')"
+              >BANCO DE DADOS</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              id="mens_outros"
+              onclick="reloadPage('Outros')"
+              >OUTROS</a
+            >
+          </li>
+        </ul>
+
+        <!-- Campo de busca -->
+        <div class="d-flex justify-content-center mb-4">
+          <input
+            type="text"
+            class="form-control w-50"
+            id="search-input"
+            placeholder="Buscar..."
+          />
+          <button class="btn btn-primary ml-2" onclick="searchFunction()">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+
+        <div class="tab-content">
+          <!-- Conteúdo Chamado -->
+          <div id="Chamado" class="tab-pane active">
+            <div class="command-list" id="ChamadoContent">
+              <div class="command-item-banco-de-dados">
+                <div
+                  class="erro-nome-banco-de-dados"
+                  style="text-align: center"
+                >
+                  <span>
+                    <strong>ERRO UNC: </strong> O que fazer se ocorrer mensagem
+                    de erro <strong>"Compartilhamento de rede UNC"</strong> ?
+                  </span>
+                </div>
+                <div class="text-center my-3">
+                  <img
+                    src="../adress/Problemas/UNC.png"
+                    alt="Erro UNC"
+                    style="width: 350px; height: 175px"
+                  />
+                </div>
+                <div
+                  class="erro-descricao-banco-de-dados"
+                  id="errorDescription-banco-de-dados-3"
+                  style="display: none"
+                >
+                  <p>
+                    Este erro <strong>compartilhamento de rede UNC</strong> pode
+                    ocorrer por algumas razões como: compartilhamento /
+                    mapeamento errado da pasta ou o usuário não possui senha
+                    para acessar arquivos ou pastas compartilhadas.
+                  </p>
+                  <p>
+                    <strong>Solução:</strong> Verifique se o
+                    <strong>Compartilhamento protegido por senha</strong> está
+                    ativo.
+                  </p>
+                  <p>
+                    PROCEDIMENTOS SERVIDOR/ATALHO: <br /><br />
+                    1- DESABILITAR ANTI VIRUS, FIREWALL E WINDOWS DEFENDER;
+                    <br />
+                    2- NA PASTA DO SISTEMA VOCÊ DEVE COMPARTILHAR O PONTO EM
+                    REDE; <br />
+                    3- VÁ EM:
+                    <strong
+                      >PAINEL DE CONTROLE / CENTRAL DE REDE E COMPARTILHAMENTO /
+                      ALTERAR AS CONFIGURAÇÕES DE COMPARTILHAMENTO
+                      AVANÇADAS</strong
+                    >; <br />
+                    4- DESCOBERTA DE REDE E DESABILITAR COMPARTILHAMENTO
+                    PROTEGIDO POR SENHA. <br />
+                  </p>
+                  <div>
+                    <center>
+                      <img
+                        src="../adress/Problemas/UNC-rede.png"
+                        alt="Erro UNC"
+                        style="width: 500px; height: 200px"
+                      />
+                      <img
+                        src="../adress/Problemas/UNC-senha.png"
+                        alt="Erro UNC"
+                        style="width: 500px; height: 200px"
+                      />
+                    </center>
+                  </div>
+                </div>
+                <br />
+                <center>
+                  <button
+                    class="btn btn-primary btn-sm"
+                    onclick="toggleErrorDescription('errorDescription-banco-de-dados-3')"
+                  >
+                    <i class="fas fa-info-circle"></i> Solução
+                  </button>
+                </center>
+                <hr
+                  style="
+                    border: none;
+                    height: 2px;
+                    background: linear-gradient(
+                      135deg,
+                      #050c9c,
+                      #3572ef,
+                      #3abef9,
+                      #a7e6ff,
+                      #f8f8f8,
+                      #3572ef,
+                      #050c9c
+                    );
+                  "
+                />
+              </div>
+
+              <div class="command-item-banco-de-dados">
+                <div
+                  class="erro-nome-banco-de-dados"
+                  style="text-align: center"
+                >
+                  <span>
+                    <strong>ERRO COLETA NÃO FUNCIONA: </strong> O que fazer se
+                    ocorrer mensagem de erro
+                    <strong>"Coleta automática não funciona"</strong> ?
+                  </span>
+                </div>
+                <div class="text-center my-3">
+                  <img
+                    src="../adress/Problemas/coleta-automatica.png"
+                    alt="Erro Coleta Automática não funciona"
+                    style="width: 350px; height: 175px"
+                  />
+                </div>
+                <div
+                  class="erro-descricao-banco-de-dados"
+                  id="errorDescription-banco-de-dados-4"
+                  style="display: none"
+                >
+                  <p>
+                    Este erro
+                    <strong>Coleta automática não funciona</strong> pode ocorrer
+                    quando o Agente de Comunicação não está executável.
+                  </p>
+                  <p><strong>Solução:</strong> faça o passo a passo abaixo:</p>
+                  <p>
+                    PROCEDIMENTOS:<br /><br />
+                    1- COM O SISTEMA ABERTO, VÁ EM
+                    <strong
+                      >MANUTENÇÃO > EQUIPAMENTOS > AGENDAR COMUNICAÇÃO</strong
+                    >, E APAGUE A COLETA E FECHE O SISTEMA; <br />
+                    2- ACESSE A PASTA DO PONTO, LOCALIZE E EXECUTE O
+                    <strong>REMGER.EXE</strong> COMO
+                    <strong>ADMINISTRADOR</strong>; <br />
+                    3- VEJA SE TEM O ARQUIVO <strong>LOG-ERROS.TXT</strong>, SE
+                    TIVER, APAGUE ESSE ARQUIVO; <br />
+                    4- LOCALIZE E EXECUTE O <strong>EXATP4.EXE</strong> COMO
+                    <strong>ADMINISTRADOR</strong>; <br />
+                    5- LOCALIZE O ARQUIVO <strong>PONTO4DLL.DLL</strong>, SEGURE
+                    A TECLA <strong>SHIFT</strong> E CLIQUE COM O BOTÃO DIREITO
+                    DO MOUSE, SELECIONE A OPÇÃO
+                    <strong>COPIAR COMO CAMINHO</strong> OU
+                    <strong>COPY AS PATH</strong> CASO ESTEJA EM INGLÊS; <br />
+                    6- ABRA O <strong>CMD</strong> COMO
+                    <strong>ADMINISTRADOR</strong> E ESCREVA
+                    <strong>regsvr32</strong> E DEPOIS COLE O CAMINHO DO ARQUIVO
+                    <strong>PONTO4DLL.DLL</strong>; <br />
+                    7- AINDA NA PASTA DO PONTO LOCALIZE E EXECUTE
+                    <strong>INSTGER.EXE</strong> COMO
+                    <strong>ADMINISTRADOR</strong>; <br />
+                    8- INICIE O GERENCIADOR DE TAREFAS DO SISTEMA E OLHE NA
+                    PASTA SE VOLTOU A GERAR O ARQUIVO
+                    <strong>LOG-ERROS.TXT</strong>; <br />
+                    9- ABRA O SISTEMA E CRIE NOVAMENTE UMA COLETA AUTOMÁTICA.
+                  </p>
+                  <div>
+                    <center>
+                      <img
+                        src="../adress/Problemas/coleta-automatica-cmd.png"
+                        alt="Erro UNC"
+                        style="width: 400px; height: 175px"
+                      />
+                    </center>
+                  </div>
+                </div>
+                <br />
+                <center>
+                  <button
+                    class="btn btn-primary btn-sm"
+                    onclick="toggleErrorDescription('errorDescription-banco-de-dados-4')"
+                  >
+                    <i class="fas fa-info-circle"></i> Solução
+                  </button>
+                </center>
+                <hr
+                  style="
+                    border: none;
+                    height: 2px;
+                    background: linear-gradient(
+                      135deg,
+                      #050c9c,
+                      #3572ef,
+                      #3abef9,
+                      #a7e6ff,
+                      #f8f8f8,
+                      #3572ef,
+                      #050c9c
+                    );
+                  "
+                />
+              </div>
+
+              <div class="command-item-banco-de-dados">
+                <div
+                  class="erro-nome-banco-de-dados"
+                  style="text-align: center"
+                >
+                  <span>
+                    <strong>ERRO 183: </strong> O que fazer se ocorrer mensagem
+                    de erro <strong>"código 183"</strong> ?
+                  </span>
+                </div>
+                <div class="text-center my-3">
+                  <img
+                    src="../adress/Problemas/Erro-183.png"
+                    alt="Erro 183"
+                    style="width: 350px; height: 175px"
+                  />
+                </div>
+                <div
+                  class="erro-descricao-banco-de-dados"
+                  id="errorDescription-banco-de-dados-5"
+                  style="display: none"
+                >
+                  <p>
+                    Este erro <strong>Código 183</strong> ocorre quando é feito
+                    a tentativa de atualização do sistema no servidor, e o Ponto
+                    está sendo utilizado por outra aplicação ou por outro
+                    usuário da rede.
+                  </p>
+                  <p><strong>Solução:</strong> faça o passo a passo abaixo:</p>
+                  <p>
+                    PROCEDIMENTOS:<br /><br />
+                    1- NO MENU INICIAR PESQUISE POR
+                    <strong>GERENCIMENO DO COMPUTADOR</strong>; <br />
+                    2- VÁ EM <strong>PASTAS COMPARTILHADAS > SESSÕES</strong> E
+                    CLIQUE COM O BOTÃO DIREITO DO MOUSE E CLIQUE EM FECHAR TODAS
+                    AS SESSÕES.<br />
+                  </p>
+                  <div>
+                    <center>
+                      <img
+                        src="../adress/Problemas/Erro-183-solucao.png"
+                        alt="Erro 183"
+                        style="width: 500px; height: 200px"
+                      />
+                    </center>
+                  </div>
+                </div>
+                <br />
+                <center>
+                  <button
+                    class="btn btn-primary btn-sm"
+                    onclick="toggleErrorDescription('errorDescription-banco-de-dados-5')"
+                  >
+                    <i class="fas fa-info-circle"></i> Solução
+                  </button>
+                </center>
+                <hr
+                  style="
+                    border: none;
+                    height: 2px;
+                    background: linear-gradient(
+                      135deg,
+                      #050c9c,
+                      #3572ef,
+                      #3abef9,
+                      #a7e6ff,
+                      #f8f8f8,
+                      #3572ef,
+                      #050c9c
+                    );
+                  "
+                />
+              </div>
+
+              <div class="command-item-banco-de-dados">
+                <div
+                  class="erro-nome-banco-de-dados"
+                  style="text-align: center"
+                >
+                  <span>
+                    <strong>INSTALAR MAIS DE UM GERENCIADOR DE TAREFAS</strong>
+                  </span>
+                </div>
+                <div class="text-center my-3">
+                  <img
+                    src="../adress/Problemas/gerenciador-de-tarefas.png"
+                    alt="Erro 183"
+                    style="width: 350px; height: 175px"
+                  />
+                </div>
+                <div
+                  class="erro-descricao-banco-de-dados"
+                  id="errorDescription-banco-de-dados-6"
+                  style="display: none"
+                >
+                  <p><strong>Solução:</strong> faça o passo a passo abaixo:</p>
+                  <p>
+                    1- BAIXE O INSTALADOR <strong>AlterarInstancia.exe</strong>
+                    <button
+                      class="btn btn-primary btn-sm ml-2"
+                      onclick="window.open('https://secullum-my.sharepoint.com/:u:/g/personal/suporte_secullum_com_br/ETRguaRCpQdBiL5rPsd9aTIBMlf77SsNTVTbSDvH2EVS2w?e=gB71n6')"
+                    >
+                      <i class="fas fa-download"></i></button
+                    >; <br />
+                    2- COLOQUE O <strong>AlterarInstancia.exe</strong> NA PASTA
+                    DO SISTEMA; <br />
+                    3- EXECUTE O <strong>AlterarInstancia.exe</strong> COMO
+                    <strong>ADMINISTRADOR</strong>; <br />
+                    4- PREENCHA COM O BANCO DE DADOS E DEPOIS CLIQUE NO BOTÃO
+                    <strong>ALTERAR</strong>; <br />
+                    5- PREENCHER O NOME DO SERVIÇO E CONCLUIR.
+                  </p>
+                  <div>
+                    <center>
+                      <img
+                        src="../adress/Problemas/"
+                        alt="Erro UNC"
+                        style="width: 500px; height: 200px"
+                      />
+                    </center>
+                  </div>
+                </div>
+                <br />
+                <center>
+                  <button
+                    class="btn btn-primary btn-sm"
+                    onclick="toggleErrorDescription('errorDescription-banco-de-dados-6')"
+                  >
+                    <i class="fas fa-info-circle"></i> Solução
+                  </button>
+                </center>
+                <hr
+                  style="
+                    border: none;
+                    height: 2px;
+                    background: linear-gradient(
+                      135deg,
+                      #050c9c,
+                      #3572ef,
+                      #3abef9,
+                      #a7e6ff,
+                      #f8f8f8,
+                      #3572ef,
+                      #050c9c
+                    );
+                  "
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Conteúdo Vendedor -->
+          <div id="Vendedor" class="tab-pane">
+            <div
+              class="command-list-banco-de-dados"
+              id="ChamadoContent-banco-de-dados"
+            >
+              <!-- Exemplo de erro com botão de solução -->
+              <div class="command-item-banco-de-dados">
+                <div
+                  class="erro-nome-banco-de-dados"
+                  style="text-align: center"
+                >
+                  <strong>ERRO 52:</strong> O que fazer se ocorrer mensagem de
+                  erro <strong>"52: bad file name or number"</strong>?
+                </div>
+                <div class="text-center my-3">
+                  <img
+                    src="../adress/Problemas/Erro 52.png"
+                    alt="Erro 52"
+                    style="width: 280px; height: 200px"
+                  />
+                </div>
+                <div
+                  class="erro-descricao-banco-de-dados"
+                  id="errorDescription-banco-de-dados-1"
+                  style="display: none"
+                >
+                  <p>
+                    A mensagem <strong>Bad file name or number</strong> ocorre
+                    quando não há permissão para acesso completo de um usuário a
+                    um determinado arquivo (normalmente o banco de dados).
+                  </p>
+                  <p>
+                    <strong>Solução:</strong> Certifique-se de que as permissões
+                    de leitura e escrita estão corretas para o arquivo de dados
+                    do sistema. <br /><br />
+
+                    1- GERALMENTE ESTÁ EM
+                    <strong
+                      >C:\Program Files\Microsoft SQL
+                      Server\MSSQL14.SQL2017\MSSQL\Backup</strong
+                    >
+                    <br />
+                    2- VERIFICAR SE O LOCAL ONDE É GERADO O BACKUP ESTÁ CORRETO
+                    <br />
+                    3- INSERIR PERMISSÃO NA PASTA DA INSTÂNCIA DO BANCO DE DADOS
+                    <br />
+                  </p>
+                  <div>
+                    <center>
+                      <img
+                        src="../adress/Problemas/Erro 52-caminho.png"
+                        alt="Erro 52"
+                        style="width: 400px; height: 200px; margin-right: 50px"
+                      />
+                      <img
+                        src="../adress/Problemas/Erro 52-permissoes.png"
+                        alt="Erro 52"
+                        style="width: 400px; height: 200px"
+                      />
+                    </center>
+                  </div>
+                </div>
+                <br />
+                <center>
+                  <button
+                    class="btn btn-primary btn-sm"
+                    onclick="toggleErrorDescription('errorDescription-banco-de-dados-1')"
+                  >
+                    <i class="fas fa-info-circle"></i> Solução
+                  </button>
+                </center>
+                <hr
+                  style="
+                    border: none;
+                    height: 2px;
+                    background: linear-gradient(
+                      135deg,
+                      #050c9c,
+                      #3572ef,
+                      #3abef9,
+                      #a7e6ff,
+                      #f8f8f8,
+                      #3572ef,
+                      #050c9c
+                    );
+                  "
+                />
+              </div>
+
+              <!-- Outros erros podem ser replicados da mesma maneira com ID único -->
+            </div>
+          </div>
+
+          <!-- Conteúdo Outros -->
+          <div id="Outros" class="tab-pane">
+            <div
+              class="command-list-banco-de-dados"
+              id="ChamadoContent-banco-de-dados"
+            >
+              <div class="command-item-banco-de-dados">
+                <div
+                  class="erro-nome-banco-de-dados"
+                  style="text-align: center"
+                >
+                  <strong>TICKET PENDENTE</strong>
+                </div>
+                <div class="text-center my-3">
+                  <img
+                    src="../adress/Problemas/rep-bloqueado.jpeg"
+                    alt="Erro Ticket Pendente"
+                    style="width: 280px; height: 200px"
+                  />
+                </div>
+                <div
+                  class="erro-descricao-banco-de-dados"
+                  id="errorDescription-banco-de-dados-outros-1"
+                  style="display: none"
+                >
+                  <p>
+                    A mensagem <strong>Ticket Pendente</strong> ocorre quando
+                    tem algum papel enroscado na impressora do relógio.
+                  </p>
+                  <p>
+                    <strong>Solução:</strong> Certifique-se que a bobina esteja
+                    colocada de forma correta e se não tem nenhum papel
+                    enroscado na impressora. <br /><br />
+
+                    1- FAZER O DOWNLOAD DO PROGRAMA
+                    <strong>repidclass_config.exe</strong>
+                    <button
+                      class="btn btn-primary btn-sm ml-2"
+                      onclick="window.open('http://www.controlid.com.br/suporte/repidclass_config.exe')"
+                    >
+                      <i class="fas fa-download"></i>
+                    </button>
+                    <br />
+                    2- EXECUTAR O ARQUIVO
+                    <strong>repidclass_config.exe</strong> PELO CMD NA PASTA DO
+                    ARQUIVO ONDE FOI BAIXADO <br />
+                    3- APERTAR O BOTÃO <strong>TAB</strong> ATÉ APARECER O
+                    ARQUIVO BAIXADO <br />
+                    4- APÓS ENCONTRAR O ARQUIVO, DIGITE NA FRENTE DO NOME DO
+                    ARQUIVO <strong>/dev</strong> E APERTE A TECLA
+                    <strong>ENTER</strong> <br />
+                    5- COLOQUE O
+                    <strong
+                      >IP DO RELÓGIO > LER CONFIGURAÇÕES > SEM SENSOR</strong
+                    >, QUANDO APARECER <strong>SENSOR 0</strong> REINICIE O
+                    RELÓGIO DE PONTO.
+                  </p>
+                  <div>
+                    <center>
+                      <img
+                        src="../adress/Problemas/ticket-pendente.png"
+                        alt="Ticket Pendente"
+                        style="width: 400px; height: 200px; margin-right: 50px"
+                      />
+                      <img
+                        src="../adress/Problemas/ticket-pendente-cmd.png"
+                        alt="Erro 52"
+                        style="width: 400px; height: 200px"
+                      />
+                      <br />
+                      <img
+                        src="../adress/Problemas/ticket-pendente-arquivo.png"
+                        alt="Erro 52"
+                        style="width: 400px; height: 200px"
+                      />
+                    </center>
+                  </div>
+                </div>
+                <br />
+                <center>
+                  <button
+                    class="btn btn-primary btn-sm"
+                    onclick="toggleErrorDescription('errorDescription-banco-de-dados-outros-1')"
+                  >
+                    <i class="fas fa-info-circle"></i> Solução
+                  </button>
+                </center>
+                <hr
+                  style="
+                    border: none;
+                    height: 2px;
+                    background: linear-gradient(
+                      135deg,
+                      #050c9c,
+                      #3572ef,
+                      #3abef9,
+                      #a7e6ff,
+                      #f8f8f8,
+                      #3572ef,
+                      #050c9c
+                    );
+                  "
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Função para alternar entre as abas
+      function showTab(tabName) {
+        const allTabs = document.querySelectorAll(".tab-pane");
+        const allNavLinks = document.querySelectorAll(".nav-link");
+
+        // Remover a classe 'active' de todas as abas e links
+        allTabs.forEach((tab) => tab.classList.remove("active"));
+        allNavLinks.forEach((link) => link.classList.remove("active"));
+
+        // Adiciona a classe 'active' na aba e no link da aba
+        document.getElementById(tabName).classList.add("active");
+        document
+          .getElementById(`mens_${tabName.toLowerCase()}`)
+          .classList.add("active");
+      }
+
+      // Recupera a aba ativa do localStorage ao carregar a página
+      window.onload = function () {
+        // Tenta pegar a aba ativa do localStorage ou define 'Chamado' como padrão
+        const activeTab = localStorage.getItem("activeTab") || "Chamado";
+
+        // Chama a função para mostrar a aba ativa ao carregar
+        showTab(activeTab);
+      };
+
+      // Função para recarregar a página e armazenar a aba ativa
+      function reloadPage(tabName) {
+        // Salva a aba selecionada no localStorage
+        localStorage.setItem("activeTab", tabName);
+
+        // Recarrega a página
+        location.reload();
+      }
+
+      function calcularValorFinal() {
+        // Obter os valores dos campos de "valor atual" e "acréscimo mensal"
+        const valorAtual =
+          parseFloat(document.getElementById("valorAtual").value) || 0;
+        const acrescimoMensal =
+          parseFloat(document.getElementById("acrescimoMensal").value) || 0;
+
+        // Calcular o valor final
+        const valorFinal = valorAtual + acrescimoMensal;
+
+        // Definir o valor final no campo correspondente
+        document.getElementById("valorFinal").value = valorFinal.toFixed(2);
+      }
+
+      window.onload = function () {
+        // Recupera a aba ativa do localStorage ou define 'Chamado' como padrão
+        const activeTab = localStorage.getItem("activeTab") || "Chamado";
+
+        // Remove as classes 'active' de todas as abas e links
+        const allTabs = document.querySelectorAll(".tab-pane");
+        const allNavLinks = document.querySelectorAll(".nav-link");
+        allTabs.forEach((tab) => tab.classList.remove("active", "show"));
+        allNavLinks.forEach((link) => link.classList.remove("active"));
+
+        // Adiciona a classe 'active' na aba e no link da aba ativa
+        document.getElementById(activeTab).classList.add("active", "show");
+        document
+          .getElementById(`mens_${activeTab.toLowerCase()}`)
+          .classList.add("active");
+      };
+
+      // Função para alternar a visibilidade da descrição de erro individual
+      function toggleErrorDescription(errorId) {
+        const description = document.getElementById(errorId);
+        // Alterna a visibilidade da descrição de erro individual
+        if (description.style.display === "none") {
+          description.style.display = "block";
+        } else {
+          description.style.display = "none";
+        }
+      }
+
+      function searchFunction() {
+        var input = document.getElementById("search-input"); // Usando o id correto
+        var filter = input.value.toLowerCase();
+        var items = document.querySelectorAll(".command-item-banco-de-dados"); // Seleciona diretamente os itens
+
+        items.forEach(function (item) {
+          var text = item.textContent || item.innerText;
+
+          // Se o texto do item corresponder à busca, exibe-o; caso contrário, oculta
+          if (text.toLowerCase().indexOf(filter) > -1) {
+            item.style.display = "";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      }
+
+      // Adiciona evento de input para a pesquisa ao digitar
+      document
+        .getElementById("search-input")
+        .addEventListener("input", searchFunction);
+
+      // Adiciona evento para pressionar Enter
+      document
+        .getElementById("search-input")
+        .addEventListener("keydown", function (event) {
+          if (event.key === "Enter") {
+            searchFunction(); // Chama a função de busca ao pressionar Enter
+          }
+        });
+      document.querySelectorAll("img").forEach((img) => {
+        img.addEventListener("click", () => {
+          // Alterna a classe 'zoomed' ao clicar
+          if (img.classList.contains("zoomed")) {
+            img.classList.remove("zoomed"); // Remove o zoom
+          } else {
+            img.classList.add("zoomed"); // Adiciona o zoom
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
