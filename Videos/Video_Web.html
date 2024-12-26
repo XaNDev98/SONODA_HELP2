@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SONODA HELP</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Ícones -->
+    <link rel="stylesheet" href="../Style.css">  
+    <script src="../index.js" defer></script>
+    <link rel="icon" href="../adress/a.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> 
+</head> 
+
+       
+
+<body>  
+     
+    <!-- Header -->
+    <div class="header d-flex justify-content-between align-items-center">
+        <div class="logo">
+            <h4 class="m-0">
+                <img src="../adress/Sonoda Ponto.ico" alt="logo">  <span class="text-primary">SONODA HELP</span>
+            </h4>
+        </div>
+        <div>
+            <span><strong></strong> | <span class="tec-alexandre">Tec Alexandre</span></span>
+        </div>
+    </div>
+
+    <div class="d-flex">
+ <!-- Sidebar -->
+<div class="sidebar p-3" style="position: relative;">
+    <ul class="nav flex-column">
+        <li class="nav-item"><a href="../index.html" class="nav-link active"><i class="fas fa-home"></i>Home</a></li> 
+        <li class="nav-item">
+            <a href="#" class="nav-link" id="video-link" onclick="toggleMenu('video')"><i class="fas fa-video"></i> Vídeo <i class="fas fa-chevron-down" id="video-arrow"></i></a>
+            <ul id="video-submenu" class="nav flex-column" style="display: none;">
+                <li class="nav-item"><a href="../Videos/Videos_OFF.html" class="nav-link">Ponto OFF</a></li>
+                <li class="nav-item"><a href="../Videos/Video_Web.html" class="nav-link">Ponto WEB</a></li>
+                <li class="nav-item"><a href="../Videos/Videos_AcadAcesso.html" class="nav-link">Academia / Acesso</a></li>
+            </ul>
+        </li> 
+        <li class="nav-item">
+            <a href="#" class="nav-link" id="relogios-link" onclick="toggleMenu('relogios')"><i class="fas fa-clock"></i> Relógios <i class="fas fa-chevron-down" id="relogios-arrow"></i></a>
+            <ul id="relogios-submenu" class="nav flex-column" style="display: none;">
+                <li class="nav-item"><a href="../Rep/Control_id.html" class="nav-link">Control ID</a></li>
+                <li class="nav-item"><a href="../Rep/Smartpoint.html" class="nav-link">Smart Point</a></li>
+                <li class="nav-item"><a href="../Rep/Miniprint.html" class="nav-link">Miniprint</a></li> 
+                <li class="nav-item"><a href="../Rep/Printpoint2.html" class="nav-link">PrintPoint 2</a></li>
+                <li class="nav-item"><a href="../Rep/Printpoint3.html" class="nav-link">PrintPoint 3</a></li>
+            </ul>
+        </li> 
+        <li class="nav-item"><a href="../Sidebar/Resoluçao.html" class="nav-link"><i class="fas fa-lightbulb"></i> Resoluções</a></li>
+        <li class="nav-item"><a href="../Sidebar/calculadora.html" class="nav-link"><i class="fas fa-calculator"></i> Calculadora</a></li> 
+        <li class="nav-item"><a href="https://sonodaponto.com.br/pis/" target="_blank" class="nav-link"><i class="fas fa-file-alt"></i> Gerar PIS</a></li> 
+    </ul>
+    
+    <!-- "Mensagens Prontas" fixado na parte inferior da sidebar -->
+    <div class="position-absolute" style="bottom: 0; left: 0; width: 100%;">
+        <ul class="nav flex-column">
+            <li class="nav-item"><a href="../Sidebar/Mensagens.html" class="nav-link"><i class="fas fa-comment"></i> Mensagens Prontas</a></li>
+        </ul>
+    </div>
+</div>
+
+        <!-- Main Content -->
+        <div class="content container-fluid">
+            <h5 class="font-weight-bold">VIDEOS SISTEMA WEB</h5><br>
+            <ul class="nav nav-tabs mb-4">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" id="prob_web" data-toggle="tab" onclick="showTab('prob_WEB')">WEB</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="Marca_ponto" data-toggle="tab" onclick="showTab('marcacaoponto')">MARCAÇÃO DE PONTO</a>
+                </li>
+            </ul>
+<!-- Barra de Pesquisa dentro da aba OFF -->
+<div class="tab-content">
+    <div id="prob_WEB" class="tab-pane active">
+        <div class="d-flex justify-content-center mb-4">
+            <input type="text" class="form-control w-50" id="search-input" placeholder="Buscar..." aria-label="Search">
+            <button class="btn btn-primary ml-2" onclick="searchContent()">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div id="search-result"></div>
+        <div id="web" class="tab-pane active">
+            <div class="command-list">
+                <div class="command-item">
+                    <span><strong>AJUSTAR BANCO DE HORAS</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1FajKL9yPkf4PRp6qFP-yK2sHDcjiiZ7E/view?usp=sharing', this)"> 
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1FajKL9yPkf4PRp6qFP-yK2sHDcjiiZ7E/view?usp=sharing', '_blank')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <span><strong>ALOCAR BATIDA CERTA COM O FECHAMENTO ERRADO</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1CG85X7-rbo91vaqPLM7UbcpZ8v36oRlw/view?usp=sharing', this)"> 
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1CG85X7-rbo91vaqPLM7UbcpZ8v36oRlw/view?usp=sharing', '_blank')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <span><strong>ALTERAR EXTRA DO DIA</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/160bc87s0QbvVKRWm2xMjLAP0Qr75MIir/view?usp=sharing', this)"> 
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/160bc87s0QbvVKRWm2xMjLAP0Qr75MIir/view?usp=sharing', '_blank')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <span><strong>CADASTRAR FERIADO</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1ahVDTl4TG21Bt_AAprtU3gog-ZHgK67P/view?usp=sharing', this)"> 
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1ahVDTl4TG21Bt_AAprtU3gog-ZHgK67P/view?usp=sharing', '_blank')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <span><strong>CADASTRAR PERÍMETRO INDIVIDUAL</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1QckXSFDly0xf4LqV3EYK7lPSnp2fx3q-/view?usp=sharing', this)"> 
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1QckXSFDly0xf4LqV3EYK7lPSnp2fx3q-/view?usp=sharing', '_blank')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <span><strong>CADASTRO DE JUSTIFICATIVAS</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1Ton1oecHVoNa4ksd0kgR8_odjFy4OjOz/view?usp=sharing', this)"> 
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1Ton1oecHVoNa4ksd0kgR8_odjFy4OjOz/view?usp=sharing', '_blank')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <span><strong>DEMITIR FUNCIONÁRIO</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1MYDmHeM2Kq9qHiykB8X9m_wH_ZRQCMEN/view?usp=sharing', this)"> 
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1MYDmHeM2Kq9qHiykB8X9m_wH_ZRQCMEN/view?usp=sharing', '_blank')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <span><strong>EDITAR COLUNAS NO RELATÓRIO</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1_pJ7riJE8Z2osPA0yfQFAOgwQxrs04Hs/view?usp=sharing', this)"> 
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1_pJ7riJE8Z2osPA0yfQFAOgwQxrs04Hs/view?usp=sharing', '_blank')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <span><strong>ENVIAR FUNCIONÁRIOS PRO RELÓGIO</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1JsKXpXSbMIW99JEI5X0lS3m0TiOL8Sdg/view?usp=sharing', this)"> 
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1JsKXpXSbMIW99JEI5X0lS3m0TiOL8Sdg/view?usp=sharing', '_blank')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <span><strong>GERAR RELATÓRIO DE PONTO</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1LACcSnnYoGqUehASkSyDa7hU3Jk8T_KY/view?usp=sharing', this)"> 
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1LACcSnnYoGqUehASkSyDa7hU3Jk8T_KY/view?usp=sharing', '_blank')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <span><strong>HABILITAR CENTRAL DO FUNCIONÁRIO</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/15mTJVL0oJUC3zSMvK8I0MKGh8EIOtRs7/view?usp=sharing', this)"> 
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/15mTJVL0oJUC3zSMvK8I0MKGh8EIOtRs7/view?usp=sharing', '_blank')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <span><strong>HABILITAR HOLERITE</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1_XOB8Q5RxoUwBIkUxtd-xMCZMMQqOxvH/view?usp=sharing', this)"> 
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1_XOB8Q5RxoUwBIkUxtd-xMCZMMQqOxvH/view?usp=sharing', '_blank')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <span><strong>IMPORTAR AFD</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/18_U2PTwICzD7Pe6hAdVrHWR4w9fcgtCn/view?usp=sharing', this)"> 
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/18_U2PTwICzD7Pe6hAdVrHWR4w9fcgtCn/view?usp=sharing', '_blank')">  
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <span><strong>INCLUIR MARCAÇÃO MANUAL</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1qzZVa2BBIIn_zVy9jsyrblcsUCSlZE7k/view?usp=sharing', this)"> 
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1qzZVa2BBIIn_zVy9jsyrblcsUCSlZE7k/view?usp=sharing', '_blank')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <span><strong>INCLUIR MARCAÇÃO AUTOMÁTICA (PRÉ-ASSINALADO)</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1skW1lQNouu289URtKMWh2Llrx6JAYyjJ/view?usp=sharing', this)"> 
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1skW1lQNouu289URtKMWh2Llrx6JAYyjJ/view?usp=sharing', '_blank')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <span><strong>REMOVER FUNCIONÁRIO DEMITIDO</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1TiQhhZ_FlC5wJbb0m2SrHO3EigeXbl6I/view?usp=sharing', this)"> 
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1TiQhhZ_FlC5wJbb0m2SrHO3EigeXbl6I/view?usp=sharing', '_blank')"> 
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <span><strong>SALVAR DIGITAIS E ENVIAR PRO RELÓGIO</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1NTYb-5a7DEpTgIA-XUrKpkSxYyCwHG8w/view?usp=sharing', this)"> 
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1NTYb-5a7DEpTgIA-XUrKpkSxYyCwHG8w/view?usp=sharing', '_blank')">
+                            <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <span><strong>ZERAR BANCO DE HORAS EM MASSA</strong></span>
+                    <div class="d-flex">
+                        <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/10-qm_ScTpxXYHRwVxDFEVkrstSVdhQWm/view?usp=sharing', this)"> 
+                            <i class="fas fa-copy copy-icon"></i></button>
+                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/10-qm_ScTpxXYHRwVxDFEVkrstSVdhQWm/view?usp=sharing', '_blank')">
+                            <i class="fas fa-play"></i></button>
+                    </div> 
+                </div> 
+            </div> 
+        </div>
+    </div> 
+        <!-- Marca ponto tab -->
+        <div id="marcacaoponto" class="tab-pane">
+            <div class="command-item">
+                <span><strong>MARCAÇÃO DE PONTO ID FACE</strong></span>
+                <div class="d-flex">
+                    <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1yvP1Y8qTp7nqgMHxUd9TscZ71YzkozhX/view?usp=sharing', this)"> 
+                        <i class="fas fa-copy copy-icon"></i></button>
+                    <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1yvP1Y8qTp7nqgMHxUd9TscZ71YzkozhX/view?usp=sharing', '_blank')"> 
+                        <i class="fas fa-play"></i></button>
+                </div>
+            </div>
+            <div class="command-item">
+                <span><strong>MARCAÇÃO DE PONTO CHECKIN</strong></span>
+                <div class="d-flex">
+                    <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1QrhFKSCuV44fEI_K1S01m9R9BnDKXWCf/view?usp=sharing', this)"> 
+                        <i class="fas fa-copy copy-icon"></i></button>
+                    <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1QrhFKSCuV44fEI_K1S01m9R9BnDKXWCf/view?usp=sharing', '_blank')"> 
+                        <i class="fas fa-play"></i></button>
+                </div>
+            </div>
+            <br><br><h5 class="font-weight-bold">CENTRAL DO FUNCIONARIO</h5><br>
+            <div class="command-item"> 
+                <span><strong>X</strong></span>
+                <div class="d-flex">
+                    <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1QrhFKSCuV44fEI_K1S01m9R9BnDKXWCf/view?usp=sharing', this)"> 
+                        <i class="fas fa-copy copy-icon"></i></button>
+                    <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1QrhFKSCuV44fEI_K1S01m9R9BnDKXWCf/view?usp=sharing', '_blank')"> 
+                        <i class="fas fa-play"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>     
+</div>
+</body>
+</html>
