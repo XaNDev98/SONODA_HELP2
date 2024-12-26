@@ -33,42 +33,41 @@
     </div>
 
     <div class="d-flex">
-<!-- Sidebar -->
-<div class="sidebar p-3" style="position: relative;">
-    <ul class="nav flex-column">
-        <li class="nav-item"><a href="index.html" class="nav-link active"><i class="fas fa-home"></i>Home</a></li> 
-        <li class="nav-item">
-            <a href="#" class="nav-link" id="video-link" onclick="toggleMenu('video', event)"><i class="fas fa-video"></i> Vídeo <i class="fas fa-chevron-down" id="video-arrow"></i></a>
-            <ul id="video-submenu" class="nav flex-column" style="display: none;">
-                <li class="nav-item"><a href="Videos/Videos_OFF.html" class="nav-link" onclick="keepMenuOpen(event)">Ponto OFF</a></li>
-                <li class="nav-item"><a href="Videos/Video_Web.html" class="nav-link" onclick="keepMenuOpen(event)">Ponto WEB</a></li>
-                <li class="nav-item"><a href="Videos/Videos_AcadAcesso.html" class="nav-link" onclick="keepMenuOpen(event)">Academia / Acesso</a></li>
+        <!-- Sidebar -->
+        <div class="sidebar p-3" style="position: relative;">
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="index.html" class="nav-link active"><i class="fas fa-home"></i>Home</a></li> 
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="video-link" onclick="toggleMenu('video', event)"><i class="fas fa-video"></i> Vídeo <i class="fas fa-chevron-down" id="video-arrow"></i></a>
+                        <ul id="video-submenu" class="nav flex-column" style="display: none;">
+                            <li class="nav-item"><a href="Videos/Videos_OFF.html" class="nav-link" onclick="keepMenuOpen(event)">Ponto OFF</a></li>
+                            <li class="nav-item"><a href="Videos/Video_Web.html" class="nav-link" onclick="keepMenuOpen(event)">Ponto WEB</a></li>
+                            <li class="nav-item"><a href="Videos/Videos_AcadAcesso.html" class="nav-link" onclick="keepMenuOpen(event)">Academia / Acesso</a></li>
+                        </ul>
+                    </li> 
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="relogios-link" onclick="toggleMenu('relogios', event)"><i class="fas fa-clock"></i> Relógios <i class="fas fa-chevron-down" id="relogios-arrow"></i></a>
+                        <ul id="relogios-submenu" class="nav flex-column" style="display: none;">
+                            <li class="nav-item"><a href="Rep/Control_id.html" class="nav-link" onclick="keepMenuOpen(event)">Control ID</a></li>
+                            <li class="nav-item"><a href="Rep/Smartpoint.html" class="nav-link" onclick="keepMenuOpen(event)">Smart Point</a></li>
+                            <li class="nav-item"><a href="Rep/Miniprint.html" class="nav-link" onclick="keepMenuOpen(event)">Miniprint</a></li> 
+                            <li class="nav-item"><a href="Rep/Printpoint2.html" class="nav-link" onclick="keepMenuOpen(event)">PrintPoint 2</a></li>
+                            <li class="nav-item"><a href="Rep/Printpoint3.html" class="nav-link" onclick="keepMenuOpen(event)">PrintPoint 3</a></li>
+                        </ul>
+                    </li> 
+                    <li class="nav-item"><a href="Sidebar/Resoluçao.html" class="nav-link"><i class="fas fa-lightbulb"></i> Resoluções</a></li>
+                    <li class="nav-item"><a href="Sidebar/calculadora.html" class="nav-link"><i class="fas fa-calculator"></i> Calculadora</a></li> 
+                    <li class="nav-item"><a href="https://sonodaponto.com.br/pis/" target="_blank" class="nav-link"><i class="fas fa-file-alt"></i> Gerar PIS</a></li> 
+                </li>
             </ul>
-        </li> 
-        <li class="nav-item">
-            <a href="#" class="nav-link" id="relogios-link" onclick="toggleMenu('relogios', event)"><i class="fas fa-clock"></i> Relógios <i class="fas fa-chevron-down" id="relogios-arrow"></i></a>
-            <ul id="relogios-submenu" class="nav flex-column" style="display: none;">
-                <li class="nav-item"><a href="Rep/Control_id.html" class="nav-link" onclick="keepMenuOpen(event)">Control ID</a></li>
-                <li class="nav-item"><a href="Rep/Smartpoint.html" class="nav-link" onclick="keepMenuOpen(event)">Smart Point</a></li>
-                <li class="nav-item"><a href="Rep/Miniprint.html" class="nav-link" onclick="keepMenuOpen(event)">Miniprint</a></li> 
-                <li class="nav-item"><a href="Rep/Printpoint2.html" class="nav-link" onclick="keepMenuOpen(event)">PrintPoint 2</a></li>
-                <li class="nav-item"><a href="Rep/Printpoint3.html" class="nav-link" onclick="keepMenuOpen(event)">PrintPoint 3</a></li>
-            </ul>
-        </li> 
-        <li class="nav-item"><a href="Sidebar/Resoluçao.html" class="nav-link"><i class="fas fa-lightbulb"></i> Resoluções</a></li>
-        <li class="nav-item"><a href="Sidebar/calculadora.html" class="nav-link"><i class="fas fa-calculator"></i> Calculadora</a></li> 
-        <li class="nav-item"><a href="https://sonodaponto.com.br/pis/" target="_blank" class="nav-link"><i class="fas fa-file-alt"></i> Gerar PIS</a></li> 
-    </ul>
-    
-    <!-- "Mensagens Prontas" fixado na parte inferior da sidebar -->
-    <div class="position-absolute" style="bottom: 0; left: 0; width: 100%;">
-        <center>
-            <ul class="nav flex-column" >
-                <li class="nav-item"><a href="Sidebar/Mensagens.html" class="nav-link"><i class="fas fa-comment"></i> Mensagens Prontas</a></li>
-            </ul>
-        </center>
-    </div>
-</div>
+            
+            <!-- "Mensagens Prontas" fixado na parte inferior da sidebar -->
+            <div class="position-absolute" style="bottom: 0px; left: 25px; width: 100%;">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="../Sidebar/Mensagens.html" class="nav-link"><i class="fas fa-comment"></i> Mensagens Prontas</a></li>
+                </ul>
+            </div>
+        </div>
 
         <!-- Main Content -->
         <div class="content container-fluid">
@@ -302,26 +301,26 @@
                 
 
              <!-- Atualizações -->
-<div id="atualizacoes" class="tab-pane">
-    <div class="row">
-        <!-- Cartão Secullum Ponto Off-line -->
-        <div class="col-md-6">
-        <div class="copy-card">
+        <div id="atualizacoes" class="tab-pane">
             <div class="row">
-                <div class="col-sm-6">
-                    <div class="copy-card-title">SECULLUM PONTO OFF-LINE</div>
-                </div>
-                <div class="col-sm-6 pull-right">
-                    <div class="copy-button-container">
-                        <button class="copy-button-home" onclick="copyText('https://download.secullum.com.br/at-ponto-offline.exe', this)" title="Copiar Link">
-                            <i class="fas fa-copy copy-icon"></i>
-                        </button>
-                        <img src="adress/icone-offline.png" alt="Ícone do Ponto Off-line" class="title-icon" width="45px">
+                <!-- Cartão Secullum Ponto Off-line -->
+                <div class="col-md-6">
+                <div class="copy-card">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="copy-card-title">SECULLUM PONTO OFF-LINE</div>
+                        </div>
+                        <div class="col-sm-6 pull-right">
+                            <div class="copy-button-container">
+                                <button class="copy-button-home" onclick="copyText('https://download.secullum.com.br/at-ponto-offline.exe', this)" title="Copiar Link">
+                                    <i class="fas fa-copy copy-icon"></i>
+                                </button>
+                                <img src="adress/icone-offline.png" alt="Ícone do Ponto Off-line" class="title-icon" width="45px">
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div> 
+            </div> 
 
         <!-- Cartão Secullum Academia -->
         <div class="col-md-6">
