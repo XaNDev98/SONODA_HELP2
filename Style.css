@@ -98,10 +98,7 @@ body {
     transition: all 0.3s ease-in-out;
     cursor: pointer; 
     font-family: 'Poppins', sans-serif; /* Fonte mais bonita */ 
- 
     margin-left: -20px;
-=======
->>>>>>> ee085939b57331f2e4432a70b68a2cb71f38a9bf
 }  
 /* Estilo para os links principais */
 .nav-link.main-link {
