@@ -48,10 +48,10 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 250px; /* Largura fixa para a sidebar */
     z-index: 999;
     font-family: 'Poppins', sans-serif; /* Aplicando a fonte Poppins */
-    width: 14%;
+    width: 10%; 
+
 } 
 
 
@@ -88,7 +88,8 @@ body {
     transition: all 0.3s ease-in-out;
     cursor: pointer; 
     font-family: 'Poppins', sans-serif; /* Fonte mais bonita */ 
-    margin-left: -20px;
+    margin-left: -20px; 
+    
 }  
 /* Estilo para os links principais */
 .nav-link.main-link {
@@ -128,7 +129,7 @@ body {
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     width: auto;
-    margin-right: -10px;
+    margin-right: -5px;
     color: #ffffff;
     border-left: 3px solid #ffffff; 
     font-family: 'Poppins', sans-serif; /* Fonte mais bonita */
@@ -329,29 +330,7 @@ body {
         position: relative; /* Para controlar melhor a seta */
     }
     
-    .fa-chevron-down {
-        font-size: 12px; /* Tamanho da seta */
-        transition: transform 0.3s ease; /* Transição suave ao girar */
-        color: #000000; /* Cor inicial da seta */
-        margin-left: auto; /* Empurra a seta para a direita */
-        position: absolute; /* Posiciona a seta de forma independente */
-        right: 20px; /* Define um espaço fixo da borda direita */ 
-        margin-top: 5px;
-    } 
-    
-    .sidebar .nav-link {
-        display: flex; /* Organiza os itens na mesma linha */
-        align-items: center; /* Alinha verticalmente o conteúdo */
-        position: relative; /* Para controlar o posicionamento da seta dentro do item */
-    }
-    
-    .sidebar .fa-chevron-down {
-        position: absolute; /* Posiciona a seta de forma independente */
-        left: 145px; /* Coloca a seta no canto direito */ 
-        transition: color 0.3s ease; /* Transição suave para mudar a cor */
-    }
-    
-    
+   
 
 /* Quando a seta estiver em estado ativo (clicada) */
 .sidebar .nav-link.active .fa-chevron-down {
@@ -368,6 +347,19 @@ body {
     }
 } 
 
+/* Ajuste para a nav-link */
+.nav-link {
+    position: relative; /* Necessário para posicionar a seta dentro do link */
+    padding-right: 25px; /* Adiciona espaço para a seta à direita */
+}
+
+/* Ajuste para a seta */
+.nav-link .fa-chevron-down {
+    position: absolute;
+    right: 10px; /* Alinha a seta ao lado direito da nav-link */
+    top: 50%; /* Alinha a seta verticalmente no meio */
+    transform: translateY(-50%); /* Ajusta para centralizar a seta */
+}
 
  
 .btn btn-success btn-sm ml-2 {

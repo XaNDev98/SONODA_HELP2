@@ -14,29 +14,30 @@
     />
     <!-- Ícones -->
     <link rel="stylesheet" href="../Style.css" />
+    <link rel="stylesheet" href="../Responsive.css" />
     <script src="../index.js" defer></script>
     <link rel="icon" href="../adress/a.png" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
-  </head> 
-  <style> 
+  </head>
+  <style>
     .none {
-        border: none;
+      border: none;
     }
-    
+
     img {
-        transition: transform 0.5s ease; /* Suaviza a transição do zoom */
-        z-index: 1; /* Garantir o nível básico */
-        position: relative; /* Necessário para controlar o zoom */
+      transition: transform 0.5s ease; /* Suaviza a transição do zoom */
+      z-index: 1; /* Garantir o nível básico */
+      position: relative; /* Necessário para controlar o zoom */
     }
-    
+
     img.zoomed {
-        transform: scale(1.5); /* Amplia a imagem */
-        z-index: 1000; /* Garante que a imagem fique em cima de outros elementos */
+      transform: scale(1.5); /* Amplia a imagem */
+      z-index: 1000; /* Garante que a imagem fique em cima de outros elementos */
     }
-    </style>
+  </style>
   <body>
     <audio autoplay loop>
       <source src="../Music/christmas-spirit-265741.mp3" type="audio/mpeg" />
@@ -155,117 +156,212 @@
           </li>
         </ul>
 
-        <!-- "Mensagens Prontas" fixado na parte inferior da sidebar -->
-        <div class="position-absolute" style="bottom: 0px; left: 25px; width: 100%;">
+        <!-- "Mensagens " fixado na parte inferior da sidebar -->
+        <div
+          class="position-absolute"
+          style="bottom: 0px; left: 25px; width: 100%"
+        >
           <ul class="nav flex-column">
-              <li class="nav-item"><a href="../Sidebar/Mensagens.html" class="nav-link"><i class="fas fa-comment"></i> Mensagens Prontas</a></li>
+            <li class="nav-item">
+              <a href="../Sidebar/Mensagens.html" class="nav-link"
+                ><i class="fas fa-comment"></i> Mensagens
+              </a>
+            </li>
           </ul>
+        </div>
       </div>
-      </div>
-    
-          <!-- Main Content -->
-     <div class="content">
-      <img src="../adress/Rep/miniprint.png" alt="Ícone" style="width: 130px; height: 130px; float: right; margin-top: -20px; margin-left: 10px;">
-      <h5 class="font-weight-bold">DIMEP – MINIPRINT</h5><br>
-      <ul class="nav nav-tabs mb-4">
+
+      <!-- Main Content -->
+      <div class="content">
+        <img
+          src="../adress/Rep/miniprint.png"
+          alt="Ícone"
+          style="
+            width: 130px;
+            height: 130px;
+            float: right;
+            margin-top: -20px;
+            margin-left: 10px;
+          "
+        />
+        <h5 class="font-weight-bold">DIMEP – MINIPRINT</h5>
+        <br />
+        <ul class="nav nav-tabs mb-4">
           <li class="nav-item">
-              <a class="nav-link active" href="#" id="comando-tab" data-toggle="tab" onclick="showTab('comando')">COMANDOS</a>
+            <a
+              class="nav-link active"
+              href="#"
+              id="comando-tab"
+              data-toggle="tab"
+              onclick="showTab('comando')"
+              >COMANDOS</a
+            >
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="#" id="videos-tab" data-toggle="tab" onclick="showTab('videos')"></a>
-          </li> 
-          <li class="nav-item">
-              <a class="nav-link" href="#" id="videosface-tab" data-toggle="tab" onclick="showTab('videos_face')"></a>
+            <a
+              class="nav-link"
+              href="#"
+              id="videos-tab"
+              data-toggle="tab"
+              onclick="showTab('videos')"
+            ></a>
           </li>
-      </ul>
-<!-- Tab Content -->
-<div class="tab-content">
- <!-- Comando -->
-<div id="comando" class="tab-pane active">
-  <div class="command-list">
-    <div class="command-item">
-      <span><strong>E > 45 > E: </strong> EXPORTAR RSA NO PENDRIVE</span>
-      <button class="btn btn-primary btn-sm" onclick="copyText('E > 45 > E – EXPORTAR RSA NO PENDRIVE', this)">
-        <i class="fas fa-copy copy-icon"></i>
-      </button>
-    </div>
-    <div class="command-item">
-      <span><strong>E > 46 > E: </strong> GERAR NOVA CHAVE RSA</span>
-      <button class="btn btn-primary btn-sm" onclick="copyText('E > 46 > E – GERAR NOVA CHAVE RSA', this)">
-        <i class="fas fa-copy copy-icon"></i>
-      </button>
-    </div>
-    <div class="command-item">
-      <span><strong>E > 80 > E: </strong> GERAR ESPELHO AFD NO PENDRIVE</span>
-      <button class="btn btn-primary btn-sm" onclick="copyText('E > 80 > E – GERAR ESPELHO AFD NO PENDRIVE', this)">
-        <i class="fas fa-copy copy-icon"></i>
-      </button>
-    </div>
-    <div class="command-item">
-      <span><strong>E > 88 > E: </strong> COMANDO DE TROCA DE BATERIA (SOMENTE COM REP EM MANUTENÇÃO)</span>
-      <button class="btn btn-primary btn-sm" onclick="copyText('E > 88 > E – COMANDO DE TROCA DE BATERIA (SOMENTE COM REP EM MANUTENÇÃO)', this)">
-        <i class="fas fa-copy copy-icon"></i>
-      </button>
-    </div>
-    <div class="command-item">
-      <span><strong>E > 89 > E: </strong> COMANDO DE TROCA DE BATERIA</span>
-      <button class="btn btn-primary btn-sm" onclick="copyText('E > 89 > E – COMANDO DE TROCA DE BATERIA', this)">
-        <i class="fas fa-copy copy-icon"></i>
-      </button>
-    </div>
-    <div class="command-item">
-      <span><strong>E > 90 > E: </strong> ENVIAR COMANDO DE IMPRESSÃO TESTE PARA IMPRESSORA</span>
-      <button class="btn btn-primary btn-sm" onclick="copyText('E > 90 > E – ENVIAR COMANDO DE IMPRESSÃO TESTE PARA IMPRESSORA', this)">
-        <i class="fas fa-copy copy-icon"></i>
-      </button>
-    </div>
-    <div class="command-item">
-      <span><strong>E > 91 > E: </strong> CADASTRAR NOVA DIGITAL</span>
-      <button class="btn btn-primary btn-sm" onclick="copyText('E > 91 > E – CADASTRAR NOVA DIGITAL', this)">
-        <i class="fas fa-copy copy-icon"></i>
-      </button>
-    </div>
-    <div class="command-item">
-      <span><strong>E > 92 > E: </strong> EXCLUIR DIGITAL</span>
-      <button class="btn btn-primary btn-sm" onclick="copyText('E > 92 > E – EXCLUIR DIGITAL', this)">
-        <i class="fas fa-copy copy-icon"></i>
-      </button>
-    </div>
-    <div class="command-item">
-      <span><strong>E > 94 > E: </strong> PROGRAMAÇÃO POR PENDRIVE</span>
-      <button class="btn btn-primary btn-sm" onclick="copyText('E > 94 > E – PROGRAMAÇÃO POR PENDRIVE', this)">
-        <i class="fas fa-copy copy-icon"></i>
-      </button>
-    </div>
-    <div class="command-item">
-      <span><strong>E > 95 > E: </strong> COLETA POR PENDRIVE</span>
-      <button class="btn btn-primary btn-sm" onclick="copyText('E > 95 > E – COLETA POR PENDRIVE', this)">
-        <i class="fas fa-copy copy-icon"></i>
-      </button>
-    </div>
-    <div class="command-item">
-      <span><strong>E > 97 > E: </strong> VERSÃO, DATA E HORA E PROGRAMAÇÕES TÉCNICAS (REDE)</span>
-      <button class="btn btn-primary btn-sm" onclick="copyText('E > 97 > E – VERSÃO, DATA E HORA E PROGRAMAÇÕES TÉCNICAS (REDE)', this)">
-        <i class="fas fa-copy copy-icon"></i>
-      </button>
-    </div>
-    <div class="command-item">
-      <span><strong>E > 98 > E: </strong> TESTE DE PERIFÉRICOS (SOMENTE COM REP EM MANUTENÇÃO)</span>
-      <button class="btn btn-primary btn-sm" onclick="copyText('E > 98 > E – TESTE DE PERIFÉRICOS (SOMENTE COM REP EM MANUTENÇÃO)', this)">
-        <i class="fas fa-copy copy-icon"></i>
-      </button>
-    </div>
-  </div>
-</div>
-
-
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              id="videosface-tab"
+              data-toggle="tab"
+              onclick="showTab('videos_face')"
+            ></a>
+          </li>
+        </ul>
+        <!-- Tab Content -->
+        <div class="tab-content">
+          <!-- Comando -->
+          <div id="comando" class="tab-pane active">
+            <div class="command-list">
+              <div class="command-item">
+                <span
+                  ><strong>E > 45 > E: </strong> EXPORTAR RSA NO PENDRIVE</span
+                >
+                <button
+                  class="btn btn-primary btn-sm"
+                  onclick="copyText('E > 45 > E – EXPORTAR RSA NO PENDRIVE', this)"
+                >
+                  <i class="fas fa-copy copy-icon"></i>
+                </button>
+              </div>
+              <div class="command-item">
+                <span><strong>E > 46 > E: </strong> GERAR NOVA CHAVE RSA</span>
+                <button
+                  class="btn btn-primary btn-sm"
+                  onclick="copyText('E > 46 > E – GERAR NOVA CHAVE RSA', this)"
+                >
+                  <i class="fas fa-copy copy-icon"></i>
+                </button>
+              </div>
+              <div class="command-item">
+                <span
+                  ><strong>E > 80 > E: </strong> GERAR ESPELHO AFD NO
+                  PENDRIVE</span
+                >
+                <button
+                  class="btn btn-primary btn-sm"
+                  onclick="copyText('E > 80 > E – GERAR ESPELHO AFD NO PENDRIVE', this)"
+                >
+                  <i class="fas fa-copy copy-icon"></i>
+                </button>
+              </div>
+              <div class="command-item">
+                <span
+                  ><strong>E > 88 > E: </strong> COMANDO DE TROCA DE BATERIA
+                  (SOMENTE COM REP EM MANUTENÇÃO)</span
+                >
+                <button
+                  class="btn btn-primary btn-sm"
+                  onclick="copyText('E > 88 > E – COMANDO DE TROCA DE BATERIA (SOMENTE COM REP EM MANUTENÇÃO)', this)"
+                >
+                  <i class="fas fa-copy copy-icon"></i>
+                </button>
+              </div>
+              <div class="command-item">
+                <span
+                  ><strong>E > 89 > E: </strong> COMANDO DE TROCA DE
+                  BATERIA</span
+                >
+                <button
+                  class="btn btn-primary btn-sm"
+                  onclick="copyText('E > 89 > E – COMANDO DE TROCA DE BATERIA', this)"
+                >
+                  <i class="fas fa-copy copy-icon"></i>
+                </button>
+              </div>
+              <div class="command-item">
+                <span
+                  ><strong>E > 90 > E: </strong> ENVIAR COMANDO DE IMPRESSÃO
+                  TESTE PARA IMPRESSORA</span
+                >
+                <button
+                  class="btn btn-primary btn-sm"
+                  onclick="copyText('E > 90 > E – ENVIAR COMANDO DE IMPRESSÃO TESTE PARA IMPRESSORA', this)"
+                >
+                  <i class="fas fa-copy copy-icon"></i>
+                </button>
+              </div>
+              <div class="command-item">
+                <span
+                  ><strong>E > 91 > E: </strong> CADASTRAR NOVA DIGITAL</span
+                >
+                <button
+                  class="btn btn-primary btn-sm"
+                  onclick="copyText('E > 91 > E – CADASTRAR NOVA DIGITAL', this)"
+                >
+                  <i class="fas fa-copy copy-icon"></i>
+                </button>
+              </div>
+              <div class="command-item">
+                <span><strong>E > 92 > E: </strong> EXCLUIR DIGITAL</span>
+                <button
+                  class="btn btn-primary btn-sm"
+                  onclick="copyText('E > 92 > E – EXCLUIR DIGITAL', this)"
+                >
+                  <i class="fas fa-copy copy-icon"></i>
+                </button>
+              </div>
+              <div class="command-item">
+                <span
+                  ><strong>E > 94 > E: </strong> PROGRAMAÇÃO POR PENDRIVE</span
+                >
+                <button
+                  class="btn btn-primary btn-sm"
+                  onclick="copyText('E > 94 > E – PROGRAMAÇÃO POR PENDRIVE', this)"
+                >
+                  <i class="fas fa-copy copy-icon"></i>
+                </button>
+              </div>
+              <div class="command-item">
+                <span><strong>E > 95 > E: </strong> COLETA POR PENDRIVE</span>
+                <button
+                  class="btn btn-primary btn-sm"
+                  onclick="copyText('E > 95 > E – COLETA POR PENDRIVE', this)"
+                >
+                  <i class="fas fa-copy copy-icon"></i>
+                </button>
+              </div>
+              <div class="command-item">
+                <span
+                  ><strong>E > 97 > E: </strong> VERSÃO, DATA E HORA E
+                  PROGRAMAÇÕES TÉCNICAS (REDE)</span
+                >
+                <button
+                  class="btn btn-primary btn-sm"
+                  onclick="copyText('E > 97 > E – VERSÃO, DATA E HORA E PROGRAMAÇÕES TÉCNICAS (REDE)', this)"
+                >
+                  <i class="fas fa-copy copy-icon"></i>
+                </button>
+              </div>
+              <div class="command-item">
+                <span
+                  ><strong>E > 98 > E: </strong> TESTE DE PERIFÉRICOS (SOMENTE
+                  COM REP EM MANUTENÇÃO)</span
+                >
+                <button
+                  class="btn btn-primary btn-sm"
+                  onclick="copyText('E > 98 > E – TESTE DE PERIFÉRICOS (SOMENTE COM REP EM MANUTENÇÃO)', this)"
+                >
+                  <i class="fas fa-copy copy-icon"></i>
+                </button>
+              </div>
+            </div>
+          </div>
 
           <!-- Outros conteúdos... -->
         </div>
       </div>
     </div>
 
-    <script> 
+    <script>
       document.querySelectorAll("img").forEach((img) => {
         img.addEventListener("click", () => {
           // Alterna a classe 'zoomed' ao clicar
