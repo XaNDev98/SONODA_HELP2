@@ -275,3 +275,49 @@
     }
 }
 
+@media (max-width: 1350px) {
+    /* Ajustes no Sidebar */
+    .sidebar {
+        width: 15%; /* Diminui a largura da sidebar */
+        z-index: 9999; /* Garantir que a sidebar seja sobreposta */
+    }
+
+    .content {
+        margin-left: 5px; /* Mantém 5px de margem da sidebar */
+        padding: 5px; /* Diminui o padding do conteúdo */ 
+        width: 100%;
+    }
+
+    /* Logo */
+    .logo img {
+        width: 25px; /* Ajusta o tamanho da logo */
+        height: auto;
+    }
+
+    /* Ajustes no Header */
+    .header {
+        padding: 10px 15px; /* Diminui o padding do header */
+    }
+
+    /* Ajustes nos links da sidebar */
+    .sidebar .nav-link {
+        font-size: 14px; /* Tamanho da fonte ajustado para 9px */
+        padding: 10px 15px; /* Diminui o padding */
+    }
+
+    /* Ajuste do conteúdo */
+    .command-item {
+        padding: 10px; /* Diminui o padding do item */
+    }
+
+    .copy-card {
+        font-size: 9px; /* Ajuste de fonte para 9px */
+        padding: 10px; /* Ajusta o padding */ 
+    }
+
+    /* Ajusta a visibilidade dos ícones */
+    .sidebar i {
+        margin-right: 8px; /* Diminui a margem dos ícones */
+    }
+}
+
