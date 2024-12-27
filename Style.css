@@ -6,6 +6,7 @@ body {
     padding: 0px;
     box-sizing: border-box;
 } 
+
 .logo img {
     height: auto;
     margin-right: 5px;
@@ -42,7 +43,7 @@ body {
     background: linear-gradient(135deg, #4E80FF, #3ABEF9, #3572EF, #050C9C); /* Gradiente suave com uma transição mais fluida */
     border-right: 1px solid rgba(255, 255, 255, 0.3); /* Borda mais sutil com maior transparência */
     min-height: 100vh; /* Garante que a sidebar ocupe toda a altura da tela */
-    border-radius: 0px 20px 20px 0px; /* Bordas mais arredondadas para suavizar o visual */
+    border-radius: 0px 10px 0px 0px; /* Bordas mais arredondadas para suavizar o visual */
     box-shadow: 4px 0 30px rgba(0, 0, 0, 0.15); /* Sombra mais suave e mais forte para profundidade */
     position: fixed;
     top: 0;
@@ -190,7 +191,7 @@ body {
 /* Content */
 .content {
     background-color: #ffffff;
-    border-radius: 10px;
+    border-radius: 10px 0px 0px 0px; /* Bordas mais arredondadas para suavizar o visual */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 0px; /* Espaçamento entre o conteúdo e outros elementos */
@@ -200,7 +201,6 @@ body {
 .command-item {
     background-color: #f8f9fa;
     margin: 10px 0;
-    border-radius: 5px;
     padding: 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
