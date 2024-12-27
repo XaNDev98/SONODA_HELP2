@@ -23,7 +23,8 @@ body {
 
 /* Header */
 .header {
-    background: linear-gradient(135deg, #3ABEF9, #3572EF, #050C9C, #A7E6FF); /* Gradiente suave e bem distribuído */
+    /* background: linear-gradient(135deg, #3ABEF9, #3572EF, #050C9C, #A7E6FF); Gradiente suave e bem distribuído */
+    background-color: #4E80FF;
     color: #ffffff;
     padding: 15px 20px;
     border-bottom: 1px solid #f8cdda;
@@ -40,7 +41,8 @@ body {
 }
 
 .sidebar {
-    background: linear-gradient(135deg, #4E80FF, #3ABEF9, #3572EF, #050C9C); /* Gradiente suave com uma transição mais fluida */
+    /* background: linear-gradient(135deg, #4E80FF); Gradiente suave com uma transição mais fluida */
+    background-color: #4E80FF;
     border-right: 1px solid rgba(255, 255, 255, 0.3); /* Borda mais sutil com maior transparência */
     min-height: 100vh; /* Garante que a sidebar ocupe toda a altura da tela */
     border-radius: 0px 10px 0px 0px; /* Bordas mais arredondadas para suavizar o visual */
