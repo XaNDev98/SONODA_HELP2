@@ -275,7 +275,7 @@
     }
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1360px) {
     /* Ajustes no Sidebar */
     .sidebar {
         width: 15%; /* Diminui a largura da sidebar */
