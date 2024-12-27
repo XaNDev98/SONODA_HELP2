@@ -188,7 +188,7 @@
     /* Ajustes no Sidebar */
     .sidebar {
         width: 20%; /* Diminui a largura da sidebar */
-        z-index: 9999; /* Garantir que a sidebar seja sobreposta */ 
+        z-index: 9999; /* Garantir que a sidebar seja sobreposta */
     }
 
     .content {

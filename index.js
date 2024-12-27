@@ -74,7 +74,6 @@ function toggleMenu(menu) {
 }  
 
 // SINALIZA A ONDE O USUARIO ESTÁ   
-
 document.addEventListener("DOMContentLoaded", function () {
     const currentPath = window.location.pathname;
 
@@ -113,9 +112,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
-
-
 function showTab(tabId) {
  // Oculta todas as abas
  const tabs = document.querySelectorAll('.tab-content > .tab-pane');
@@ -138,7 +134,6 @@ function showTab(tabId) {
  });
  document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
 }
-
 
 function copyText(link, button) {
     // Usando a API Clipboard moderna
@@ -237,17 +232,4 @@ function toggleErrorDescription(targetId) {
     } else {
         targetDescription.style.display = 'none';
     }
-}
-document.addEventListener("DOMContentLoaded", function() {
-    const navLinks = document.querySelectorAll('.nav-link');
-    const currentUrl = window.location.href;
-
-    navLinks.forEach(link => {
-        if (currentUrl.includes(link.href)) {
-            link.classList.add('active');
-        } else {
-            link.classList.remove('active');
-        }
-    });
-});
-
+};

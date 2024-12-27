@@ -157,16 +157,9 @@
         </ul>
 
         <!-- "Mensagens " fixado na parte inferior da sidebar -->
-        <div
-          class="position-absolute"
-          style="bottom: 0px; left: 25px; width: 100%"
-        >
+        <div class="position-absolute" style="bottom: 5px; left: 25px; width: 100%; margin-left: -12px">
           <ul class="nav flex-column">
-            <li class="nav-item">
-              <a href="../Sidebar/Mensagens.html" class="nav-link"
-                ><i class="fas fa-comment"></i> Mensagens
-              </a>
-            </li>
+              <li class="nav-item"><a href="../Sidebar/Mensagens.html" class="nav-link"><i class="fas fa-comment"></i> Mensagens</a></li>
           </ul>
         </div>
       </div>
@@ -372,17 +365,6 @@
           }
         });
       }); 
-      document.addEventListener("DOMContentLoaded", function() {
-        const navLinks = document.querySelectorAll('.nav-link');
-        const currentUrl = window.location.href;
-    
-        navLinks.forEach(link => {
-            if (currentUrl.includes(link.href)) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
-        });
     });
     </script>
 

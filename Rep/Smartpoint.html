@@ -72,11 +72,11 @@
     </ul>
     
     <!-- "Mensagens " fixado na parte inferior da sidebar -->
-    <div class="position-absolute" style="bottom: 0px; left: 25px; width: 100%;">
-        <ul class="nav flex-column">
-            <li class="nav-item"><a href="../Sidebar/Mensagens.html" class="nav-link"><i class="fas fa-comment"></i> Mensagens </a></li>
-        </ul>
-    </div>
+    <div class="position-absolute" style="bottom: 5px; left: 25px; width: 100%; margin-left: -12px">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="../Sidebar/Mensagens.html" class="nav-link"><i class="fas fa-comment"></i> Mensagens</a></li>
+                </ul>
+            </div>
 </div>
         <!-- Main Content -->
      <div class="content">
@@ -263,19 +263,7 @@
             img.classList.add("zoomed"); // Adiciona o zoom
           }
         });
-      }); 
-      document.addEventListener("DOMContentLoaded", function() {
-        const navLinks = document.querySelectorAll('.nav-link');
-        const currentUrl = window.location.href;
-    
-        navLinks.forEach(link => {
-            if (currentUrl.includes(link.href)) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
-        });
-    });
+      });
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>

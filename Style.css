@@ -49,16 +49,8 @@ body {
     left: 0;
     z-index: 999;
     font-family: 'Poppins', sans-serif; /* Mantendo a fonte Poppins */
-    width: 10%; /* Aumentando a largura da sidebar para um visual mais espaçoso */
-    transition: width 0.3s ease-in-out; /* Transição suave ao alterar a largura da sidebar */
+    width: 11%; /* Aumentando a largura da sidebar para um visual mais espaçoso */
 }
-
-/* Adicionando um efeito de hover ao passar o mouse sobre a sidebar */
-.sidebar:hover {
-    width: 12%; /* Aumenta a largura ao passar o mouse para dar mais destaque */
-}
-
-
 
 /* Container de navegação dentro da sidebar */
 .sidebar .nav {
