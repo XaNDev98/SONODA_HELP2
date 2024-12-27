@@ -38,21 +38,26 @@ body {
     height: auto;
 }
 
-/* Sidebar */
 .sidebar {
-    background: linear-gradient(135deg, #3ABEF9, #3572EF, #050C9C, #A7E6FF); /* Gradiente suave e bem distribuído */
-    border-right: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil e transparente */
+    background: linear-gradient(135deg, #4E80FF, #3ABEF9, #3572EF, #050C9C); /* Gradiente suave com uma transição mais fluida */
+    border-right: 1px solid rgba(255, 255, 255, 0.3); /* Borda mais sutil com maior transparência */
     min-height: 100vh; /* Garante que a sidebar ocupe toda a altura da tela */
-    border-radius: 0px 20px 20px 0px; /* Bordas mais arredondadas para um visual mais fluido */
-    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave para um efeito de profundidade */
+    border-radius: 0px 20px 20px 0px; /* Bordas mais arredondadas para suavizar o visual */
+    box-shadow: 4px 0 30px rgba(0, 0, 0, 0.15); /* Sombra mais suave e mais forte para profundidade */
     position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
-    font-family: 'Poppins', sans-serif; /* Aplicando a fonte Poppins */
-    width: 10%; 
+    font-family: 'Poppins', sans-serif; /* Mantendo a fonte Poppins */
+    width: 10%; /* Aumentando a largura da sidebar para um visual mais espaçoso */
+    transition: width 0.3s ease-in-out; /* Transição suave ao alterar a largura da sidebar */
+}
 
-} 
+/* Adicionando um efeito de hover ao passar o mouse sobre a sidebar */
+.sidebar:hover {
+    width: 12%; /* Aumenta a largura ao passar o mouse para dar mais destaque */
+}
+
 
 
 /* Container de navegação dentro da sidebar */
@@ -80,7 +85,7 @@ body {
 .sidebar .nav-link {
     color: #ffffff;
     padding: 12px 20px;
-    font-size: 16px;
+    font-size: 15px;
     display: flex;
     align-items: center;
     border-left: 3px solid transparent;
@@ -89,7 +94,6 @@ body {
     cursor: pointer; 
     font-family: 'Poppins', sans-serif; /* Fonte mais bonita */ 
     margin-left: -20px; 
-    
 }  
 /* Estilo para os links principais */
 .nav-link.main-link {
@@ -118,21 +122,24 @@ body {
 }
 
 .sidebar .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(24, 8, 53, 0.2);
     color: #ffffff;
     border-left: 3px solid #ffffff;
     transform: translateX(5px); 
-    font-family: 'Poppins', sans-serif; /* Fonte mais bonita */
+    font-family: 'Poppins', sans-serif; /* Fonte mais bonita */ 
+    border-radius: 10px;
 }
 
 .sidebar .nav-link.active {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(166, 149, 243, 0.3);
     border-radius: 10px;
     width: auto;
-    margin-right: -5px;
+    margin-right: -12px;
     color: #ffffff;
     border-left: 3px solid #ffffff; 
-    font-family: 'Poppins', sans-serif; /* Fonte mais bonita */
+    font-family: 'Poppins', sans-serif; /* Fonte mais bonita */ 
+    margin-left: -12px;
+
 } 
 
 /* Caso queira um estilo mais forte para o hover também */

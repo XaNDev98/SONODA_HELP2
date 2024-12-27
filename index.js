@@ -238,5 +238,16 @@ function toggleErrorDescription(targetId) {
         targetDescription.style.display = 'none';
     }
 }
- 
+document.addEventListener("DOMContentLoaded", function() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const currentUrl = window.location.href;
+
+    navLinks.forEach(link => {
+        if (currentUrl.includes(link.href)) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+});
 

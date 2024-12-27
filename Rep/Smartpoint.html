@@ -253,7 +253,29 @@
             img.classList.add("zoomed"); // Adiciona o zoom
           }
         });
-      });
+      }); 
+      document.querySelectorAll("img").forEach((img) => {
+        img.addEventListener("click", () => {
+          // Alterna a classe 'zoomed' ao clicar
+          if (img.classList.contains("zoomed")) {
+            img.classList.remove("zoomed"); // Remove o zoom
+          } else {
+            img.classList.add("zoomed"); // Adiciona o zoom
+          }
+        });
+      }); 
+      document.addEventListener("DOMContentLoaded", function() {
+        const navLinks = document.querySelectorAll('.nav-link');
+        const currentUrl = window.location.href;
+    
+        navLinks.forEach(link => {
+            if (currentUrl.includes(link.href)) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    });
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>

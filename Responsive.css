@@ -58,7 +58,7 @@
     .content {
         margin-left: 5px; /* Mantém 5px de margem da sidebar */
         padding: 5px; /* Diminui o padding do conteúdo */ 
-        width: auto;
+        width: 100%;
     }
 
     /* Logo */
@@ -103,7 +103,7 @@
     .content {
         margin-left: 5px; /* Mantém 5px de margem da sidebar */
         padding: 5px; /* Diminui o padding do conteúdo */ 
-        width: auto;
+        width: 100%;
     }
 
     /* Logo */
@@ -149,7 +149,7 @@
     .content {
         margin-left: 5px; /* Mantém 5px de margem da sidebar */
         padding: 5px; /* Diminui o padding do conteúdo */ 
-        width: auto;
+        width: 100%;
     }
 
     /* Logo */
@@ -194,7 +194,7 @@
     .content {
         margin-left: 5px; /* Mantém 5px de margem da sidebar */
         padding: 5px; /* Diminui o padding do conteúdo */ 
-        width: auto;
+        width: 100%;
     }
 
     /* Logo */
@@ -239,7 +239,7 @@
     .content {
         margin-left: 5px; /* Mantém 5px de margem da sidebar */
         padding: 5px; /* Diminui o padding do conteúdo */
-        width: auto;
+        width: 100%;
     }
 
     /* Logo */

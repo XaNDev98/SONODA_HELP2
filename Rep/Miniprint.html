@@ -371,7 +371,19 @@
             img.classList.add("zoomed"); // Adiciona o zoom
           }
         });
-      });
+      }); 
+      document.addEventListener("DOMContentLoaded", function() {
+        const navLinks = document.querySelectorAll('.nav-link');
+        const currentUrl = window.location.href;
+    
+        navLinks.forEach(link => {
+            if (currentUrl.includes(link.href)) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    });
     </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
