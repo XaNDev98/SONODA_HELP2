@@ -13,9 +13,9 @@
       rel="stylesheet"
     />
     <!-- Ícones -->
-    <link rel="stylesheet" href="../Style.css" />
-    <link rel="stylesheet" href="../Responsive.css" />
-    <script src="../index.js" defer></script>
+    <link rel="stylesheet" href="../Style/Style.css" />
+    <link rel="stylesheet" href="../Style/Responsive.css" />
+    <script src="../JavaScript/index.js" defer></script>
     <link rel="icon" href="../adress/a.png" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
@@ -157,9 +157,13 @@
         </ul>
 
         <!-- "Mensagens " fixado na parte inferior da sidebar -->
-        <div class="position-absolute" style="bottom: 5px; margin-right: -5px;">
+        <div class="position-absolute" style="bottom: 5px; margin-right: -5px">
           <ul class="nav flex-column">
-              <li class="nav-item"><a href="../Sidebar/Mensagens.html" class="nav-link"><i class="fas fa-comment"></i> Mensagens</a></li>
+            <li class="nav-item">
+              <a href="../Sidebar/Mensagens.html" class="nav-link"
+                ><i class="fas fa-comment"></i> Mensagens</a
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -364,8 +368,7 @@
             img.classList.add("zoomed"); // Adiciona o zoom
           }
         });
-      }); 
-    });
+      });
     </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

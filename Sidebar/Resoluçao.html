@@ -13,11 +13,11 @@
       rel="stylesheet"
     />
     <!-- Ícones -->
-    <link rel="stylesheet" href="../Style.css" />
-    <link rel="stylesheet" href="../Responsive.css" />
-    <link rel="stylesheet" href="../Responsive.css" />
+    <link rel="stylesheet" href="../Style/Style.css" />
+    <link rel="stylesheet" href="../Style/Responsive.css" />
+    <link rel="stylesheet" href="../Style/Responsive.css" />
     <link rel="stylesheet" href="../style_resoluções.css" />
-    <script src="../index.js" defer></script>
+    <script src="../JavaScript/index.js" defer></script>
     <link rel="icon" href="../adress/a.png" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
@@ -56,53 +56,97 @@
             >
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link" id="video-link" onclick="toggleMenu('video')"><i class="fas fa-video"></i> Vídeo<i class="fas fa-chevron-down" id="video-arrow"></i></a>
-            <ul id="video-submenu" class="nav flex-column" style="display: none">
+            <a
+              href="#"
+              class="nav-link"
+              id="video-link"
+              onclick="toggleMenu('video')"
+              ><i class="fas fa-video"></i> Vídeo<i
+                class="fas fa-chevron-down"
+                id="video-arrow"
+              ></i
+            ></a>
+            <ul
+              id="video-submenu"
+              class="nav flex-column"
+              style="display: none"
+            >
               <li class="nav-item">
-                <a href="../Videos/Videos_OFF.html" class="nav-link">Ponto OFF</a>
+                <a href="../Videos/Videos_OFF.html" class="nav-link"
+                  >Ponto OFF</a
+                >
               </li>
               <li class="nav-item">
-                <a href="../Videos/Video_Web.html" class="nav-link">Ponto WEB</a>
+                <a href="../Videos/Video_Web.html" class="nav-link"
+                  >Ponto WEB</a
+                >
               </li>
               <li class="nav-item">
-                <a href="../Videos/Videos_AcadAcesso.html" class="nav-link">Academia / Acesso</a>
+                <a href="../Videos/Videos_AcadAcesso.html" class="nav-link"
+                  >Academia / Acesso</a
+                >
               </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link" id="relogios-link" onclick="toggleMenu('relogios')"><i class="fas fa-clock"></i> Relógios
-              <i class="fas fa-chevron-down" id="relogios-arrow"></i></a>
-            <ul id="relogios-submenu" class="nav flex-column" style="display: none">
+            <a
+              href="#"
+              class="nav-link"
+              id="relogios-link"
+              onclick="toggleMenu('relogios')"
+              ><i class="fas fa-clock"></i> Relógios
+              <i class="fas fa-chevron-down" id="relogios-arrow"></i
+            ></a>
+            <ul
+              id="relogios-submenu"
+              class="nav flex-column"
+              style="display: none"
+            >
               <li class="nav-item">
                 <a href="../Rep/Control_id.html" class="nav-link">Control ID</a>
               </li>
               <li class="nav-item">
-                <a href="../Rep/Smartpoint.html" class="nav-link">Smart Point</a>
+                <a href="../Rep/Smartpoint.html" class="nav-link"
+                  >Smart Point</a
+                >
               </li>
               <li class="nav-item">
                 <a href="../Rep/Miniprint.html" class="nav-link">Miniprint</a>
               </li>
               <li class="nav-item">
-                <a href="../Rep/Printpoint2.html" class="nav-link">PrintPoint 2</a>
+                <a href="../Rep/Printpoint2.html" class="nav-link"
+                  >PrintPoint 2</a
+                >
               </li>
               <li class="nav-item">
-                <a href="../Rep/Printpoint3.html" class="nav-link">PrintPoint 3</a>
+                <a href="../Rep/Printpoint3.html" class="nav-link"
+                  >PrintPoint 3</a
+                >
               </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a href="../Sidebar/Resoluçao.html" class="nav-link"><i class="fas fa-lightbulb"></i> Resoluções</a>
+            <a href="../Sidebar/Resoluçao.html" class="nav-link"
+              ><i class="fas fa-lightbulb"></i> Resoluções</a
+            >
           </li>
           <li class="nav-item">
-            <a href="../Sidebar/calculadora.html" class="nav-link"><i class="fas fa-calculator"></i> Calculadora</a>
+            <a href="../Sidebar/calculadora.html" class="nav-link"
+              ><i class="fas fa-calculator"></i> Calculadora</a
+            >
           </li>
           <li class="nav-item">
-            <a href="https://sonodaponto.com.br/pis/" target="_blank" class="nav-link"><i class="fas fa-file-alt"></i> Gerar PIS</a>
+            <a
+              href="https://sonodaponto.com.br/pis/"
+              target="_blank"
+              class="nav-link"
+              ><i class="fas fa-file-alt"></i> Gerar PIS</a
+            >
           </li>
         </ul>
 
         <!-- "Mensagens " fixado na parte inferior da sidebar -->
-        <div class="position-absolute" style="bottom: 5px; margin-right: -5px;">
+        <div class="position-absolute" style="bottom: 5px; margin-right: -5px">
           <ul class="nav flex-column">
             <li class="nav-item">
               <a href="../Sidebar/Mensagens.html" class="nav-link"
@@ -464,9 +508,21 @@
                   </p>
                   <div>
                     <center>
-                      <img src="../adress/Problemas/gerenciador-de-tarefas-banco1.jpg" alt="Banco 1" style="width: 500px; height: 200px"/>
-                      <img src="../adress/Problemas/gerenciador-de-tarefas-banco2.jpg" alt="Banco 2" style="width: 500px; height: 200px"/>
-                      <img src="../adress/Problemas/gerenciador-de-tarefas-config-banco.jpg" alt="Banco de Dados" style="width: 500px; height: 200px"/>
+                      <img
+                        src="../adress/Problemas/gerenciador-de-tarefas-banco1.jpg"
+                        alt="Banco 1"
+                        style="width: 500px; height: 200px"
+                      />
+                      <img
+                        src="../adress/Problemas/gerenciador-de-tarefas-banco2.jpg"
+                        alt="Banco 2"
+                        style="width: 500px; height: 200px"
+                      />
+                      <img
+                        src="../adress/Problemas/gerenciador-de-tarefas-config-banco.jpg"
+                        alt="Banco de Dados"
+                        style="width: 500px; height: 200px"
+                      />
                     </center>
                   </div>
                 </div>
@@ -498,28 +554,55 @@
               </div>
 
               <div class="command-item-banco-de-dados">
-                <div class="erro-nome-banco-de-dados" style="text-align: center">
+                <div
+                  class="erro-nome-banco-de-dados"
+                  style="text-align: center"
+                >
                   <span>
-                    <strong>ERRO 482: </strong> O que fazer se ocorrer mensagem de erro <strong>"Run-time error: 482: Printer error"</strong> ?
+                    <strong>ERRO 482: </strong> O que fazer se ocorrer mensagem
+                    de erro
+                    <strong>"Run-time error: 482: Printer error"</strong> ?
                   </span>
                 </div>
                 <div class="text-center my-3">
-                  <img src="../adress/Problemas/Erro-482.png" alt="Erro 482" style="width: 350px; height: 200px"/>
+                  <img
+                    src="../adress/Problemas/Erro-482.png"
+                    alt="Erro 482"
+                    style="width: 350px; height: 200px"
+                  />
                 </div>
-                <div class="erro-descricao-banco-de-dados" id="errorDescription-off-5" style="display: none">
+                <div
+                  class="erro-descricao-banco-de-dados"
+                  id="errorDescription-off-5"
+                  style="display: none"
+                >
                   <p><strong>Solução:</strong> faça o passo a passo abaixo:</p>
                   <p>
-                    1- APERTE O BOTÃO DO WINDOWS E PESQUISE <strong>PAINEL DE CONTROLE > PROGRAMAS E RECURSOS</strong> <br>
-                    2- VÁ EM <strong>ATIVAR OU DESATIVAR RECURSOS DO WINDOWS</strong> <br>
-                    3- CLIQUE NA CAIXINHA E ATIVE O <strong>IMPRESSÃO DA MICROSOFT EM PDF</strong>
+                    1- APERTE O BOTÃO DO WINDOWS E PESQUISE
+                    <strong>PAINEL DE CONTROLE > PROGRAMAS E RECURSOS</strong>
+                    <br />
+                    2- VÁ EM
+                    <strong>ATIVAR OU DESATIVAR RECURSOS DO WINDOWS</strong>
+                    <br />
+                    3- CLIQUE NA CAIXINHA E ATIVE O
+                    <strong>IMPRESSÃO DA MICROSOFT EM PDF</strong>
                   </p>
                   <div>
                     <center>
-                      <img src="../adress/Problemas/Erro-482-painel-de-controle.png" alt="Erro 482 - Painel de controle" style="width: 500px; height: 200px"/>
-                      <img src="../adress/Problemas/Erro-482-pdf.png" alt="Erro 482 - PDF" style="width: 500px; height: 200px"/>
+                      <img
+                        src="../adress/Problemas/Erro-482-painel-de-controle.png"
+                        alt="Erro 482 - Painel de controle"
+                        style="width: 500px; height: 200px"
+                      />
+                      <img
+                        src="../adress/Problemas/Erro-482-pdf.png"
+                        alt="Erro 482 - PDF"
+                        style="width: 500px; height: 200px"
+                      />
                     </center>
                   </div>
-                </div> <br>
+                </div>
+                <br />
                 <center>
                   <button
                     class="btn btn-primary btn-sm"
@@ -868,8 +951,7 @@
             img.classList.add("zoomed"); // Adiciona o zoom
           }
         });
-      }); 
-      
+      });
     </script>
   </body>
 </html>
