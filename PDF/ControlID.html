@@ -7,36 +7,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> 
     <link rel="stylesheet" href="../Style/Style.css">   
     <script src="../JavaScript/PDF.js" defer></script> 
-    <style> 
-        @media print {
-            /* Esconde o header */
-            .header {
-                display: none;
-            }
-
-            /* Esconde a sidebar */
-            .sidebar {
-                display: none;
-            }
-
-            /* Ajusta o conteúdo principal para ocupar mais espaço */
-            .content {
-                margin-left: 0;
-                width: 100%;
-            }
-        }
-        .command-item {
-            margin: 5px 0;
-        } 
-        /* Estilo para a pré-visualização com fonte azul */
-.preview-container .command-item {
-    color: blue; /* Fonte azul */
-}
-
-    </style>
 </head>
 <body>
-    <h1>Comandos do Relógio</h1>
+    <Center><h1>COMANDOS CONTROL ID</h1></Center>
     <div class="tab-content">
         <!-- Comando -->
         <div id="comando" class="tab-pane active">
@@ -67,16 +40,8 @@
     </div>
 <img src="../adress/Rep/control id.png" alt="Relógio" style="display: block; margin: 0 auto; width: 130px; height: 130px;">
     
-    <!-- Botão para pré-visualização -->
-    <button onclick="previewPDF()">Pré-visualizar PDF</button>
 
-    <!-- Contêiner para pré-visualização -->
-    <div id="previewContainer" class="preview-container" style="display:none;">
-        <h3>Pré-visualização do PDF:</h3>
-        <div id="previewContent"></div>
-    </div>
-
-    <button onclick="downloadPDF()">Baixar PDF</button>
+    <button onclick="downloadPDF_Control_ID()">Baixar PDF</button>
 
  
 </body>

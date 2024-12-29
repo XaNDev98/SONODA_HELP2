@@ -100,7 +100,7 @@ img.zoomed {
         </li>
         <!-- Botão de Impressora ao lado direito -->
         <li class="nav-item ml-auto">
-            <button onclick="downloadPDF()" class="btn btn-primary btn-sm">
+            <button onclick="downloadPDF_Control_ID()" class="btn btn-primary btn-sm">
                 <i class="fas fa-print"></i>
             </button>              
     </ul>
@@ -291,41 +291,6 @@ img.zoomed {
           }
         });
       });  
-   
-    document.getElementById("generate-pdf").addEventListener("click", function() {
-        const { jsPDF } = window.jspdf;
-        const doc = new jsPDF();
-        
-        // Adicionar título ao PDF
-        doc.setFontSize(18);
-        doc.text("Comandos do Relógio", 20, 20);
-
-        // Adicionar imagem
-        const img = document.querySelector("img"); // Pegando a imagem
-        doc.addImage(img, "PNG", 20, 30, 50, 50); // Posiciona e redimensiona a imagem
-
-        // Adicionar comandos
-        doc.setFontSize(12);
-        const commands = [
-            "ALTERAR IP: MENU > CONFIGURAÇÃO > CONFIGURAÇÃO DE REDE.",
-            "CADASTRAR DIGITAL: MENU > USUÁRIOS > ESCOLHA O USUÁRIO 1000 > BIOMETRIA > SALVAR.",
-            "AJUSTAR DATA E HORA: MENU > CONFIGURAÇÕES > DATA E HORA > SALVAR.",
-            "EXCLUIR FUNCIONÁRIO: MENU > USUÁRIOS > EXCLUIR.",
-            "CADASTRAR CRACHÁ: MENU > USUÁRIOS > ESCOLHA O USUÁRIO 1000 > CARTÃO > APROXIMA O CARTÃO + SALVAR.",
-            "AFD COMPLETO: PEN DRIVE PORTA VERMELHA > AGUARDAR EXPORTAÇÃO > RETIRAR PEN DRIVE.",
-            "AFD POR DATA: MENU > USB > ENVIAR MARCAÇÕES > SELECIONA O PERÍODO NA DATA > EXPORTAR > MENU > USB > REMOVER O PENDRIVE > COLETA FEITA."
-        ];
-
-        let y = 90; // Posição Y inicial para os comandos
-        commands.forEach(command => {
-            doc.text(command, 20, y);
-            y += 10; // Distância entre as linhas de texto
-        });
-
-        // Salvar o PDF
-        doc.save("Comandos_Relogio.pdf");
-    });
-
 
 </script> 
 
