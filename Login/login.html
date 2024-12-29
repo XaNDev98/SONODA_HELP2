@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sonoda</title>
+    <script src="../Login/login.js" defer></script>
+    <link rel="stylesheet" href="../Login/login.css">  
+    <style>
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .remember-container {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .remember-container input {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container animation" id="loginContainer">
+        <h2>Login - Sonoda</h2>
+        <form onsubmit="validarLogin(event)">
+            <div class="input-group">
+                <label for="username">Usuário</label>
+                <input type="text" id="username" placeholder="Digite seu usuário" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Digite sua senha" required>
+            </div>
+            <div class="remember-container">
+                <input type="checkbox" id="rememberMe">
+                <label for="rememberMe">Lembrar senha</label>
+            </div>
+            <div class="button-group">
+                <button type="submit" class="btn-admin">Entrar como Administrador</button>
+                <button type="button" class="btn-client" onclick="entrarComoCliente()">Entrar como Cliente</button>
+            </div>
+        </form>
+        <div class="footer">
+            <p><a href="#" onclick="mostrarEsquecerSenha()">Esqueceu a senha ou Solicitar Login?</a></p><br>
+            <p>Criado pelo técnico Alexandre por <span class="heart">❤️</span></p>
+        </div>
+    </div>
+
+    <div class="forgot-password-container animation" id="forgotPasswordContainer">
+        <h2>Confirmar CNPJ e Email</h2>
+        <form onsubmit="enviarWhatsApp(event)">
+            <div class="input-group">
+                <label for="cnpj">CNPJ</label>
+                <input type="text" id="cnpj" placeholder="Digite o CNPJ cadastrado" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Digite o email cadastrado" required>
+            </div>
+            <div class="input-group">
+                <label for="phone">Telefone</label>
+                <input type="text" id="phone" placeholder="Digite seu telefone" required>
+            </div>
+            <div class="button-group">
+                <button type="button" class="btn-back" onclick="voltarLogin()">Voltar</button>
+                <button type="submit" class="btn-admin">Confirmar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Função de validação do login
+        function validarLogin(event) {
+            event.preventDefault(); // Evita o envio do formulário
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const rememberMe = document.getElementById("rememberMe").checked; // Verifica se o "Lembrar senha" está marcado
+
+            // Login do Administrador
+            if (username === "Administrador" && password === "Sonoda455b") {
+                sessionStorage.setItem("isLoggedIn", "true");
+
+                // Salva as informações se o "Lembrar senha" estiver marcado
+                if (rememberMe) {
+                    localStorage.setItem("username", username);
+                    localStorage.setItem("password", password);
+                }
+
+                window.location.href = "../index.html"; // Redireciona para a página inicial
+            } else {
+                alert("Usuário ou senha inválidos.");
+            }
+        }
+
+        // Função para lembrar o usuário
+        window.onload = function() {
+            const storedUsername = localStorage.getItem("username");
+            const storedPassword = localStorage.getItem("password");
+
+            if (storedUsername && storedPassword) {
+                document.getElementById("username").value = storedUsername;
+                document.getElementById("password").value = storedPassword;
+                document.getElementById("rememberMe").checked = true; // Marca o checkbox "Lembrar senha"
+            }
+        };
+
+        function entrarComoCliente() {
+            alert("Função de login como cliente em desenvolvimento.");
+        }
+
+        function mostrarEsquecerSenha() {
+            document.getElementById("loginContainer").style.display = "none";
+            document.getElementById("forgotPasswordContainer").style.display = "block";
+        }
+
+        function voltarLogin() {
+            document.getElementById("forgotPasswordContainer").style.display = "none";
+            document.getElementById("loginContainer").style.display = "block";
+        }
+
+        function enviarWhatsApp(event) {
+            event.preventDefault();
+
+            const cnpj = document.getElementById("cnpj").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+
+            let mensagemTipo = document.querySelector('button[type="submit"]').innerText;
+
+            const mensagem = `Olá, ${mensagemTipo}.\n\nCNPJ: ${cnpj}\nEmail: ${email}\nTelefone: ${phone}\nMensagem: ${mensagemTipo}`;
+
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=+5515997454174&text=${encodeURIComponent(mensagem)}`;
+
+            window.open(whatsappUrl, '_blank');
+
+            voltarLogin();
+        }
+    </script>
+</body>
+</html>

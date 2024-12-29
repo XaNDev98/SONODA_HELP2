@@ -232,4 +232,8 @@ function toggleErrorDescription(targetId) {
     } else {
         targetDescription.style.display = 'none';
     }
-};
+};  
+ // Verificar se o usuário está logado
+ if (localStorage.getItem("isLoggedIn") !== "true") {
+    window.location.href = "login.html"; // Redireciona para a página de login
+}
