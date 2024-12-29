@@ -8,7 +8,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Ícones --> 
     <link rel="stylesheet" href="../Style/Style.css"> 
     <link rel="stylesheet" href="../Style/Responsive.css">   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> 
     <script src="../JavaScript/index.js" defer></script> 
+    <script src="../JavaScript/PDF-smartpoint.js" defer></script> 
     <link rel="icon" href="../adress/a.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -92,6 +94,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="#" id="videosface-tab" data-toggle="tab" onclick="showTab('videos_face')"></a>
             </li>
+            <!-- Botão de Impressora ao lado direito -->
+            <li class="nav-item ml-auto">
+                <button onclick="downloadPDF_smartpoint()" class="btn btn-primary btn-sm">
+                    <i class="fas fa-print"></i>
+                </button>        
         </ul>
 
           <!-- Tab Content -->
