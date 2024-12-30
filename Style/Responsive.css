@@ -459,7 +459,7 @@
 @media (max-width: 853px) {
     /* Ajustes no Sidebar */
     .sidebar {
-        width: 15%; /* Diminui a largura da sidebar */
+        width: 35%; /* Diminui a largura da sidebar */
         z-index: 9999; /* Garantir que a sidebar seja sobreposta */
     }
 
