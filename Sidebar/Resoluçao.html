@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="../Style/Style.css" />
     <link rel="stylesheet" href="../Style/Responsive.css" />
     <link rel="stylesheet" href="../Style/style_resoluções.css" /> 
-    <script src="../Login/login.js" defer></script>
     <script src="../JavaScript/index.js" defer></script>
     <link rel="icon" href="../adress/a.png" type="image/x-icon" />
     <link
@@ -870,19 +869,7 @@
         location.reload();
       }
 
-      function calcularValorFinal() {
-        // Obter os valores dos campos de "valor atual" e "acréscimo mensal"
-        const valorAtual =
-          parseFloat(document.getElementById("valorAtual").value) || 0;
-        const acrescimoMensal =
-          parseFloat(document.getElementById("acrescimoMensal").value) || 0;
-
-        // Calcular o valor final
-        const valorFinal = valorAtual + acrescimoMensal;
-
-        // Definir o valor final no campo correspondente
-        document.getElementById("valorFinal").value = valorFinal.toFixed(2);
-      }
+     
 
       window.onload = function () {
         // Recupera a aba ativa do localStorage ou define 'Chamado' como padrão
@@ -934,14 +921,7 @@
         .getElementById("search-input")
         .addEventListener("input", searchFunction);
 
-      // Adiciona evento para pressionar Enter
-      document
-        .getElementById("search-input")
-        .addEventListener("keydown", function (event) {
-          if (event.key === "Enter") {
-            searchFunction(); // Chama a função de busca ao pressionar Enter
-          }
-        });
+     
       document.querySelectorAll("img").forEach((img) => {
         img.addEventListener("click", () => {
           // Alterna a classe 'zoomed' ao clicar
