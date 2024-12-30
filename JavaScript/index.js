@@ -233,7 +233,9 @@ function toggleErrorDescription(targetId) {
         targetDescription.style.display = 'none';
     }
 };  
- // Verificar se o usuário está logado
- if (localStorage.getItem("isLoggedIn") !== "true") {
-    window.location.href = "login.html"; // Redireciona para a página de login
+if (localStorage.getItem("isLoggedIn") !== "true") {
+    window.location.href = "../Login/login.html"; // Redireciona para a página de login
+} else {
+    // Se estiver logado, pode exibir a página normalmente
+    // Aqui você pode incluir outras funcionalidades ou ajustes necessários.
 }

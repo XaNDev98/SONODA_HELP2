@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Sonoda</title>
     <script src="../Login/login.js" defer></script>
-    <link rel="stylesheet" href="../Login/login.css">  
+    <link rel="stylesheet" href="../Login/login.css">
     <style>
         .footer {
             text-align: center;
@@ -23,9 +23,48 @@
         .remember-container input {
             margin-right: 5px;
         }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .button-group {
+            text-align: center;
+        }
+
+        .btn-admin {
+            background-color: #007BFF; /* Azul */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-admin:hover {
+            background-color: #0056b3; /* Azul escuro */
+        }
+
+        .forgot-password-container {
+            display: none;
+        }
+
     </style>
 </head>
 <body>
+    <!-- Formulário de Login -->
     <div class="login-container animation" id="loginContainer">
         <h2>Login - Sonoda</h2>
         <form onsubmit="validarLogin(event)">
@@ -42,103 +81,130 @@
                 <label for="rememberMe">Lembrar senha</label>
             </div>
             <div class="button-group">
-                <button type="submit" class="btn-admin">Entrar como Administrador</button>
-                <button type="button" class="btn-client" onclick="entrarComoCliente()">Entrar como Cliente</button>
+                <button type="submit" class="btn-admin">Entrar</button>
             </div>
         </form>
         <div class="footer">
-            <p><a href="#" onclick="mostrarEsquecerSenha()">Esqueceu a senha ou Solicitar Login?</a></p><br>
+            <p><a href="#" onclick="mostrarOpcaoLogin()">Esqueceu a senha ou Solicitar Login?</a></p><br>
             <p>Criado pelo técnico Alexandre por <span class="heart">❤️</span></p>
         </div>
     </div>
 
-    <div class="forgot-password-container animation" id="forgotPasswordContainer">
-        <h2>Confirmar CNPJ e Email</h2>
-        <form onsubmit="enviarWhatsApp(event)">
+    <!-- Formulário de Opções (Esquecer senha ou Solicitar Cadastro) -->
+    <div class="forgot-password-container animation" id="opcaoContainer" style="display: none;">
+        <h2>Escolha uma opção</h2>
+        <div class="button-group">
+            <button type="button" class="btn-admin" onclick="mostrarFormulario('esquecerSenha')">Esquecer a senha</button>
+            <button type="button" class="btn-admin" onclick="mostrarFormulario('solicitarCadastro')">Solicitar Cadastro</button>
+        </div>
+        <div class="footer">
+            <p><a href="#" onclick="voltarLogin()">Voltar</a></p>
+        </div>
+    </div>
+
+    <!-- Formulário de Esquecer Senha -->
+    <div class="forgot-password-container animation" id="forgotPasswordContainer" style="display: none;">
+        <h2>Recuperar Senha</h2>
+        <form id="recoverPasswordForm">
             <div class="input-group">
                 <label for="cnpj">CNPJ</label>
-                <input type="text" id="cnpj" placeholder="Digite o CNPJ cadastrado" required>
+                <input type="text" id="cnpj" placeholder="Digite seu CNPJ" required>
             </div>
             <div class="input-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Digite o email cadastrado" required>
+                <label for="email">Email Cadastrado</label>
+                <input type="email" id="email" placeholder="Digite seu email" required>
             </div>
             <div class="input-group">
                 <label for="phone">Telefone</label>
                 <input type="text" id="phone" placeholder="Digite seu telefone" required>
             </div>
             <div class="button-group">
-                <button type="button" class="btn-back" onclick="voltarLogin()">Voltar</button>
-                <button type="submit" class="btn-admin">Confirmar</button>
+                <button type="button" class="btn-admin" onclick="enviarWhatsAppRecuperarSenha()">Enviar</button>
             </div>
         </form>
+        <div class="footer">
+            <p><a href="#" onclick="voltarLogin()">Voltar</a></p>
+        </div>
+    </div>
+
+    <!-- Formulário de Solicitar Cadastro -->
+    <div class="forgot-password-container animation" id="solicitarCadastroContainer" style="display: none;">
+        <h2>Solicitar Cadastro</h2>
+        <form id="solicitarCadastroForm">
+            <div class="input-group">
+                <label for="cnpjCadastro">CNPJ</label>
+                <input type="text" id="cnpjCadastro" placeholder="Digite seu CNPJ" required>
+            </div>
+            <div class="input-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+            </div>
+            <div class="input-group">
+                <label for="emailCadastro">Email</label>
+                <input type="email" id="emailCadastro" placeholder="Digite seu email" required>
+            </div>
+            <div class="input-group">
+                <label for="telefoneCadastro">Telefone</label>
+                <input type="text" id="telefoneCadastro" placeholder="Digite seu telefone" required>
+            </div>
+            <div class="button-group">
+                <button type="button" class="btn-admin" onclick="enviarWhatsAppCadastro()">Solicitar Cadastro</button>
+            </div>
+        </form>
+        <div class="footer">
+            <p><a href="#" onclick="voltarLogin()">Voltar</a></p>
+        </div>
     </div>
 
     <script>
-        // Função de validação do login
-        function validarLogin(event) {
-            event.preventDefault(); // Evita o envio do formulário
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
-            const rememberMe = document.getElementById("rememberMe").checked; // Verifica se o "Lembrar senha" está marcado
-
-            // Login do Administrador
-            if (username === "Administrador" && password === "Sonoda455b") {
-                sessionStorage.setItem("isLoggedIn", "true");
-
-                // Salva as informações se o "Lembrar senha" estiver marcado
-                if (rememberMe) {
-                    localStorage.setItem("username", username);
-                    localStorage.setItem("password", password);
-                }
-
-                window.location.href = "../index.html"; // Redireciona para a página inicial
-            } else {
-                alert("Usuário ou senha inválidos.");
-            }
-        }
-
-        // Função para lembrar o usuário
-        window.onload = function() {
-            const storedUsername = localStorage.getItem("username");
-            const storedPassword = localStorage.getItem("password");
-
-            if (storedUsername && storedPassword) {
-                document.getElementById("username").value = storedUsername;
-                document.getElementById("password").value = storedPassword;
-                document.getElementById("rememberMe").checked = true; // Marca o checkbox "Lembrar senha"
-            }
-        };
-
-        function entrarComoCliente() {
-            alert("Função de login como cliente em desenvolvimento.");
-        }
-
-        function mostrarEsquecerSenha() {
+        // Função para mostrar opções de Esquecer Senha ou Solicitar Cadastro
+        function mostrarOpcaoLogin() {
             document.getElementById("loginContainer").style.display = "none";
-            document.getElementById("forgotPasswordContainer").style.display = "block";
+            document.getElementById("opcaoContainer").style.display = "block";
         }
 
+        // Função para voltar ao login
         function voltarLogin() {
-            document.getElementById("forgotPasswordContainer").style.display = "none";
             document.getElementById("loginContainer").style.display = "block";
+            document.getElementById("opcaoContainer").style.display = "none";
+            document.getElementById("forgotPasswordContainer").style.display = "none";
+            document.getElementById("solicitarCadastroContainer").style.display = "none";
         }
 
-        function enviarWhatsApp(event) {
-            event.preventDefault();
+        // Função para mostrar o formulário de Esquecer Senha ou Solicitar Cadastro
+        function mostrarFormulario(tipo) {
+            if (tipo === 'esquecerSenha') {
+                document.getElementById("opcaoContainer").style.display = "none";
+                document.getElementById("forgotPasswordContainer").style.display = "block";
+            }
+            if (tipo === 'solicitarCadastro') {
+                document.getElementById("opcaoContainer").style.display = "none";
+                document.getElementById("solicitarCadastroContainer").style.display = "block";
+            }
+        }
 
+        // Função para enviar mensagem para WhatsApp sobre recuperar senha
+        function enviarWhatsAppRecuperarSenha() {
             const cnpj = document.getElementById("cnpj").value;
             const email = document.getElementById("email").value;
             const phone = document.getElementById("phone").value;
-
-            let mensagemTipo = document.querySelector('button[type="submit"]').innerText;
-
-            const mensagem = `Olá, ${mensagemTipo}.\n\nCNPJ: ${cnpj}\nEmail: ${email}\nTelefone: ${phone}\nMensagem: ${mensagemTipo}`;
+            const mensagem = `Olá, eu sou ${cnpj} e preciso recuperar minha senha. Meu e-mail é ${email} e telefone ${phone}.`;
 
             const whatsappUrl = `https://api.whatsapp.com/send?phone=+5515997454174&text=${encodeURIComponent(mensagem)}`;
-
             window.open(whatsappUrl, '_blank');
+            voltarLogin();
+        }
 
+        // Função para enviar mensagem para WhatsApp sobre solicitar cadastro
+        function enviarWhatsAppCadastro() {
+            const cnpjCadastro = document.getElementById("cnpjCadastro").value;
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("emailCadastro").value;
+            const telefone = document.getElementById("telefoneCadastro").value;
+            const mensagem = `Olá, gostaria de solicitar um cadastro. CNPJ: ${cnpjCadastro}, Nome: ${nome}, E-mail: ${email}, Telefone: ${telefone}.`;
+
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=+5515997454174&text=${encodeURIComponent(mensagem)}`;
+            window.open(whatsappUrl, '_blank');
             voltarLogin();
         }
     </script>

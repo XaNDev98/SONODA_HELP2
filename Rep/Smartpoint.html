@@ -10,10 +10,18 @@
     <link rel="stylesheet" href="../Style/Responsive.css">   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> 
     <script src="../JavaScript/index.js" defer></script> 
-    <script src="../JavaScript/PDF-smartpoint.js" defer></script> 
+    <script src="../JavaScript/PDF-smartpoint.js" defer></script>  
+    <script src="../Login/login.js" defer></script>
     <link rel="icon" href="../adress/a.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> 
+    <script> 
+        if (localStorage.getItem("isLoggedIn") !== "true") {
+       window.location.href = "../Login/login.js"; // Redireciona para a página de login
+   } else {
+       // Se estiver logado, pode exibir a página normalmente
+       // Aqui você pode incluir outras funcionalidades ou ajustes necessários.
+   }
+   </script>
     <style> 
         .none {
             border: none;
@@ -260,7 +268,8 @@
             img.classList.add("zoomed"); // Adiciona o zoom
           }
         });
-      });   
+      });    
+            </script>
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>

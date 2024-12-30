@@ -7,8 +7,8 @@
     <link
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
-    /> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> 
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       rel="stylesheet"
@@ -16,13 +16,23 @@
     <!-- Ícones -->
     <link rel="stylesheet" href="../Style/Style.css" />
     <link rel="stylesheet" href="../Style/Responsive.css" />
-    <script src="../JavaScript/index.js" defer></script> 
+    <script src="../JavaScript/index.js" defer></script>
+    <script src="../Login/login.js" defer></script>
     <script src="../JavaScript/PDF-printpoint2.js" defer></script>
     <link rel="icon" href="../adress/a.png" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
+    <script>
+      // Verificar se o usuário está logado
+      if (localStorage.getItem("isLoggedIn") !== "true") {
+        window.location.href = "Login/login.html"; // Redireciona para a página de login
+      } else {
+        // Se estiver logado, pode exibir a página normalmente
+        // Aqui você pode incluir outras funcionalidades ou ajustes necessários.
+      }
+    </script>
   </head>
   <style>
     .none {
@@ -194,8 +204,8 @@
               onclick="showTab('comando')"
               >COMANDOS</a
             >
-          </li> 
-          
+          </li>
+
           <li class="nav-item">
             <a
               class="nav-link"
@@ -213,20 +223,27 @@
               data-toggle="tab"
               onclick="showTab('videos_face')"
             ></a>
-          </li> 
+          </li>
           <li class="nav-item ml-auto">
-            <button onclick="downloadPDF_Printpoint2()" class="btn btn-primary btn-sm">
-                <i class="fas fa-print"></i>
+            <button
+              onclick="downloadPDF_Printpoint2()"
+              class="btn btn-primary btn-sm"
+            >
+              <i class="fas fa-print"></i>
             </button>
-        </ul> 
-        
+          </li>
+        </ul>
+
         <!-- Tab Content -->
         <div class="tab-content">
           <!-- Comando -->
           <div id="comando" class="tab-pane active">
             <div class="command-list">
               <div class="command-item">
-                <span><strong>E > 80 > E: </strong> GERAR ESPELHO AFD NOPENDRIVE</span>
+                <span
+                  ><strong>E > 80 > E: </strong> GERAR ESPELHO AFD
+                  NOPENDRIVE</span
+                >
                 <button
                   class="btn btn-primary btn-sm"
                   onclick="copyText('E > 80 > E – GERAR ESPELHO AFD NO PENDRIVE', this)"
@@ -235,7 +252,10 @@
                 </button>
               </div>
               <div class="command-item">
-                <span><strong>E > 88 > E: </strong> COMANDO DE TROCA DE BATERIA(SOMENTE COM REP EM MANUTENÇÃO)</span>
+                <span
+                  ><strong>E > 88 > E: </strong> COMANDO DE TROCA DE
+                  BATERIA(SOMENTE COM REP EM MANUTENÇÃO)</span
+                >
                 <button
                   class="btn btn-primary btn-sm"
                   onclick="copyText('E > 88 > E – COMANDO DE TROCA DE BATERIA (SOMENTE COM REP EM MANUTENÇÃO)', this)"
@@ -244,7 +264,10 @@
                 </button>
               </div>
               <div class="command-item">
-                <span><strong>E > 90 > E: </strong> ENVIAR COMANDO DE CORTE PARA IMPRESSORA</span>
+                <span
+                  ><strong>E > 90 > E: </strong> ENVIAR COMANDO DE CORTE PARA
+                  IMPRESSORA</span
+                >
                 <button
                   class="btn btn-primary btn-sm"
                   onclick="copyText('E > 90 > E – ENVIAR COMANDO DE CORTE PARA IMPRESSORA', this)"
@@ -253,7 +276,9 @@
                 </button>
               </div>
               <div class="command-item">
-                <span><strong>E > 91 > E: </strong> CADASTRAR NOVA DIGITAL</span>
+                <span
+                  ><strong>E > 91 > E: </strong> CADASTRAR NOVA DIGITAL</span
+                >
                 <button
                   class="btn btn-primary btn-sm"
                   onclick="copyText('E > 91 > E – CADASTRAR NOVA DIGITAL', this)"
@@ -271,7 +296,9 @@
                 </button>
               </div>
               <div class="command-item">
-                <span><strong>E > 94 > E: </strong> PROGRAMAÇÃO POR PENDRIVE</span>
+                <span
+                  ><strong>E > 94 > E: </strong> PROGRAMAÇÃO POR PENDRIVE</span
+                >
                 <button
                   class="btn btn-primary btn-sm"
                   onclick="copyText('E > 94 > E – PROGRAMAÇÃO POR PENDRIVE', this)"
@@ -289,7 +316,10 @@
                 </button>
               </div>
               <div class="command-item">
-                <span><strong>E > 97 > E: </strong> VERSÃO, DATA E HORA E PROGRAMAÇÕES TÉCNICAS (REDE)</span>
+                <span
+                  ><strong>E > 97 > E: </strong> VERSÃO, DATA E HORA E
+                  PROGRAMAÇÕES TÉCNICAS (REDE)</span
+                >
                 <button
                   class="btn btn-primary btn-sm"
                   onclick="copyText('E > 97 > E – VERSÃO, DATA E HORA E PROGRAMAÇÕES TÉCNICAS (REDE)', this)"
@@ -298,7 +328,10 @@
                 </button>
               </div>
               <div class="command-item">
-                <span><strong>E > 98 > E: </strong> TESTE DE PERIFÉRICOS (SOMENTE COM REP EM MANUTENÇÃO)</span>
+                <span
+                  ><strong>E > 98 > E: </strong> TESTE DE PERIFÉRICOS (SOMENTE
+                  COM REP EM MANUTENÇÃO)</span
+                >
                 <button
                   class="btn btn-primary btn-sm"
                   onclick="copyText('E > 98 > E – TESTE DE PERIFÉRICOS (SOMENTE COM REP EM MANUTENÇÃO)', this)"

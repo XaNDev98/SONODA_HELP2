@@ -7,16 +7,21 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Ícones -->
     <link rel="stylesheet" href="Style/Style.css">  
-    <link rel="stylesheet" href="Style/Responsive.css">  
+    <link rel="stylesheet" href="Style/Responsive.css">    
+    <link rel="stylesheet" href="Style/sair.css">  
     <script src="JavaScript/index.js" defer></script>  
     <link rel="icon" href="adress/a.png" type="image/x-icon"> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> 
     <script>
         // Verificar se o usuário está logado
-        if (localStorage.getItem("isLoggedIn") !== "true") {
-            window.location.href = "Login/login.html"; // Redireciona para a página de login
-        }
-    </script>
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+        window.location.href = "Login/login.html"; // Redireciona para a página de login
+    } else {
+        // Se estiver logado, pode exibir a página normalmente
+        // Aqui você pode incluir outras funcionalidades ou ajustes necessários.
+    }
+
+        </script>
     
 </head>
 <body> 
@@ -31,7 +36,8 @@
         <div>
             <div>
                 <span><strong></strong> | <span class="tec-alexandre">Tec Alexandre</span></span>
-            </div>
+                <button id="logoutBtn" class="btn-logout">Sair</button> <!-- Botão para sair -->
+            </div>            
         </div>
     </div>
 
@@ -678,6 +684,16 @@
         </div> 
     </div>
 </div>
-    
+    <Script> 
+            // Quando o botão de sair for clicado
+        document.getElementById("logoutBtn").addEventListener("click", function() {
+        // Remover a chave de login do localStorage
+        localStorage.removeItem("isLoggedIn");
+
+        // Redirecionar para a página de login
+        window.location.href = "../Login/login.html";
+});
+
+    </Script>
 </body>
 </html>

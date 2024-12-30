@@ -15,16 +15,17 @@
         }
 
         .login-container {
-            background: #fff;
+            background: linear-gradient(145deg, #e0f7ff, #c1e4f7); /* Gradiente suave de azul muito claro */
             border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra suave e profunda */
             padding: 40px;
             width: 100%;
             max-width: 400px;
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
+        
+        
         .login-container:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
@@ -85,14 +86,6 @@
             background-color: #0056b3;
         }
 
-        .btn-client {
-            background-color: #28a745;
-            color: white;
-        }
-
-        .btn-client:hover {
-            background-color: #218838;
-        }
 
         .footer {
             margin-top: 20px;
@@ -126,7 +119,7 @@
 
         .forgot-password-container {
             display: none;
-            background: #fff;
+            background: linear-gradient(145deg, #e0f7ff, #c1e4f7); /* Gradiente suave de azul muito claro */
             border-radius: 12px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             padding: 40px;

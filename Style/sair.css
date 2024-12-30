@@ -1,0 +1,20 @@
+#logoutBtn {
+  background-color: #ff4757; /* Cor de fundo vermelho */
+  color: white; /* Cor do texto */
+  padding: 8px 16px; /* Espaçamento interno ajustado */
+  font-size: 14px; /* Tamanho da fonte menor */
+  border: none; /* Remove borda */
+  border-radius: 20px; /* Borda arredondada mais suave */
+  cursor: pointer; /* Cursor em forma de mãozinha */
+  transition: background-color 0.3s, transform 0.2s; /* Transições suaves */
+}
+
+#logoutBtn:hover {
+  background-color: #ff6b81; /* Cor de fundo ao passar o mouse */
+  transform: scale(1.05); /* Leve aumento de tamanho */
+}
+
+#logoutBtn:active {
+  background-color: #ff4757; /* Cor original ao clicar */
+  transform: scale(1); /* Retorna ao tamanho original */
+}
