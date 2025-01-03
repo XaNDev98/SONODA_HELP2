@@ -427,4 +427,4 @@ body {
     animation: bounceColor 0.8s ease-out, blinkEffect 1s ease-in-out; /* Combina bounceColor e blinkEffect */
     transition: background-color 0.3s ease-in-out;
 } 
-  
+

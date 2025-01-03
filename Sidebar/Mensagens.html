@@ -6,7 +6,8 @@
     <title>SONODA HELP</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Ícones -->
-    <link rel="stylesheet" href="../Style/Style.css">  
+    <link rel="stylesheet" href="../Style/Style.css">   
+    <link rel="stylesheet" href="../Style/style_resoluções.css"> 
     <script src="../index.js" defer></script>
     <link rel="icon" href="../adress/a.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> 
@@ -57,9 +58,9 @@
             </ul>
             
             <!-- "Mensagens Prontas" fixado na parte inferior da sidebar -->
-            <div class="position-absolute" style="bottom: 5px; margin-right: -5px;">
+            <div class="position-absolute" style="bottom: 0; left: 0; width: 100%;">
                 <ul class="nav flex-column">
-                    <li class="nav-item"><a href="Sidebar/Mensagens.html" class="nav-link"><i class="fas fa-comment"></i> Mensagens</a></li>
+                    <li class="nav-item"><a href="../Sidebar/Mensagens.html" class="nav-link"><i class="fas fa-comment"></i> Mensagens </a></li>
                 </ul>
             </div>
         </div>
@@ -151,9 +152,9 @@
             </div> 
             <div class="command-list" id="ChamadoContent"> 
                 <br><br><h5 class="font-weight-bold">NEGOCIAÇÕES</h5><br>
-                <div class="command-item"> 
-                    <span><strong>FEIJÃO:</strong> MENU > CONFIGURAÇÃO > CONFIGURAÇÃO DE REDE.</span>
-                    <button class="btn btn-primary btn-sm" onclick="copyText('FEIJÃO: MENU > CONFIGURAÇÃO > CONFIGURAÇÃO DE REDE.')">
+                <div class="command-item">
+                    <span><strong>ALMOÇO: </strong>Estou em meu intervalo de almoço, mas assim que retornar, respondo sua mensagem. Fique tranquilo, logo volto para te ajudar! </span>
+                    <button class="btn btn-primary btn-sm" onclick="copyText('Estou em meu intervalo de almoço, mas assim que retornar, respondo sua mensagem. Fique tranquilo, logo volto para te ajudar!', this)">
                         <i class="fas fa-copy copy-icon"></i>
                     </button>
                 </div>
@@ -282,26 +283,22 @@ window.onload = function() {
     document.getElementById(activeTab).classList.add('active', 'show');
     document.getElementById(`mens_${activeTab.toLowerCase()}`).classList.add('active');
 }; 
-function toggleMenu(menu) {
-  // Selecionar todos os submenus
-  const submenus = document.querySelectorAll(".nav .nav-item ul");
-  const submenu = document.getElementById(menu + "-submenu");
-
-  // Esconder todos os submenus, exceto o clicado
-  submenus.forEach((sub) => {
-    if (sub !== submenu) {
-      sub.style.display = "none";
-    }
-  });
-
-  // Alterar o estado de exibição do submenu clicado
-  if (submenu.style.display === "none" || submenu.style.display === "") {
-    submenu.style.display = "block";
-  } else {
-    submenu.style.display = "none";
-  }
+function copyText(link, button) {
+    // Usando a API Clipboard moderna
+    navigator.clipboard.writeText(link)
+        .then(() => {
+            // Adiciona a classe de piscar no botão
+            button.classList.add('blink');
+            
+            // Remove a classe após 1 segundo para restaurar o estado original
+            setTimeout(() => {
+                button.classList.remove('blink');
+            }, 1000);
+        })
+        .catch(err => {
+            console.error('Erro ao copiar o link:', err);
+        });
 }
-
     </script>
 </body>
 </html>
