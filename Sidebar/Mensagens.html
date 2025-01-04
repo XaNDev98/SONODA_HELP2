@@ -6,10 +6,13 @@
     <title>SONODA HELP</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Ícones -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <link rel="stylesheet" href="../Style/Style.css">   
     <link rel="stylesheet" href="../Style/Responsive.css">  
-    <script src="../index.js" defer></script>
+    <script src="../index.js" defer></script> 
+    <script src="../JavaScript/PDF-mensagens.js" defer></script>
     <link rel="icon" href="../adress/a.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> 
 </head>
@@ -118,6 +121,20 @@
                     <button class="btn btn-primary btn-sm" onclick="copyText('Meu expediente chegou ao fim, e por falta de comunicação estarei encerrando esse chamado. Caso seja necessário pode abrir outro chamado', this)">
                         <i class="fas fa-copy copy-icon"></i>
                     </button>
+                </div> 
+                <div class="command-item">
+                    <span><strong>CLIENTE ANALISANDO: </strong>Olá, gostaria de saber se teve a oportunidade de analisar o assunto da nossa última conversa. Fico à disposição para qualquer dúvida. Aguardo seu retorno! :)  </span>
+                    <button class="btn btn-primary btn-sm" onclick="copyText('Olá, gostaria de saber se teve a oportunidade de analisar o assunto da nossa última conversa. Fico à disposição para qualquer dúvida. Aguardo seu retorno! :)', this)">
+                        <i class="fas fa-copy copy-icon"></i>
+                    </button>
+                </div>
+            </div> 
+            <div class="command-list" id="ChamadoContent">
+                <div class="command-item">
+                    <span><strong>FALTA DE RETORNO: </strong> Por falta de comunicação estarei encerrando esse chamado. Caso seja necessário pode abrir outro chamado, até mais!</span>
+                    <button class="btn btn-primary btn-sm" onclick="copyText('Por falta de comunicação estarei encerrando esse chamado. Caso seja necessário pode abrir outro chamado, até mais!p', this)">
+                        <i class="fas fa-copy copy-icon"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -150,22 +167,155 @@
                 </span>
             </div> 
             <div class="command-list" id="ChamadoContent"> 
-                <br><br><h5 class="font-weight-bold">NEGOCIAÇÕES</h5><br>
+                <br><br><h5 class="font-weight-bold">PROPOSTA</h5><br>
                 <div class="command-item">
-                    <span><strong>ALMOÇO: </strong>Estou em meu intervalo de almoço, mas assim que retornar, respondo sua mensagem. Fique tranquilo, logo volto para te ajudar! </span>
-                    <button class="btn btn-primary btn-sm" onclick="copyText('Estou em meu intervalo de almoço, mas assim que retornar, respondo sua mensagem. Fique tranquilo, logo volto para te ajudar!', this)">
+                    <span><strong>PROPOSTA CLIENTE NOVO: </strong>Este pacote inclui IMPLANTAÇÃO, TREINAMENTO e SUPORTE HUMANIZADO E ILIMITADO. <br>
+                        Oferecemos a possibilidade de instalação conforme a necessidade da empresa.
+                        Não trabalhamos com termos de fidelização, ou seja, caso desejem cancelar, não cobramos taxas de cancelamento. <br>
+                        A Sonoda Ponto é uma empresa com alcance nacional, atendendo todo o Brasil com qualidade e comprometimento. Confie sua empresa aos nossos cuidados.
+                    </span>
+                    <button class="btn btn-primary btn-sm" onclick="copyText('Este pacote inclui IMPLANTAÇÃO, TREINAMENTO e SUPORTE HUMANIZADO E ILIMITADO. Oferecemos a possibilidade de instalação conforme a necessidade da empresa. \nNão trabalhamos com termos de fidelização, ou seja, caso desejem cancelar, não cobramos taxas de cancelamento. \nA Sonoda Ponto é uma empresa com alcance nacional, atendendo todo o Brasil com qualidade e comprometimento. Confie sua empresa aos nossos cuidados.', this)">
+                        <i class="fas fa-copy copy-icon"></i> 
+                    </button> 
+                </div> 
+            </div> 
+            <br><br><h5 class="font-weight-bold">SISTEMA DE PONTO</h5><br>
+            <div class="command-item">
+                <span>
+                    Atualmente trabalhamos com dois sistemas de ponto: o sistema de ponto web PRO e o sistema de ponto web ULTIMATE. <br>
+                    Ambos fazem a gestão de ponto e já são homologados à nova portaria 671, que utiliza somente o CPF. <br>
+                    Porém eles possuem alguns diferenciais, como: <br>
+                    
+                    <br><strong>WEB PRÓ POSSUI:</strong><br><br>
+                    - Backup automático em Nuvem, ou seja, sem chance das informações serem apagadas ou perdidas;<br>
+                    - Sistema totalmente na Web;<br>
+                    - Inclusão de ponto por QR Code;<br>
+                    - Inclusão de ponto por aplicativo com Geolocalização e foto em tempo real;<br>
+                    - Decomposição de cálculos em tela;<br>
+                    - Comprovante de ponto por E-mail;<br>
+                    - Feriados facultativos;<br>
+                    - Inclusão de ponto sem Internet/por Perímetro;<br>
+                    - Solicitar foto ao incluir ponto;<br>
+                    - Envio de atestado pelo aplicativo;<br>
+                    - Assinatura eletrônica do cartão ponto;<br>
+                    - Múltiplos contratos por funcionário;<br>
+                    - Feriados por cidades;<br>
+                    - Dashboard de rotatividade;<br>
+                    - Hierarquia de estruturas no aplicativo.<br><br>
+                    
+                    <strong>WEB ULTIMATE POSSUI:</strong><br><br>
+                    - Todos os recursos do WEB PRÓ;<br>
+                    - Gestão de Arquivos;<br><br>
+                    
+                    <strong>DIFERENCIAIS DO ULTIMATE:</strong><br><br>
+                    - Configurações de horário que passam da 00:00;<br>
+                    - Gestão de Arquivos (pago à parte);<br>
+                    - Reconhecimento facial online/offline (licença paga à parte);<br>
+                    - Pesquisas de QVT;<br>
+                    - Registro de atividades diárias (usado muito para motoristas);<br>
+                    - Feriados por departamentos;<br>
+                    - Logins separados por departamentos e empresas (caso a empresa possua mais de um CNPJ);<br>
+                    - Separação de extras após a meia-noite;<br>
+                    - Personalização de itens do sistema.<br>
+                </span>
+                <div>
+                    <button class="btn btn-primary btn-sm" onclick="copyText(`Atualmente trabalhamos com dois sistemas de ponto: o sistema de ponto web PRO e o sistema de ponto web ULTIMATE.
+            
+                    Ambos fazem a gestão de ponto e já são homologados à nova portaria 671, que utiliza somente o CPF.
+            
+                    Porém eles possuem alguns diferenciais, como:
+            
+                    WEB PRÓ POSSUI:
+                    - Backup automático em Nuvem, ou seja, sem chance das informações serem apagadas ou perdidas;
+                    - Sistema totalmente na Web;
+                    - Inclusão de ponto por QR Code;
+                    - Inclusão de ponto por aplicativo com Geolocalização e foto em tempo real;
+                    - Decomposição de cálculos em tela;
+                    - Comprovante de ponto por E-mail;
+                    - Feriados facultativos;
+                    - Inclusão de ponto sem Internet/por Perímetro;
+                    - Solicitar foto ao incluir ponto;
+                    - Envio de atestado pelo aplicativo;
+                    - Assinatura eletrônica do cartão ponto;
+                    - Múltiplos contratos por funcionário;
+                    - Feriados por cidades;
+                    - Dashboard de rotatividade;
+                    - Hierarquia de estruturas no aplicativo.
+            
+                    WEB ULTIMATE POSSUI:
+                    - Todos os recursos do WEB PRÓ;
+                    - Gestão de Arquivos.
+            
+                    DIFERENCIAIS DO ULTIMATE:
+                    - Configurações de horário que passam da 00:00;
+                    - Gestão de Arquivos (pago à parte);
+                    - Reconhecimento facial online/offline (licença paga à parte);
+                    - Pesquisas de QVT;
+                    - Registro de atividades diárias (usado muito para motoristas);
+                    - Feriados por departamentos;
+                    - Logins separados por departamentos e empresas (caso a empresa possua mais de um CNPJ);
+                    - Separação de extras após a meia-noite;
+                    - Personalização de itens do sistema.`, this)">
                         <i class="fas fa-copy copy-icon"></i>
                     </button>
+                    <button class="btn btn-danger btn-sm" onclick="DiferencaSistema()">
+                        <i class="fas fa-file-pdf"></i>
+                    </button>
                 </div>
+            </div>  
+            <br><br><h5 class="font-weight-bold">MIGRAÇÃO</h5><br>
+            <div class="command-item">  
+                <span><strong>MIGRAÇÃO OFF/WEB: </strong>Gostaria de aproveitar a oportunidade para apresentar a você, em nome da SONODA PONTO, o nosso sistema WEB – uma evolução do seu sistema atual offline. Com a versão web, não há necessidade de instalação local no computador, e o acesso pode ser feito de qualquer lugar, com login e senha para cada gestor. Além disso, você conta com backups em nuvem, proporcionando mais segurança e disponibilidade. Caso algo aconteça com a sua máquina, o sistema continuará acessível sem nenhum impacto, já que ele é totalmente baseado em nuvem. <br>
+                Nosso sistema é ainda mais completo para a gestão de funcionários. É possível monitorar afastamentos, férias, faltas e presenças com facilidade. Ele também tem gestão de arquivos (Adicional à parte) e permite o envio de holerites, atestados e outros documentos, como a assinatura eletrônica do cartão de ponto, garantindo praticidade e eficiência. <br>
+                Além disso, o sistema permite que os funcionários registrem seus pontos através de um aplicativo exclusivo no celular. Caso habilitado, é possível configurar um perímetro especial, com monitoramento via geolocalização, reconhecimento facial ou foto, aumentando a precisão e segurança. <br>
+                Outra grande vantagem é que, por ser em nuvem, não é necessário disponibilizar o computador para o suporte. Nós conseguimos resolver qualquer questão diretamente daqui. <br>
+                Quanto ao custo, ele é diferente do seu sistema atual, pois nosso sistema oferece recursos mais completos e funcionalidades avançadas que o sistema offline não conseguiria proporcionar. <br><br>
+                </span>
+                <button class="btn btn-primary btn-sm" onclick="copyText('Gostaria de aproveitar a oportunidade para apresentar a você, em nome da SONODA PONTO, o nosso sistema WEB – uma evolução do seu sistema atual offline. Com a versão web, não há necessidade de instalação local no computador, e o acesso pode ser feito de qualquer lugar, com login e senha para cada gestor. Além disso, você conta com backups em nuvem, proporcionando mais segurança e disponibilidade. Caso algo aconteça com a sua máquina, o sistema continuará acessível sem nenhum impacto, já que ele é totalmente baseado em nuvem. \nNosso sistema é ainda mais completo para a gestão de funcionários. É possível monitorar afastamentos, férias, faltas e presenças com facilidade. Ele também tem gestão de arquivos (Adicional à parte) e permite o envio de holerites, atestados e outros documentos, como a assinatura eletrônica do cartão de ponto, garantindo praticidade e eficiência.\nAlém disso, o sistema permite que os funcionários registrem seus pontos através de um aplicativo exclusivo no celular. Caso habilitado, é possível configurar um perímetro especial, com monitoramento via geolocalização, reconhecimento facial ou foto, aumentando a precisão e segurança.\nOutra grande vantagem é que, por ser em nuvem, não é necessário disponibilizar o computador para o suporte. Nós conseguimos resolver qualquer questão diretamente daqui.\nQuanto ao custo, ele é diferente do seu sistema atual, pois nosso sistema oferece recursos mais completos e funcionalidades avançadas que o sistema offline não conseguiria proporcionar.', this)">
+                    <i class="fas fa-copy copy-icon"></i> 
+                </button>  
             </div>
+        </div>
     </div>
-</div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <script>
+    <script> 
+  function searchContent() {
+    // Obtém o valor da pesquisa e converte para minúsculo
+    const searchQuery = document.getElementById('search-input').value.toLowerCase();
+    
+    // Seleciona todos os itens de comando, incluindo h5 e outros
+    const commandItems = document.querySelectorAll('.command-item, h5 ');
+    
+    // Itera sobre cada item e verifica se ele contém o texto da pesquisa
+    commandItems.forEach(item => {
+        const text = item.innerText.trim().toLowerCase();  // Garantindo que o texto não tenha espaços extras
+        
+        // Se o item contém o texto da pesquisa, exibe o item
+        if (text.includes(searchQuery)) {
+            item.style.display = '';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+
+// Associando a função ao evento de digitação
+document.getElementById('search-input').addEventListener('input', searchContent);
+
+
+// Associando a função ao evento de digitação
+document.getElementById('search-input').addEventListener('input', searchContent);
+
+
+// Associando a função ao evento de digitação
+document.getElementById('search-input').addEventListener('input', searchContent);
+
+
+
         // Função para alternar entre as abas
         function showTab(tabName) {
             const allTabs = document.querySelectorAll('.tab-pane');
@@ -316,7 +466,8 @@ function toggleMenu(menu) {
     
     // Exibe o conteúdo da aba clicada
     $('#' + tabId).addClass('active');
-}
+} 
+
 
     </script>
 </body>
