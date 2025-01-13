@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SONODA HELP</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Ícones -->
+    <link rel="stylesheet" href="../Style/Style.css">  
+    <link rel="stylesheet" href="../Style/Responsive.css">      
+    <link rel="stylesheet" href="../Style/comercial.css">  
+    <script src="../JavaScript/index.js" defer></script>  
+    <link rel="icon" href="adress/a.png" type="image/x-icon"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> 
+</head>
+<body> 
+    <!-- Header -->
+    <div class="header d-flex justify-content-between align-items-center">
+        <div class="logo">
+            <h4 class="m-0">
+                <img src="../adress/Sonoda Ponto.ico" alt="logo">  <span class="text-primary">SONODA HELP</span>
+            </h4>
+        </div>
+        <div>
+            <div>
+                <span><strong></strong> | <span class="tec-alexandre">Tec Alexandre</span></span>
+            </div>            
+        </div>
+    </div>
+
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div class="sidebar p-3" style="position: relative;">
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="../index.html" class="nav-link active"><i class="fas fa-home"></i>Home</a></li> 
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="video-link" onclick="toggleMenu('video', event)"><i class="fas fa-video"></i> Vídeo <i class="fas fa-chevron-down" id="video-arrow"></i></a>
+                        <ul id="video-submenu" class="nav flex-column" style="display: none;">
+                            <li class="nav-item"><a href="../Videos/Videos_OFF.html" class="nav-link" onclick="keepMenuOpen(event)">Ponto OFF</a></li>
+                            <li class="nav-item"><a href="../Videos/Video_Web.html" class="nav-link" onclick="keepMenuOpen(event)">Ponto WEB</a></li>
+                            <li class="nav-item"><a href="../Videos/Videos_AcadAcesso.html" class="nav-link" onclick="keepMenuOpen(event)">Academia / Acesso</a></li>
+                        </ul>
+                    </li> 
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="relogios-link" onclick="toggleMenu('relogios', event)"><i class="fas fa-clock"></i> Relógios <i class="fas fa-chevron-down" id="relogios-arrow"></i></a>
+                        <ul id="relogios-submenu" class="nav flex-column" style="display: none;">
+                            <li class="nav-item"><a href="../Rep/Control_id.html" class="nav-link" onclick="keepMenuOpen(event)">Control ID</a></li>
+                            <li class="nav-item"><a href="../Rep/Smartpoint.html" class="nav-link" onclick="keepMenuOpen(event)">Smart Point</a></li>
+                            <li class="nav-item"><a href="../Rep/Miniprint.html" class="nav-link" onclick="keepMenuOpen(event)">Miniprint</a></li> 
+                            <li class="nav-item"><a href="../Rep/Printpoint2.html" class="nav-link" onclick="keepMenuOpen(event)">PrintPoint 2</a></li>
+                            <li class="nav-item"><a href="../Rep/Printpoint3.html" class="nav-link" onclick="keepMenuOpen(event)">PrintPoint 3</a></li>
+                        </ul>
+                    </li> 
+                    <li class="nav-item"><a href="../Sidebar/Resoluçao.html" class="nav-link"><i class="fas fa-lightbulb"></i> Resoluções</a></li> 
+                    <li class="nav-item"><a href="../Sidebar/comercial.html" class="nav-link"><i class="fas fa-coins"></i> Comercial</a></li>
+                    <li class="nav-item"><a href="../Sidebar/calculadora.html" class="nav-link"><i class="fas fa-calculator"></i> Calculadora</a></li> 
+                    <li class="nav-item"><a href="https://sonodaponto.com.br/pis/" target="_blank" class="nav-link"><i class="fas fa-file-alt"></i> Gerar PIS</a></li> 
+                </li>
+            </ul>
+            
+            <!-- "Mensagens " fixado na parte inferior da sidebar -->
+            <div class="position-absolute" style="bottom: 5px; margin-right: -5px;">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="../Sidebar/Mensagens.html" class="nav-link"><i class="fas fa-comment"></i> Mensagens</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content container-fluid">
+            <h5 class="font-weight-bold">PRINCIPAIS SISTEMAS</h5><br>
+            <ul class="nav nav-tabs mb-4">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" id="sistemas-tab" data-toggle="tab" onclick="showTab('Diferença_sistemas')">SISTEMAS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="Pontos_Fracos" data-toggle="tab" onclick="showTab('desvantagens')"></a>
+                </li>
+            </ul> <br>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+               <!-- Sistemas - Conteúdo Completo -->
+               <div id="Diferença_sistemas" class="tab-pane active">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr style="background-color: #007BFF; color: white;">
+                            <th>Funcionalidades</th>
+                            <th>Ponto Web</th>
+                            <th>PontoMais</th>
+                            <th>RHiD</th>
+                            <th>TANGERINO</th>
+                            <th>TopData</th>
+                            <th>Kairos dimep</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Decompor cálculos</td><td><strong class="highlight">X</strong></td><td></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>Envio de Cartão Ponto por e-mail</td><td></td><td><strong class="highlight">X</strong></td><td></td><td><strong class="highlight">X</strong></td><td></td><td></td></tr>
+                        <tr><td>Realizar marcação sem acessar o sistema pelo navegador com QR Code</td><td></td><td><strong class="highlight">X</strong></td><td></td><td><strong class="highlight">X</strong></td><td></td><td></td></tr>
+                        <tr><td>Indicadores configuráveis - Dashboard</td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td></td><td></td><td><strong class="highlight">X</strong></td><td></td></tr>
+                        <tr><td>Registro de ponto pelo navegador com reconhecimento facial</td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>Registro de ponto pelo navegador por QR Code</td><td></td><td><strong class="highlight">X</strong></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>Registro de ponto com QR Code em aplicativo (checkin ou quioski)</td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td></td><td></td><td></td></tr>
+                        <tr><td>Troca de mensagens entre Gerente e Funcionário de equipe</td><td></td><td><strong class="highlight">X</strong></td><td></td><td><strong class="highlight">X</strong></td><td></td><td></td></tr>
+                        <tr><td>Feriado facultativo</td><td><strong class="highlight">X</strong></td><td></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>Cercas virtuais/pontos de referências/perímetro / Locais de Interesse</td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td></td><td></td></tr>
+                        <tr><td>Alerta de batida dentro ou fora do perímetro/cerca</td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td></td><td></td></tr>
+                        <tr><td>Alerta de localização editada ao realizar batida por geolocalização</td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>Possui mais de 10 batidas por dia (Fizemos exemplo pessoalmente com 12 marcações)</td><td></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td></td></tr>
+                        <tr><td>Alertas por email e push de notificações como: Entradas/saídas (somente no navegador), Atrasos, Faltas, Resumo de Jornada, solicitações enviadas</td><td></td><td><strong class="highlight">X</strong></td><td></td><td></td><td><strong class="highlight">X</strong></td><td></td></tr>
+                        <tr><td>Notificação de registro de Ponto no APP</td><td><strong class="highlight">X</strong></td><td></td><td></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td></td></tr>
+                        <tr><td>Geração de QR Code no sistema</td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td></td><td></td></tr>
+                        <tr><td>Alertas por email de solicitações não respondidas</td><td><strong class="highlight">X</strong></td><td></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>Cadastro de biometrias para funcionários</td><td><strong class="highlight">X</strong></td><td></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td></tr>
+                        <tr><td>Visualização do mapa na marcação por geolocalização no app</td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td></td></tr>
+                        <tr><td>Visualização do mapa na marcação por geolocalização</td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td></tr>
+                        <tr><td>Duplicidade de PIS por empresas diferentes</td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td></td><td></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td></tr>
+                        <tr><td>Aplicativos para iOS e Android</td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td></td></tr>
+                        <tr><td>Centro de Custos</td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td></td><td></td><td><strong class="highlight">X</strong></td></tr>
+                        <tr><td>Realizar login no aplicativo por biometria</td><td><strong class="highlight">X</strong></td><td></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>Realizar marcação por QR Code no aplicativo sem realizar login</td><td></td><td><strong class="highlight">X</strong></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>Batida Offline com geolocalização e foto</td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td></td><td></td><td><strong class="highlight">X</strong></td><td></td></tr>
+                        <tr><td>Restrição por dispositivo ou Endereço IP</td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td></td><td><strong class="highlight">X</strong></td><td></td><td></td></tr>
+                        <tr><td>Notificar o funcionário antes de cada registro de ponto</td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>Escalas mensais</td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>Escalas cíclicas</td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td></tr>
+                        <tr><td>Criação de novas colunas específicas (Colunas Mix)</td><td><strong class="highlight">X</strong></td><td></td><td><strong class="highlight">X</strong></td><td></td><td></td><td></td></tr>
+                        <tr><td>Banco de horas encerrado por período</td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td></td><td><strong class="highlight">X</strong></td><td></td><td><strong class="highlight">X</strong></td></tr>
+                        <tr><td>Multiplicação por faixa de extras em Banco de Horas</td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td></td></tr>
+                        <tr><td>Comunicação agendada</td><td><strong class="highlight">X</strong></td><td></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>Empresas Relacionadas</td><td><strong class="highlight">X</strong></td><td></td><td><strong class="highlight">X</strong></td><td></td><td><strong class="highlight">X</strong></td><td></td></tr>
+                        <tr><td>Monitoramento de Ponto no APP</td><td><strong class="highlight">X</strong></td><td></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td></td></tr>
+                        <tr><td>Demonstrativo de Ponto por período</td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td></td><td><strong class="highlight">X</strong></td><td></td><td></td></tr>
+                        <tr><td>Gestão de cartões</td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td></td><td></td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td></tr>
+                        <tr><td>Controle de escala</td><td><strong class="highlight">X</strong></td><td><strong class="highlight">X</strong></td><td></td><td></td><td></td><td><strong class="highlight">X</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+              
+              
+
+                
+
+             <!-- Atualizações -->
+             <div id="desvantagens" class="tab-pane">
+
+            </div>
+
+
+
+</body>
+</html>
