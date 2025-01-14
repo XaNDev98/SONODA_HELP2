@@ -109,9 +109,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 addActiveDot(link); // Adiciona a bolinha com ícone ao link correspondente
             }
         });
-    }
-});
-
+    } 
+     // Submenu de checklist
+const checklistSubmenu = document.getElementById("checklist-submenu");
+const checklistLinks = checklistSubmenu.querySelectorAll('a'); // Corrigido para checklistSubmenu
+if (currentPath.includes("Treinamento")) {
+    checklistSubmenu.style.display = "block";
+    checklistLinks.forEach(link => {
+        if (currentPath.includes(link.getAttribute("href").split('/').pop())) {
+            addActiveDot(link); // Adiciona a bolinha com ícone ao link correspondente
+        }
+    });
+}
+}); 
 function showTab(tabId) {
  // Oculta todas as abas
  const tabs = document.querySelectorAll('.tab-content > .tab-pane');
@@ -233,9 +243,5 @@ function toggleErrorDescription(targetId) {
         targetDescription.style.display = 'none';
     }
 };  
-if (localStorage.getItem("isLoggedIn") !== "true") {
-    window.location.href = "../Login/login.html"; // Redireciona para a página de login
-} else {
-    // Se estiver logado, pode exibir a página normalmente
-    // Aqui você pode incluir outras funcionalidades ou ajustes necessários.
-}
+
+

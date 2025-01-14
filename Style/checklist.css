@@ -1,0 +1,171 @@
+/* Estilo geral da checklist */
+.checklist-container {
+  max-width: 100%;
+  margin: 3px auto;
+  background: #fefefe;
+  border-radius: 15px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  font-family: 'Poppins', sans-serif;
+  position: relative; /* Necessário para o posicionamento do botão dentro do container */
+  font-size: 14px; /* Ajustado para uma leitura mais confortável */ 
+  margin-top: -p20px;
+}
+
+/* Cabeçalho da checklist */
+.checklist-header {
+  background: #007bff;
+  color: white;
+  padding: 25px;
+  border-radius: 15px 15px 0 0;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Lista de itens da checklist */
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+}
+
+/* Estilo dos itens da checklist */
+.checklist li {
+  display: flex;
+  align-items: center;
+  padding: 18px 22px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  margin-bottom: 18px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.checklist li:hover {
+  background-color: #e7f3fe;
+  transform: translateX(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do checkbox customizado */
+.checklist-checkbox {
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  border: 2px solid #007bff;
+  position: relative;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.checklist-checkbox:checked {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.checklist-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  transform: scale(1);
+  animation: checkmark 0.3s ease forwards;
+}
+
+@keyframes checkmark {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Estilo do texto do label */
+.checklist-label {
+  font-size: 18px;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+/* Estilo do botão de copiar */
+/* Estilo do botão de copiar */
+.btn-copy {
+  font-size: 0.8rem; /* Ajuste do tamanho da fonte para algo mais legível */
+  background: linear-gradient(135deg, #0F7BDE, #2b8be5); /* Efeito gradiente para um visual mais moderno */
+  color: white;
+  border: none;
+  padding: 10px 18px; /* Ajustei o padding para diminuir o tamanho do botão */
+  cursor: pointer;
+  border-radius: 10px; /* Bordas mais arredondadas para suavizar o visual */
+  transition: all 0.3s ease;
+  position: absolute;
+  right: 30px; /* Ajustado para mais distância da borda direita */
+  bottom: 2px; /* Ajustado para mais distância da parte inferior */
+  font-weight: bold; /* Texto em negrito para dar mais destaque */
+  letter-spacing: 0.5px; /* Leve espaçamento entre letras para melhorar a legibilidade */
+  margin-top: 5px; /* Garantindo a margem de 5px do topo para os outros elementos */
+}
+
+/* Estilo do botão de copiar ao passar o mouse (hover) */
+.btn-copy:hover {
+  background: linear-gradient(135deg, #2b8be5, #0F7BDE); /* Inverte o gradiente ao passar o mouse */
+  transform: translateY(-3px); /* Sobe o botão levemente para criar efeito de interação */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para dar o efeito de flutuação */
+}
+
+/* Estilo do botão de copiar ao clicar (active) */
+.btn-copy:active {
+  transform: translateY(1px); /* Diminui o deslocamento para dar efeito de pressionamento */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra mais suave no estado ativo */
+}
+
+/* Estilo do ícone do botão (se houver) */
+.copy-icon {
+  font-size: 1.4rem; /* Aumenta o tamanho do ícone para dar mais destaque */
+  margin-right: 8px; /* Distância entre o ícone e o texto */
+}
+
+
+
+/* Adicionando animação suave ao carregar os itens da lista */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.checklist li {
+  animation: slideIn 0.5s ease-out;
+} 
+/* Estilo personalizado para o ícone de "feito" */
+.custom-check-icon {
+  color: #28a745; /* Cor verde personalizada para o ícone */
+  font-size: 1.3rem; /* Tamanho do ícone maior */
+  margin-left: 8px; /* Espaço entre o texto e o ícone */
+  transition: all 0.3s ease; /* Transição suave ao adicionar o ícone */
+}
+
+.custom-check-icon:hover {
+  color: #218838; /* Cor do ícone ao passar o mouse */
+  transform: scale(1.2); /* Leve aumento de tamanho ao passar o mouse */
+}

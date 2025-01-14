@@ -30,45 +30,47 @@
     </div>
 
     <div class="d-flex">
-    <!-- Sidebar -->
-    <div class="sidebar p-3" style="position: relative;">
+      <!-- Sidebar -->
+      <div class="sidebar p-3" style="position: relative;">
         <ul class="nav flex-column">
-            <li class="nav-item">
-                <a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+            <li class="nav-item"><a href="../index.html" class="nav-link active"><i class="fas fa-home"></i>Home</a></li> 
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="video-link" onclick="toggleMenu('video', event)"><i class="fas fa-video"></i> Vídeo <i class="fas fa-chevron-down" id="video-arrow"></i></a>
+                    <ul id="video-submenu" class="nav flex-column" style="display: none;">
+                        <li class="nav-item"><a href="../Videos/Videos_OFF.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Offline</a></li>
+                        <li class="nav-item"><a href="../Videos/Video_Web.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Web</a></li>
+                        <li class="nav-item"><a href="../Videos/Videos_AcadAcesso.html" class="nav-link" onclick="keepMenuOpen(event)">Demais Sistemas</a></li>
+                    </ul>
+                </li> 
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="relogios-link" onclick="toggleMenu('relogios', event)"><i class="fas fa-clock"></i> Relógios <i class="fas fa-chevron-down" id="relogios-arrow"></i></a>
+                    <ul id="relogios-submenu" class="nav flex-column" style="display: none;">
+                        <li class="nav-item"><a href="../Rep/Control_id.html" class="nav-link" onclick="keepMenuOpen(event)">Control ID</a></li>
+                        <li class="nav-item"><a href="../Rep/Smartpoint.html" class="nav-link" onclick="keepMenuOpen(event)">Smart Point</a></li>
+                        <li class="nav-item"><a href="../Rep/Miniprint.html" class="nav-link" onclick="keepMenuOpen(event)">Miniprint</a></li> 
+                        <li class="nav-item"><a href="../Rep/Printpoint2.html" class="nav-link" onclick="keepMenuOpen(event)">PrintPoint 2</a></li>
+                        <li class="nav-item"><a href="../Rep/Printpoint3.html" class="nav-link" onclick="keepMenuOpen(event)">PrintPoint 3</a></li>
+                    </ul>
+                </li> 
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="checklist-link" onclick="toggleMenu('checklist', event)"><i class="fas  fa-check"></i> Checklist <i class="fas fa-chevron-down" id="video-arrow"></i></a>
+                    <ul id="checklist-submenu" class="nav flex-column" style="display: none;">
+                        <li class="nav-item"><a href="../Treinamento/Sistema_OFF.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Offline</a></li>
+                        <li class="nav-item"><a href="../Treinamento/Sistema_WEB.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Web</a></li>
+                        <li class="nav-item"><a href="../Treinamento/Sistema_acad_acess_escola.html" class="nav-link" onclick="keepMenuOpen(event)">Demais Sistemas</a></li>
+                    </ul>
+                </li>  
+                <li class="nav-item"><a href="../Sidebar/Resoluçao.html" class="nav-link"><i class="fas fa-lightbulb"></i> Resoluções</a></li> 
+                <li class="nav-item"><a href="../Sidebar/comercial.html" class="nav-link"><i class="fas fa-coins"></i> Comercial</a></li>
+                <li class="nav-item"><a href="../Sidebar/calculadora.html" class="nav-link"><i class="fas fa-calculator"></i> Calculadora</a></li> 
+                <li class="nav-item"><a href="https://sonodaponto.com.br/pis/" target="_blank" class="nav-link"><i class="fas fa-file-alt"></i> Gerar PIS</a></li> 
             </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link" id="video-link" onclick="toggleMenu('video')">
-                    <i class="fas fa-video"></i> Vídeo <i class="fas fa-chevron-down" id="video-arrow"></i>
-                </a>
-                <ul id="video-submenu" class="nav flex-column" style="display: none;">
-                    <li class="nav-item"><a href="../Videos/Videos_OFF.html" class="nav-link">Ponto OFF</a></li>
-                    <li class="nav-item"><a href="../Videos/Video_Web.html" class="nav-link">Ponto WEB</a></li>
-                    <li class="nav-item"><a href="../Videos/Videos_AcadAcesso.html" class="nav-link">Academia / Acesso</a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link" id="relogios-link" onclick="toggleMenu('relogios')">
-                    <i class="fas fa-clock"></i> Relógios <i class="fas fa-chevron-down" id="relogios-arrow"></i>
-                </a>
-                <ul id="relogios-submenu" class="nav flex-column" style="display: none;">
-                    <li class="nav-item"><a href="../Rep/Control_id.html" class="nav-link">Control ID</a></li>
-                    <li class="nav-item"><a href="../Rep/Smartpoint.html" class="nav-link">Smart Point</a></li>
-                    <li class="nav-item"><a href="../Rep/Miniprint.html" class="nav-link">Miniprint</a></li> 
-                    <li class="nav-item"><a href="../Rep/Printpoint2.html" class="nav-link">PrintPoint 2</a></li>
-                    <li class="nav-item"><a href="../Rep/Printpoint3.html" class="nav-link">PrintPoint 3</a></li>
-                </ul>
-            </li>
-            <li class="nav-item"><a href="../Sidebar/Resoluçao.html" class="nav-link"><i class="fas fa-lightbulb"></i> Resoluções</a></li> 
-            <li class="nav-item"><a href="../Sidebar/comercial.html" class="nav-link"><i class="fas fa-coins"></i> Comercial</a></li>
-            <li class="nav-item"><a href="../Sidebar/calculadora.html" class="nav-link"><i class="fas fa-calculator"></i> Calculadora</a></li>
-            <li class="nav-item"><a href="https://sonodaponto.com.br/pis/" target="_blank" class="nav-link"><i class="fas fa-file-alt"></i> Gerar PIS</a></li>
         </ul>
- 
-
+        
         <!-- "Mensagens " fixado na parte inferior da sidebar -->
         <div class="position-absolute" style="bottom: 5px; margin-right: -5px;">
             <ul class="nav flex-column">
-                <li class="nav-item"><a href="../Sidebar/Mensagens.html" class="nav-link"><i class="fas fa-comment"></i>Mensagens</a></li> 
+                <li class="nav-item"><a href="../Sidebar/Mensagens.html" class="nav-link"><i class="fas fa-comment"></i> Mensagens</a></li>
             </ul>
         </div>
     </div>

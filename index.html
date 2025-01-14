@@ -47,9 +47,9 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link" id="video-link" onclick="toggleMenu('video', event)"><i class="fas fa-video"></i> Vídeo <i class="fas fa-chevron-down" id="video-arrow"></i></a>
                         <ul id="video-submenu" class="nav flex-column" style="display: none;">
-                            <li class="nav-item"><a href="Videos/Videos_OFF.html" class="nav-link" onclick="keepMenuOpen(event)">Ponto OFF</a></li>
-                            <li class="nav-item"><a href="Videos/Video_Web.html" class="nav-link" onclick="keepMenuOpen(event)">Ponto WEB</a></li>
-                            <li class="nav-item"><a href="Videos/Videos_AcadAcesso.html" class="nav-link" onclick="keepMenuOpen(event)">Academia / Acesso</a></li>
+                            <li class="nav-item"><a href="Videos/Videos_OFF.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Offline</a></li>
+                            <li class="nav-item"><a href="Videos/Video_Web.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Web</a></li>
+                            <li class="nav-item"><a href="Videos/Videos_AcadAcesso.html" class="nav-link" onclick="keepMenuOpen(event)">Demais Sistemas</a></li>
                         </ul>
                     </li> 
                     <li class="nav-item">
@@ -62,6 +62,14 @@
                             <li class="nav-item"><a href="Rep/Printpoint3.html" class="nav-link" onclick="keepMenuOpen(event)">PrintPoint 3</a></li>
                         </ul>
                     </li> 
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="checklist-link" onclick="toggleMenu('checklist', event)"><i class="fas fa-check"></i> Checklist <i class="fas fa-chevron-down" id="video-arrow"></i></a>
+                        <ul id="checklist-submenu" class="nav flex-column" style="display: none;">
+                            <li class="nav-item"><a href="Treinamento/Sistema_OFF.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Offline</a></li>
+                            <li class="nav-item"><a href="Treinamento/Sistema_WEB.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Web</a></li>
+                            <li class="nav-item"><a href="Treinamento/Sistema_acad_acess_escola.html" class="nav-link" onclick="keepMenuOpen(event)">Demais Sistemas</a></li>
+                        </ul>
+                    </li>  
                     <li class="nav-item"><a href="Sidebar/Resoluçao.html" class="nav-link"><i class="fas fa-lightbulb"></i> Resoluções</a></li> 
                     <li class="nav-item"><a href="Sidebar/comercial.html" class="nav-link"><i class="fas fa-coins"></i> Comercial</a></li>
                     <li class="nav-item"><a href="Sidebar/calculadora.html" class="nav-link"><i class="fas fa-calculator"></i> Calculadora</a></li> 
@@ -681,16 +689,6 @@
         </div> 
     </div>
 </div>
-    <Script> 
-            // Quando o botão de sair for clicado
-        document.getElementById("logoutBtn").addEventListener("click", function() {
-        // Remover a chave de login do localStorage
-        localStorage.removeItem("isLoggedIn");
 
-        // Redirecionar para a página de login
-        window.location.href = "Login/login.html";
-});
-
-    </Script>
 </body>
 </html>
