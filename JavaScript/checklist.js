@@ -1,23 +1,4 @@
 
-document.addEventListener('DOMContentLoaded', () => {
-     // Adiciona eventos aos checkboxes
-     document.querySelectorAll('.checklist-checkbox').forEach((checkbox) => {
-         checkbox.addEventListener('change', () => {
-             const label = checkbox.nextElementSibling; // Captura o label associado ao checkbox
-             if (label) { 
-                 if (checkbox.checked) {
-                     // Marca a tarefa como concluída e aguarda cópia do texto para mostrar o ícone
-                     label.innerHTML = `${label.textContent.trim()} <span class="to-copy">( Feito ) </span> <i class="fas fa-check-circle custom-check-icon"></i>`;
-                 } else {
-                     // Remove o ícone e o texto 'feito' ao desmarcar
-                     label.innerHTML = label.textContent.replace(/<i class="fas fa-check-circle custom-check-icon"><\/i>/, '').replace(/<span class="to-copy">✔️<\/span>/, '').trim();
-                 }
-             } else {
-                 console.error('Label não encontrado para o checkbox:', checkbox);
-             }
-         });
-     });
- 
      // Adiciona evento de cópia para mostrar o ícone depois da cópia
      document.addEventListener('copy', (event) => {
          // Verifica se o texto copiado contém o ícone '✔️' ou o símbolo 'feito'
@@ -40,29 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
      });
      document.getElementById(tabId).classList.add('active');
  }
- 
- document.addEventListener('DOMContentLoaded', () => {
-     // Adiciona eventos aos checkboxes
-     document.querySelectorAll('.checklist-checkbox').forEach((checkbox) => {
-         checkbox.addEventListener('change', () => {
-             const label = checkbox.nextElementSibling; // Captura o label associado ao checkbox
-             if (label) { 
-                 if (checkbox.checked) {
-                     // Marca a tarefa como concluída e aguarda cópia do texto para mostrar o ícone
-                     label.innerHTML = `${label.textContent.trim()} <span class="to-copy">( Feito ) </span> <i class="fas fa-check-circle custom-check-icon"></i>`;
-                 } else {
-                     // Remove o ícone e o texto 'feito' ao desmarcar
-                     label.innerHTML = label.textContent.replace(/<i class="fas fa-check-circle custom-check-icon"><\/i>/, '').replace(/<span class="to-copy">✔️<\/span>/, '').trim();
-                 }
-             } else {
-                 console.error('Label não encontrado para o checkbox:', checkbox);
-             }
-         });
-     });
- });
- 
- 
-     // Função para copiar o texto das tarefas concluídas
+ // Função para copiar o texto das tarefas concluídas
      window.copyText = function () {
          const completedTasks = [];
          document.querySelectorAll('.checklist-checkbox:checked').forEach((checkbox) => {
@@ -90,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
                  .catch((err) => console.error('Erro ao copiar checklist:', err));
          }
      }; 
- });  
+
  // Função para alternar entre as abas
  function showTab(tabId) {
      // Remove a classe 'active' de todas as abas
@@ -144,22 +103,50 @@ function resetCheckboxes() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Adiciona eventos aos checkboxes
-  document.querySelectorAll('.checklist-checkbox').forEach((checkbox) => {
-      checkbox.addEventListener('change', () => {
-          const label = checkbox.nextElementSibling; // Captura o label associado ao checkbox
-          if (label) {
-              if (checkbox.checked) {
-                  // Marca a tarefa como concluída e aguarda cópia do texto para mostrar o ícone
-                  label.innerHTML = `${label.textContent.trim()} <span class="to-copy">( Feito ) </span> <i class="fas fa-check-circle custom-check-icon"></i>`;
-              } else {
-                  // Remove o ícone e o texto 'feito' ao desmarcar
-                  label.innerHTML = label.textContent.replace(/<i class="fas fa-check-circle custom-check-icon"><\/i>/, '').replace(/<span class="to-copy">✔️<\/span>/, '').trim();
-              }
-          } else {
-              console.error('Label não encontrado para o checkbox:', checkbox);
-          }
-      });
-  });
+    // Adiciona eventos aos checkboxes
+    document.querySelectorAll('.checklist-checkbox').forEach((checkbox) => {
+        checkbox.addEventListener('change', () => {
+            const label = checkbox.nextElementSibling; // Captura o label associado ao checkbox
+            if (label) {
+                if (checkbox.checked) {
+                    // Marca a tarefa como concluída
+                    label.innerHTML = `${label.textContent.trim()} <span class="to-copy">( Feito )</span> <i class="fas fa-check-circle custom-check-icon"></i>`;
+                } else {
+                    // Remove o ícone e "( Feito )" ao desmarcar
+                    label.innerHTML = label.textContent
+                        .replace(/ \( Feito \)/, '') // Remove "( Feito )"
+                        .replace(/<span class="to-copy">\( Feito \)<\/span>/, '') // Remove span
+                        .replace(/<i class="fas fa-check-circle custom-check-icon"><\/i>/, '') // Remove ícone
+                        .trim();
+                }
+            } else {
+                console.error('Label não encontrado para o checkbox:', checkbox);
+            }
+        });
+    });
+
+    // Adiciona evento de cópia para mostrar o texto copiado
+    document.addEventListener('copy', () => {
+        const completedTasks = [];
+        document.querySelectorAll('.checklist-checkbox:checked').forEach((checkbox) => {
+            const label = checkbox.nextElementSibling; // Captura o label associado ao checkbox
+            if (label) {
+                const taskText = label.textContent.replace(/ \( Feito \)/, '').trim();
+                completedTasks.push(taskText); // Adiciona o texto da tarefa
+            }
+        });
+
+        if (completedTasks.length > 0) {
+            const textToCopy = completedTasks.join('\n');
+            navigator.clipboard.writeText(textToCopy)
+                .then(() => {
+                    console.log('Texto copiado:', textToCopy);
+                })
+                .catch((err) => console.error('Erro ao copiar checklist:', err));
+        }
+    });
 });
+
+
+
 
