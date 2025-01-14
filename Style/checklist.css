@@ -35,8 +35,8 @@
 /* Estilo dos itens da checklist */
 .checklist li {
   display: flex;
-  align-items: center; 
-  padding: 14px 10px;
+  align-items: center;
+  padding: 8px 10px;
   border-radius: 10px;
   border: 1px solid #ddd;
   background-color: #f8f5f5;
@@ -55,11 +55,11 @@
 /* Estilo do checkbox customizado */
 .checklist-checkbox {
   appearance: none;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background-color: #f0f0f0;
-  border: 2px solid #007bff;
+  border: 2px solid #333;
   position: relative;
   margin-right: 20px;
   cursor: pointer;
@@ -74,15 +74,28 @@
 .checklist-checkbox:checked::after {
   content: '';
   position: absolute;
-  top: 6px;
-  left: 6px;
-  width: 16px;
-  height: 16px;
+  top: px;
+  left: 2px;
+  width: 17px;
+  height: 17px;
   background-color: white;
   border-radius: 50%;
   transform: scale(1);
-  animation: checkmark 0.3s ease forwards;
-} 
+  animation: wave 0.6s ease forwards;
+}
+
+@keyframes wave {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 128, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(0, 128, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(0, 128, 255, 0);
+  }
+}
+
 .checklist-checkbox:checked + .checklist-label {
   color: #28a745;
   text-decoration: line-through;
@@ -90,23 +103,13 @@
   transition: transform 0.3s ease, color 0.3s ease, text-decoration 0.3s ease;
 }
 
-
-@keyframes checkmark {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 /* Estilo do texto do label */
 .checklist-label {
   font-size: 18px;
-  color: #333;
+  color: #0F7BDE;
   font-weight: 500;
   transition: color 0.3s ease;
-  letter-spacing: 0.5px;
+  margin: 0;
 }
 
 /* Estilo do botão de copiar */
