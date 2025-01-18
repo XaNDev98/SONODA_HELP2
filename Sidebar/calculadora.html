@@ -6,107 +6,138 @@
     <title>SONODA HELP</title>
     <link
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
     <link rel="stylesheet" href="../Style/Style.css" />
     <link rel="stylesheet" href="../Style/Responsive.css" />
     <script src="../JavaScript/index.js" defer></script> 
-    <script src="../Login/login.js" defer></script>
     <link rel="icon" href="../adress/a.png" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
-    <style>
-      body {
-        font-family: "Poppins", sans-serif; /* Fonte mais bonita */
-        background-color: #f4f6f9;
-      }
-      .entrada-saida {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
+  </head> 
+  <style>
+    strong {
+    color: #0F7BDE;
+    font-family: 'Poppins', sans-serif;
+}
+    .container {
+        max-width: 700px;
         background-color: #ffffff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-      .entrada-saida label {
-        font-weight: bold;
-        margin-bottom: 10px;
-      }
-      .entrada-saida input {
-        margin-right: 15px;
-        border-radius: 5px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-      }
-      .btn-adicionar,
-      .btn-calcular {
-        background-color: #007bff;
-        color: white;
-        border-radius: 5px;
-        padding: 12px 20px;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         font-size: 16px;
-        transition: background-color 0.3s;
-        display: inline-block;
-        margin-right: 15px;
-      }
-      .btn-adicionar:hover,
-      .btn-calcular:hover {
-        background-color: #0056b3;
-      }
-      .btn-adicionar i,
-      .btn-calcular i {
-        margin-right: 8px;
-      }
-      .btn-remover {
-        background-color: #dc3545;
-        color: white;
-        border-radius: 5px;
-        padding: 12px 20px;
-        font-size: 16px;
-        margin-left: 15px;
-        display: inline-block;
-        transition: background-color 0.3s;
-      }
-      .btn-remover:hover {
-        background-color: #c82333;
-      }
-      .container {
-        max-width: 800px;
-        margin: 30px auto;
-      }
-      #resultado {
-        background-color: #f8f9fa;
-        padding: 20px;
-        border-radius: 8px;
-        border: 1px solid #ddd;
-        font-size: 20px;
-        font-weight: bold;
-        margin-top: 25px;
+    }
+    h2 {
+        color: #080808;
         text-align: center;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-      .btn-container {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
+        font-size: 32px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    .form-group label {
+        color: #555;
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    .form-control {
+        border-radius: 10px;
+        padding: 12px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        width: 100%;
+        margin-bottom: 20px;
+        transition: border 0.3s ease;
+        background-color: #fafafa;
+    }
+    .form-control:focus {
+        border-color: #ff6f00;
+        outline: none;
+        background-color: #fff;
+    }
+    .btn {
+        border-radius: 12px;
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+    .btn-primary {
+        background-color: #ff6f00;
+        color: white;
+        border: none;
+    }
+    .btn-primary:hover {
+        background-color: #000000;
+    }
+    .btn-success {
+        background-color: #28a745;
+        color: white;
+        border: none; 
+    }
+    .btn-success:hover {
+        background-color: #000000;
+    }
+    .btn i {
+        font-size: 10px;        /* Ícone menor */
+        margin-right: 8px;      /* Espaço entre o ícone e o texto */
+        padding: 0;             /* Remove padding extra */
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    #entradasAdicionais {
         margin-top: 20px;
-      }
-
-      .header .logo {
-        display: flex;
+    }
+    #resultado {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #e9f7ef;
+        border-radius: 10px;
+        font-size: 18px;
+        color: #333;
+        border: 2px solid #0F7BDE;
+        text-align: center;
+        font-weight: bold;
+    }
+    .input-container button {
+        padding: 6px 12px;     /* Diminuindo o padding */
+        font-size: 12px;        /* Reduzindo o tamanho da fonte */
+        border-radius: 8px;     /* Bordas arredondadas */
+        font-weight: bold;
+        display: inline-flex;   /* Para alinhar o ícone e o texto de forma mais compacta */
         align-items: center;
-      }
-      .logo img {
-        margin-right: 10px;
-      }
-    </style>
-  </head>
+    }
+
+    .input-container button i {
+        font-size: 20px;        /* Ícone menor */
+        margin-right: 5px;      /* Espaço entre o ícone e o texto */
+    }
+
+    .btn-primary {
+        background-color: #ff0000;
+        color: white;
+        border: none;
+    }
+
+    .btn-success {
+        background-color: #3908eb;
+        color: white;
+        border: none;
+    }
+
+    .btn-primary:hover, .btn-success:hover {
+        opacity: 0.9;          /* Leve efeito de hover */
+    }
+</style>
+
+
+
   <body>
     <audio autoplay loop>
       <source src="../Music/christmas-spirit-265741.mp3" type="audio/mpeg" />
@@ -120,202 +151,219 @@
         </h4>
       </div>
       <div>
-        <span
-          ><strong></strong> |
-          <span class="tec-alexandre">Tec Alexandre</span></span
-        >
+        <span><strong></strong> | <span class="tec-alexandre">Tec Alexandre</span></span>
       </div>
     </div>
 
     <div class="d-flex">
-        <!-- Sidebar -->
-        <div class="sidebar p-3" style="position: relative;">
+      <!-- Sidebar -->
+      <div class="sidebar p-3" style="position: relative;">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a href="../Sidebar/instaladores.html" class="nav-link active"><i class="fas fa-home"></i>Home</a></li> 
+          <li class="nav-item">
+            <a href="#" class="nav-link" id="video-link" onclick="toggleMenu('video', event)"><i class="fas fa-video"></i> Vídeo <i class="fas fa-chevron-down" id="video-arrow"></i></a>
+            <ul id="video-submenu" class="nav flex-column" style="display: none;">
+              <li class="nav-item"><a href="../Videos/Videos_OFF.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Offline</a></li>
+              <li class="nav-item"><a href="../Videos/Video-Web.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Web</a></li>
+              <li class="nav-item"><a href="../Videos/Videos_AcadAcesso.html" class="nav-link" onclick="keepMenuOpen(event)">Demais Sistemas</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" id="relogios-link" onclick="toggleMenu('relogios', event)"><i class="fas fa-clock"></i> Relógios <i class="fas fa-chevron-down" id="relogios-arrow"></i></a>
+            <ul id="relogios-submenu" class="nav flex-column" style="display: none;">
+              <li class="nav-item"><a href="../Rep/Control_id.html" class="nav-link" onclick="keepMenuOpen(event)">Control ID</a></li>
+              <li class="nav-item"><a href="../Rep/Smartpoint.html" class="nav-link" onclick="keepMenuOpen(event)">Smart Point</a></li>
+              <li class="nav-item"><a href="../Rep/Miniprint.html" class="nav-link" onclick="keepMenuOpen(event)">Miniprint</a></li> 
+              <li class="nav-item"><a href="../Rep/Printpoint2.html" class="nav-link" onclick="keepMenuOpen(event)">PrintPoint 2</a></li>
+              <li class="nav-item"><a href="../Rep/Printpoint3.html" class="nav-link" onclick="keepMenuOpen(event)">PrintPoint 3</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" id="checklist-link" onclick="toggleMenu('checklist', event)"><i class="fas  fa-check"></i> Checklist <i class="fas fa-chevron-down" id="video-arrow"></i></a>
+            <ul id="checklist-submenu" class="nav flex-column" style="display: none;">
+              <li class="nav-item"><a href="../Treinamento/Sistema_OFF.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Offline</a></li>
+              <li class="nav-item"><a href="../Treinamento/Sistema_WEB.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Web</a></li>
+              <li class="nav-item"><a href="../Treinamento/Sistema_acad_acess_escola.html" class="nav-link" onclick="keepMenuOpen(event)">Demais Sistemas</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="../Sidebar/Resoluçao.html" class="nav-link"><i class="fas fa-lightbulb"></i> Resoluções</a></li> 
+          <li class="nav-item"><a href="../Sidebar/comercial.html" class="nav-link"><i class="fas fa-coins"></i> Comercial</a></li>
+          <li class="nav-item"><a href="../Sidebar/calculadora.html" class="nav-link"><i class="fas fa-calculator"></i> Calculadora</a></li> 
+          <li class="nav-item"><a href="https://sonodaponto.com.br/pis/" target="_blank" class="nav-link"><i class="fas fa-file-alt"></i> Gerar PIS</a></li> 
+        </ul>
+
+        <!-- "Mensagens " fixado na parte inferior da sidebar -->
+        <div class="position-absolute" style="bottom: 5px; margin-right: -5px;">
           <ul class="nav flex-column">
-              <li class="nav-item"><a href="../index.html" class="nav-link active"><i class="fas fa-home"></i>Home</a></li> 
-                  <li class="nav-item">
-                      <a href="#" class="nav-link" id="video-link" onclick="toggleMenu('video', event)"><i class="fas fa-video"></i> Vídeo <i class="fas fa-chevron-down" id="video-arrow"></i></a>
-                      <ul id="video-submenu" class="nav flex-column" style="display: none;">
-                          <li class="nav-item"><a href="../Videos/Videos_OFF.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Offline</a></li>
-                          <li class="nav-item"><a href="../Videos/Video_Web.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Web</a></li>
-                          <li class="nav-item"><a href="../Videos/Videos_AcadAcesso.html" class="nav-link" onclick="keepMenuOpen(event)">Demais Sistemas</a></li>
-                      </ul>
-                  </li> 
-                  <li class="nav-item">
-                      <a href="#" class="nav-link" id="relogios-link" onclick="toggleMenu('relogios', event)"><i class="fas fa-clock"></i> Relógios <i class="fas fa-chevron-down" id="relogios-arrow"></i></a>
-                      <ul id="relogios-submenu" class="nav flex-column" style="display: none;">
-                          <li class="nav-item"><a href="../Rep/Control_id.html" class="nav-link" onclick="keepMenuOpen(event)">Control ID</a></li>
-                          <li class="nav-item"><a href="../Rep/Smartpoint.html" class="nav-link" onclick="keepMenuOpen(event)">Smart Point</a></li>
-                          <li class="nav-item"><a href="../Rep/Miniprint.html" class="nav-link" onclick="keepMenuOpen(event)">Miniprint</a></li> 
-                          <li class="nav-item"><a href="../Rep/Printpoint2.html" class="nav-link" onclick="keepMenuOpen(event)">PrintPoint 2</a></li>
-                          <li class="nav-item"><a href="../Rep/Printpoint3.html" class="nav-link" onclick="keepMenuOpen(event)">PrintPoint 3</a></li>
-                      </ul>
-                  </li> 
-                  <li class="nav-item">
-                      <a href="#" class="nav-link" id="checklist-link" onclick="toggleMenu('checklist', event)"><i class="fas  fa-check"></i> Checklist <i class="fas fa-chevron-down" id="video-arrow"></i></a>
-                      <ul id="checklist-submenu" class="nav flex-column" style="display: none;">
-                          <li class="nav-item"><a href="../Treinamento/Sistema_OFF.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Offline</a></li>
-                          <li class="nav-item"><a href="../Treinamento/Sistema_WEB.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Web</a></li>
-                          <li class="nav-item"><a href="../Treinamento/Sistema_acad_acess_escola.html" class="nav-link" onclick="keepMenuOpen(event)">Demais Sistemas</a></li>
-                        </ul>
-                  </li>  
-                  <li class="nav-item"><a href="../Sidebar/Resoluçao.html" class="nav-link"><i class="fas fa-lightbulb"></i> Resoluções</a></li> 
-                  <li class="nav-item"><a href="../Sidebar/comercial.html" class="nav-link"><i class="fas fa-coins"></i> Comercial</a></li>
-                  <li class="nav-item"><a href="../Sidebar/calculadora.html" class="nav-link"><i class="fas fa-calculator"></i> Calculadora</a></li> 
-                  <li class="nav-item"><a href="https://sonodaponto.com.br/pis/" target="_blank" class="nav-link"><i class="fas fa-file-alt"></i> Gerar PIS</a></li> 
-              </li>
+            <li class="nav-item"><a href="../Sidebar/Mensagens.html" class="nav-link"><i class="fas fa-comment"></i> Mensagens</a></li>
           </ul>
-          
-          <!-- "Mensagens " fixado na parte inferior da sidebar -->
-          <div class="position-absolute" style="bottom: 5px; margin-right: -5px;">
-              <ul class="nav flex-column">
-                  <li class="nav-item"><a href="../Sidebar/Mensagens.html" class="nav-link"><i class="fas fa-comment"></i> Mensagens</a></li>
-              </ul>
+        </div>
+      </div>
+
+<!-- Conteúdo Principal -->
+<div class="container">
+  <h2>Cálculos de Jornada <strong>Sonoda Ponto</strong></h2>
+  <form id="calcForm">
+      <div class="form-group row">
+          <div class="col-md-5">
+              <label for="entrada1">Entrada 1:</label>
+              <input type="time" class="form-control" id="entrada1" required>
+          </div>
+          <div class="col-md-5">
+              <label for="saida1">Saída 1:</label>
+              <input type="time" class="form-control" id="saida1" required>
           </div>
       </div>
+
+      <div id="entradasAdicionais"></div>
+
+      <div class="form-group row">
+          <div class="col-md-5">
+              <label for="carga_obrigatoria">Carga Obrigatória <strong>(Opcional):</strong></label>
+              <input type="time" class="form-control" id="carga_obrigatoria" placeholder="Preencha se necessário">
+          </div>
+      </div>
+
+      <div class="input-container">
+          <button type="button" class="btn btn-primary" onclick="adicionarEntrada()"><i class="fa fa-plus"></i></button>
+          <button type="submit" class="btn btn-success"><i class="fa fa-calculator"></i></button>
+          <button type="button" class="btn btn-danger" onclick="limparCalculo()"><i class="fa fa-trash"></i> Limpar Cálculo</button>
+      </div>
+  </form>
+
+  <div id="resultado"></div>
+</div>
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
       
-
-      <div class="container mt-4">
-        <center><h3>Calculadora de Jornada</h3></center>
-        <br /><br />
-        <form id="form-jornada">
-          <div id="entradas-saidas">
-            <div class="entrada-saida" id="entrada-saida-1">
-              <div class="form-group">
-                <label for="entrada-1">Entrada 1:</label>
-                <input
-                  type="time"
-                  id="entrada-1"
-                  name="entrada-1"
-                  class="form-control"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="saida-1">Saída 1:</label>
-                <input
-                  type="time"
-                  id="saida-1"
-                  name="saida-1"
-                  class="form-control"
-                  required
-                />
-              </div>
-            </div>
-          </div>
-          <div class="btn-container">
-            <button type="button" id="adicionar" class="btn btn-adicionar">
-              <i class="fas fa-plus"></i>
-            </button>
-            <button type="submit" class="btn btn-calcular">
-              <i class="fas fa-calculator"></i> Calcular
-            </button>
-            <button
-              type="button"
-              id="remover"
-              class="btn btn-remover"
-              style="display: none"
-            >
-              <i class="fas fa-trash-alt"></i> Remover Jornada
-            </button>
-          </div>
-        </form>
-        <div id="resultado" class="mt-3"></div>
-      </div>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
     <script>
-      let contador = 1;
-
-      document
-        .getElementById("adicionar")
-        .addEventListener("click", function () {
-          if (contador < 5) {
-            contador++;
-            const entradasSaidasDiv =
-              document.getElementById("entradas-saidas");
-            const novoEntradaSaida = document.createElement("div");
-            novoEntradaSaida.classList.add("entrada-saida");
-            novoEntradaSaida.id = "entrada-saida-" + contador;
-
-            novoEntradaSaida.innerHTML = ` 
-                    <div class="form-group">
-                        <label for="entrada-${contador}">Entrada ${contador}:</label>
-                        <input type="time" id="entrada-${contador}" name="entrada-${contador}" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="saida-${contador}">Saída ${contador}:</label>
-                        <input type="time" id="saida-${contador}" name="saida-${contador}" class="form-control" required>
-                    </div>
-                `;
-            entradasSaidasDiv.appendChild(novoEntradaSaida);
-
-            if (contador > 1) {
-              document.getElementById("remover").style.display = "inline-block";
-            }
-          }
-        });
-
-      document.getElementById("remover").addEventListener("click", function () {
-        if (contador > 1) {
-          const entradasSaidasDiv = document.getElementById("entradas-saidas");
-          const entradaSaidaDiv = document.getElementById(
-            "entrada-saida-" + contador
-          );
-          entradasSaidasDiv.removeChild(entradaSaidaDiv);
-          contador--;
-
-          if (contador === 1) {
-            document.getElementById("remover").style.display = "none";
-          }
-        }
-      });
-
-      document
-        .getElementById("form-jornada")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          let totalMinutos = 0;
-
-          for (let i = 1; i <= contador; i++) {
-            const entrada = document.getElementById(`entrada-${i}`);
-            const saida = document.getElementById(`saida-${i}`);
-
-            if (entrada && saida) {
-              const entradaTime = new Date(`1970-01-01T${entrada.value}:00`);
-              const saidaTime = new Date(`1970-01-01T${saida.value}:00`);
-
-              let minutos = (saidaTime - entradaTime) / (1000 * 60);
-              totalMinutos += minutos;
-            }
-          }
-
-          let horas = Math.floor(totalMinutos / 60);
-          let minutos = totalMinutos % 60;
-
-          document.getElementById(
-            "resultado"
-          ).innerHTML = `<h4>Total da jornada: ${horas} horas e ${minutos} minutos</h4>`;
-        });
-
-      function toggleMenu(menu) {
-        const submenus = document.querySelectorAll(".nav .nav-item ul");
-        const submenu = document.getElementById(menu + "-submenu");
-
-        if (submenu.style.display === "none" || submenu.style.display === "") {
-          submenus.forEach((sub) => {
-            if (sub !== submenu) {
-              sub.style.display = "none";
-            }
-          });
-          submenu.style.display = "block";
-        } else {
-          submenu.style.display = "none";
-        }
+      let contadorEntradas = 1;
+  
+      // Função para adicionar novas entradas e saídas
+      function adicionarEntrada() {
+          contadorEntradas++;
+  
+          const entradasAdicionais = document.getElementById("entradasAdicionais");
+          const novaEntrada = document.createElement("div");
+          novaEntrada.classList.add("form-group", "row");
+          novaEntrada.innerHTML = `
+              <div class="col-md-5">
+                  <label for="entrada${contadorEntradas}">Entrada ${contadorEntradas}:</label>
+                  <input type="time" class="form-control" id="entrada${contadorEntradas}">
+              </div>
+              
+              <div class="col-md-5">
+                  <label for="saida${contadorEntradas}">Saída ${contadorEntradas}:</label>
+                  <input type="time" class="form-control" id="saida${contadorEntradas}">
+              </div>
+          `;
+          entradasAdicionais.appendChild(novaEntrada);
       }
-    </script>
+  
+      // Evento ao submeter o formulário
+      document.getElementById("calcForm").addEventListener("submit", function(event) {
+          event.preventDefault();
+  
+          const cargaObrigatoria = document.getElementById("carga_obrigatoria").value;
+          const entradas = [];
+          const saídas = [];
+  
+          // Pega os valores das entradas e saídas
+          for (let i = 1; i <= contadorEntradas; i++) {
+              const entrada = document.getElementById(`entrada${i}`).value;
+              const saída = document.getElementById(`saida${i}`).value;
+              if (entrada && saída) {
+                  entradas.push(entrada);
+                  saídas.push(saída);
+              }
+          }
+  
+          if (entradas.length === 0 || saídas.length === 0) {
+              document.getElementById("resultado").innerHTML = "Por favor, preencha todas as entradas e saídas.";
+              return;
+          }
+  
+          calcularJornada(entradas, saídas, cargaObrigatoria);
+      });
+  
+      // Função para calcular a jornada
+      function calcularJornada(entradas, saídas, cargaObrigatoria) {
+          let totalJornadaMinutos = 0;
+  
+          // Calcula o total de jornada somando os intervalos de entrada e saída
+          for (let i = 0; i < entradas.length; i++) {
+              const entradaMinutos = converteParaMinutos(entradas[i]);
+              const saídaMinutos = converteParaMinutos(saídas[i]);
+              totalJornadaMinutos += saídaMinutos - entradaMinutos;
+          }
+  
+          // Função para converter minutos em horas e minutos
+          function converteEmHorasEMinutos(minutos) {
+              const horas = Math.abs(Math.floor(minutos / 60));
+              const minutosRestantes = Math.abs(minutos % 60);
+              return `${horas < 10 ? '0' : ''}${horas}:${minutosRestantes < 10 ? '0' : ''}${minutosRestantes}`;
+          }
+  
+          let cargaFormatada = '';
+          let horasExtras = 0;
+          let cargaEmMinutos = 0;
+  
+          if (cargaObrigatoria) {
+              const [cargaHora, cargaMinuto] = cargaObrigatoria.split(":").map(Number);
+              if (!isNaN(cargaHora) && !isNaN(cargaMinuto)) {
+                  cargaEmMinutos = (cargaHora * 60) + cargaMinuto;
+                  cargaFormatada = converteEmHorasEMinutos(cargaEmMinutos);
+                  horasExtras = totalJornadaMinutos - cargaEmMinutos;
+              }
+          }
+  
+          const jornadaFormatada = converteEmHorasEMinutos(totalJornadaMinutos);
+          const resultadoFormatado = converteEmHorasEMinutos(horasExtras);
+  
+          let resultadoHTML = `Jornada: ${jornadaFormatada}<br>`;
+  
+          if (cargaFormatada) {
+              if (horasExtras > 0) {
+                  resultadoHTML += `Carga obrigatória: ${cargaFormatada}<br>Resultado: ${resultadoFormatado}<br>Colaborador fez ${resultadoFormatado} de hora extra.`;
+              } else if (horasExtras < 0) {
+                  resultadoHTML += `Carga obrigatória: ${cargaFormatada}<br>Resultado: ${resultadoFormatado}<br>Colaborador faltou ${resultadoFormatado} para cumprir a jornada.`;
+              } else {
+                  resultadoHTML += `Carga obrigatória: ${cargaFormatada}<br>Resultado: ${resultadoFormatado}<br>Colaborador fez o horário exato.`;
+              }
+          } else {
+              resultadoHTML += `Colaborador fez ${jornadaFormatada}.`;
+          }
+  
+          document.getElementById("resultado").innerHTML = resultadoHTML;
+      }
+  
+      // Função para converter a hora em minutos
+      function converteParaMinutos(time) {
+          const [hora, minuto] = time.split(":").map(Number);
+          return (hora * 60) + minuto;
+      }
+  
+      // Função para limpar os cálculos
+      function limparCalculo() {
+          // Limpa os campos de entrada e saída
+          for (let i = 1; i <= contadorEntradas; i++) {
+              document.getElementById(`entrada${i}`).value = '';
+              document.getElementById(`saida${i}`).value = '';
+          }
+          document.getElementById("carga_obrigatoria").value = '';
+  
+          // Limpa o resultado da jornada
+          document.getElementById("resultado").innerHTML = '';
+  
+          // Limpa as entradas adicionais
+          document.getElementById("entradasAdicionais").innerHTML = '';
+          contadorEntradas = 1;  // Reseta o contador
+      }
+  </script>
+  
+      
+      
+      
+    
   </body>
 </html>

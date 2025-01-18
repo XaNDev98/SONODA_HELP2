@@ -3,692 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SONODA HELP</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Ícones -->
-    <link rel="stylesheet" href="Style/Style.css">  
-    <link rel="stylesheet" href="Style/Responsive.css">    
-    <link rel="stylesheet" href="Style/sair.css">  
-    <script src="JavaScript/index.js" defer></script>  
-    <link rel="icon" href="adress/a.png" type="image/x-icon"> 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> 
-    <!-- <script>
-        // Verificar se o usuário está logado
-        if (localStorage.getItem("isLoggedIn") !== "true") {
-            window.location.href = "Login/login.html"; // Redireciona para a página de login
-        } else {
-            // Se estiver logado, pode exibir a página normalmente
-            // Aqui você pode incluir outras funcionalidades ou ajustes necessários.
+    <title>Sonoda Help</title>
+    <style>
+        /* Reset global */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
         }
-    </script> -->
-    
+
+        /* Corpo da página com animações */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #007bff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            animation: backgroundFade 10s infinite alternate, wave 10s ease-in-out infinite;
+        }
+
+        /* Animações de fundo e movimento */
+        @keyframes backgroundFade {
+            0% {
+                background-color: #007bff;
+                opacity: 0.8;
+            }
+            50% {
+                background-color: #0b033a;
+                opacity: 0.9;
+            }
+            100% {
+                background-color: #007bff;
+                opacity: 1;
+            }
+        }
+
+        /* Efeitos de partículas de fogos de artifício */
+        .fireworks {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .firework {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            animation: explode 1s ease-out infinite;
+            opacity: 0;
+        }
+
+        /* Cores diferentes para os fogos de artifício */
+        .firework:nth-child(odd) {
+            background-color: rgba(71, 129, 255, 0.8); /* Red */
+        }
+
+        .firework:nth-child(even) {
+            background-color: rgba(255, 215, 0, 0.8); /* Yellow */
+        }
+
+        @keyframes explode {
+            0% {
+                transform: scale(0) translate(0, 0);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(4) translate(var(--x), var(--y));
+                opacity: 0;
+            }
+        }
+
+        /* Gerar várias explosões em posições aleatórias */
+        .firework:nth-child(1) {
+            left: 5%;
+            animation-duration: 1s;
+            animation-delay: 0s;
+        }
+        .firework:nth-child(2) {
+            left: 15%;
+            animation-duration: 1.2s;
+            animation-delay: 0.3s;
+        }
+        .firework:nth-child(3) {
+            left: 25%;
+            animation-duration: 1.4s;
+            animation-delay: 0.6s;
+        }
+        .firework:nth-child(4) {
+            left: 35%;
+            animation-duration: 1.6s;
+            animation-delay: 0.9s;
+        }
+        .firework:nth-child(5) {
+            left: 45%;
+            animation-duration: 1.8s;
+            animation-delay: 1.2s;
+        }
+        .firework:nth-child(6) {
+            left: 55%;
+            animation-duration: 2s;
+            animation-delay: 1.5s;
+        }
+        .firework:nth-child(7) {
+            left: 65%;
+            animation-duration: 2.2s;
+            animation-delay: 1.8s;
+        }
+        .firework:nth-child(8) {
+            left: 75%;
+            animation-duration: 2.4s;
+            animation-delay: 2.1s;
+        }
+        .firework:nth-child(9) {
+            left: 85%;
+            animation-duration: 2.6s;
+            animation-delay: 2.4s;
+        }
+        .firework:nth-child(10) {
+            left: 95%;
+            animation-duration: 2.8s;
+            animation-delay: 2.7s;
+        }
+
+        /* Container centralizado */
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            padding: 60px 40px;
+            width: 450px;
+            height: auto;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        /* Animação de fadeInUp */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 25px;
+            color: #007bff;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            animation: textGlow 1.5s ease infinite alternate;
+        }
+
+        /* Efeito de brilho no texto */
+        @keyframes textGlow {
+            0% {
+                text-shadow: 0 0 20px #007bff, 0 0 40px #007bff;
+            }
+            100% {
+                text-shadow: 0 0 40px #007bff, 0 0 80px #007bff;
+            }
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #f0f0f0;
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #007bff;
+            padding: 18px 45px;
+            font-size: 1.2rem;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            transition: all 0.4s ease;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+
+        .button:hover::before {
+            width: 0;
+            height: 0;
+        }
+
+        .button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+        }
+
+        .button span {
+            z-index: 1;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 1.1rem;
+            color: #eee;
+        }
+
+        footer strong {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+    </style>
 </head>
-<body> 
-    <!-- Header -->
-    <div class="header d-flex justify-content-between align-items-center">
-        <div class="logo">
-            <h4 class="m-0">
-                <img src="adress/Sonoda Ponto.ico" alt="logo">  <span class="text-primary">SONODA HELP</span>
-            </h4>
-        </div>
-        <div>
-            <div>
-                <span><strong></strong> | <span class="tec-alexandre">Tec Alexandre</span></span>
-                <!-- <button id="logoutBtn" class="btn-logout">Sair</button> Botão para sair -->
-            </div>            
-        </div>
+<body>
+
+    <!-- Partículas de fogos de artifício -->
+    <div class="fireworks">
+        <div class="firework" style="--x: 100px; --y: 100px;"></div>
+        <div class="firework" style="--x: -100px; --y: -100px;"></div>
+        <div class="firework" style="--x: 200px; --y: 200px;"></div>
+        <div class="firework" style="--x: -150px; --y: -150px;"></div>
+        <div class="firework" style="--x: 300px; --y: 50px;"></div>
+        <div class="firework" style="--x: -250px; --y: 150px;"></div>
+        <div class="firework" style="--x: 400px; --y: -200px;"></div>
+        <div class="firework" style="--x: -300px; --y: -200px;"></div>
+        <div class="firework" style="--x: 150px; --y: 300px;"></div>
+        <div class="firework" style="--x: -400px; --y: 200px;"></div>
     </div>
 
-    <div class="d-flex">
-        <!-- Sidebar -->
-        <div class="sidebar p-3" style="position: relative;">
-            <ul class="nav flex-column">
-                <li class="nav-item"><a href="index.html" class="nav-link active"><i class="fas fa-home"></i>Home</a></li> 
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" id="video-link" onclick="toggleMenu('video', event)"><i class="fas fa-video"></i> Vídeo <i class="fas fa-chevron-down" id="video-arrow"></i></a>
-                        <ul id="video-submenu" class="nav flex-column" style="display: none;">
-                            <li class="nav-item"><a href="Videos/Videos_OFF.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Offline</a></li>
-                            <li class="nav-item"><a href="Videos/Video_Web.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Web</a></li>
-                            <li class="nav-item"><a href="Videos/Videos_AcadAcesso.html" class="nav-link" onclick="keepMenuOpen(event)">Demais Sistemas</a></li>
-                        </ul>
-                    </li> 
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" id="relogios-link" onclick="toggleMenu('relogios', event)"><i class="fas fa-clock"></i> Relógios <i class="fas fa-chevron-down" id="relogios-arrow"></i></a>
-                        <ul id="relogios-submenu" class="nav flex-column" style="display: none;">
-                            <li class="nav-item"><a href="Rep/Control_id.html" class="nav-link" onclick="keepMenuOpen(event)">Control ID</a></li>
-                            <li class="nav-item"><a href="Rep/Smartpoint.html" class="nav-link" onclick="keepMenuOpen(event)">Smart Point</a></li>
-                            <li class="nav-item"><a href="Rep/Miniprint.html" class="nav-link" onclick="keepMenuOpen(event)">Miniprint</a></li> 
-                            <li class="nav-item"><a href="Rep/Printpoint2.html" class="nav-link" onclick="keepMenuOpen(event)">PrintPoint 2</a></li>
-                            <li class="nav-item"><a href="Rep/Printpoint3.html" class="nav-link" onclick="keepMenuOpen(event)">PrintPoint 3</a></li>
-                        </ul>
-                    </li> 
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" id="checklist-link" onclick="toggleMenu('checklist', event)"><i class="fas fa-check"></i> Checklist <i class="fas fa-chevron-down" id="video-arrow"></i></a>
-                        <ul id="checklist-submenu" class="nav flex-column" style="display: none;">
-                            <li class="nav-item"><a href="Treinamento/Sistema_OFF.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Offline</a></li>
-                            <li class="nav-item"><a href="Treinamento/Sistema_WEB.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Web</a></li>
-                            <li class="nav-item"><a href="Treinamento/Sistema_acad_acess_escola.html" class="nav-link" onclick="keepMenuOpen(event)">Demais Sistemas</a></li>
-                        </ul>
-                    </li>  
-                    <li class="nav-item"><a href="Sidebar/Resoluçao.html" class="nav-link"><i class="fas fa-lightbulb"></i> Resoluções</a></li> 
-                    <li class="nav-item"><a href="Sidebar/comercial.html" class="nav-link"><i class="fas fa-coins"></i> Comercial</a></li>
-                    <li class="nav-item"><a href="Sidebar/calculadora.html" class="nav-link"><i class="fas fa-calculator"></i> Calculadora</a></li> 
-                    <li class="nav-item"><a href="https://sonodaponto.com.br/pis/" target="_blank" class="nav-link"><i class="fas fa-file-alt"></i> Gerar PIS</a></li> 
-                </li>
-            </ul>
-            
-            <!-- "Mensagens " fixado na parte inferior da sidebar -->
-            <div class="position-absolute" style="bottom: 5px; margin-right: -5px;">
-                <ul class="nav flex-column">
-                    <li class="nav-item"><a href="Sidebar/Mensagens.html" class="nav-link"><i class="fas fa-comment"></i> Mensagens</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Main Content -->
-        <div class="content container-fluid">
-            <h5 class="font-weight-bold">PÁGINA INICIAL</h5><br>
-            <ul class="nav nav-tabs mb-4">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#" id="instalacoes-tab" data-toggle="tab" onclick="showTab('instalacoes')">INSTALAÇÕES</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="atualizacoes-tab" data-toggle="tab" onclick="showTab('atualizacoes')">ATUALIZAÇÕES</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="pacotes-tab" data-toggle="tab" onclick="showTab('pacotes')">PACOTES DE COMUNICAÇÃO</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="sql-tab" data-toggle="tab" onclick="showTab('sql')">SQL</a>
-                </li>
-            </ul> <br>
-
-            <!-- Tab Content -->
-            <div class="tab-content">
-                <!-- Instalações -->
-                <div id="instalacoes" class="tab-pane active">
-                    <div class="row"> 
-                        <div class="col-md-4">
-                            <div class="copy-card">
-                                <div class="row align-items-center">
-                                    <div class="col-sm-2 text-left">
-                                        <img src="adress/icone-offline.png" alt="Ícone do Seculum Off-line" class="title-icon" width="45px">
-                                    </div>
-                                    <div class="col-sm-8 text-center">
-                                        <div class="copy-card-title">SECULLUM PONTO OFF-LINE</div>
-                                    </div>
-                                    <div class="col-sm-2 text-right">
-                                        <div class="copy-button-container">
-                                            <button class="copy-button-home" onclick="copyText('https://download.secullum.com.br/SecullumPontoOffline-setup.exe', this)" title="Copiar Link">
-                                                <i class="fas fa-copy copy-icon"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="copy-card">
-                                <div class="row align-items-center">
-                                    <div class="col-sm-2 text-left">
-                                        <img src="adress/icone-academia.png" alt="Ícone do Secullum Academia" class="title-icon" width="45px">
-                                    </div>
-                                    <div class="col-sm-8 text-center">
-                                        <div class="copy-card-title">SECULLUM ACADEMIA</div>
-                                    </div>
-                                    <div class="col-sm-2 text-right">
-                                        <div class="copy-button-container">
-                                            <button class="copy-button-home" onclick="copyText('https://download.secullum.com.br/academianet/AcademiaNetSetup.exe', this)" title="Copiar Link">
-                                                <i class="fas fa-copy copy-icon"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="copy-card">
-                                <div class="row align-items-center">
-                                    <div class="col-sm-2 text-left">
-                                        <img src="adress/icone-acesso.png" alt="Ícone do Secullum Acesso" class="title-icon" width="45px">
-                                    </div>
-                                    <div class="col-sm-8 text-center">
-                                        <div class="copy-card-title">SECULLUM ACESSO</div>
-                                    </div>
-                                    <div class="col-sm-2 text-right">
-                                        <div class="copy-button-container">
-                                            <button class="copy-button-home" onclick="copyText('https://download.secullum.com.br/SecullumAcesso-setup.exe', this)" title="Copiar Link">
-                                                <i class="fas fa-copy copy-icon"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <div class="copy-card">
-                                <div class="row align-items-center">
-                                    <div class="col-sm-2 text-left">
-                                        <img src="adress/at-rel.png" alt="Ícone do At-Rel" class="title-icon" width="45px">
-                                    </div>
-                                    <div class="col-sm-8 text-center">
-                                        <div class="copy-card-title">AT - REL</div>
-                                    </div>
-                                    <div class="col-sm-2 text-right">
-                                        <div class="copy-button-container">
-                                            <button class="copy-button-home" onclick="copyText('https://download.secullum.com.br/at-rel.exe', this)" title="Copiar Link">
-                                                <i class="fas fa-copy copy-icon"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4">
-                            <div class="copy-card">
-                                <div class="row align-items-center">
-                                    <div class="col-sm-2 text-left">
-                                        <img src="adress/at-rel.png" alt="Ícone das DLLs" class="title-icon" width="45px">
-                                    </div>
-                                    <div class="col-sm-8 text-center">
-                                        <div class="copy-card-title">DLLs</div>
-                                    </div>
-                                    <div class="col-sm-2 text-right">
-                                        <div class="copy-button-container">
-                                            <button class="copy-button-home" onclick="copyText('https://download.secullum.com.br/dlls.exe', this)" title="Copiar Link">
-                                                <i class="fas fa-copy copy-icon"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                         <div class="col-md-4">
-                        <div class="copy-card">
-                            <div class="row align-items-center">
-                                <div class="col-sm-2 text-left">
-                                    <img src="adress/dlls.png" alt="Ícone das DLLs Genos" class="title-icon" width="45px">
-                                </div>
-                                <div class="col-sm-8 text-center">
-                                    <div class="copy-card-title">DLLs GENOS</div>
-                                </div>
-                                <div class="col-sm-2 text-right">
-                                    <div class="copy-button-container">
-                                        <button class="copy-button-home" onclick="copyText('https://bit.ly/3Sn1Afs', this)" title="Copiar Link">
-                                            <i class="fas fa-copy copy-icon"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="copy-card">
-                            <div class="row align-items-center">
-                                <div class="col-sm-2 text-left">
-                                    <img src="adress/icone-offline.png" alt="Ícone do Ponto Virtual" class="title-icon" width="45px">
-                                </div>
-                                <div class="col-sm-8 text-center">
-                                    <div class="copy-card-title">PONTO VIRTUAL</div>
-                                </div>
-                                <div class="col-sm-2 text-right">
-                                    <div class="copy-button-container">
-                                        <button class="copy-button-home" onclick="copyText('https://play.google.com/store/apps/details?id=com.secullum.pontovirtual', this)" title="Copiar Link">
-                                            <i class="fas fa-copy copy-icon"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="copy-card">
-                            <div class="row align-items-center">
-                                <div class="col-sm-2 text-left">
-                                    <img src="adress/android.png" alt="Ícone do SECULLUM PONTO WEB - APP ANDROID" class="title-icon" width="45px">
-                                </div>
-                                <div class="col-sm-8 text-center">
-                                    <div class="copy-card-title" style="font-size: 12px;">SECULLUM PONTO WEB - APP ANDROID</div>
-                                </div>
-                                <div class="col-sm-2 text-right">
-                                    <div class="copy-button-container">
-                                        <button class="copy-button-home" onclick="copyText('https://play.google.com/store/apps/details?id=com.secullum.pontoweb.centraldofuncionario', this)" title="Copiar Link">
-                                            <i class="fas fa-copy copy-icon"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="copy-card">
-                            <div class="row align-items-center">
-                                <div class="col-sm-2 text-left">
-                                    <img src="adress/ios.png" alt="Ícone do SECULLUM PONTO WEB - APP IOS" class="title-icon" width="55px">
-                                </div>
-                                <div class="col-sm-8 text-center">
-                                    <div class="copy-card-title" style="font-size: 12px;">SECULLUM PONTO WEB - APP IOS</div>
-                                </div>
-                                <div class="col-sm-2 text-right">
-                                    <div class="copy-button-container">
-                                        <button class="copy-button-home" onclick="copyText('https://apps.apple.com/br/app/ponto-web-funcion%C3%A1rios/id1434571841', this)" title="Copiar Link">
-                                            <i class="fas fa-copy copy-icon"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><br><br>
-                    </div>
-                        <div class="col-md-4">
-                            <h5 class="font-weight-bold">ACESSO REMOTO</h5>
-                            <div class="copy-card">
-                                <div class="row align-items-center">
-                                    <div class="col-sm-2 text-left">
-                                        <img src="adress/teamviewer.png" alt="Ícone do Team Viewer" class="title-icon" width="45px">
-                                    </div>
-                                    <div class="col-sm-8 text-center">
-                                        <div class="copy-card-title">TEAM VIEWER</div>
-                                    </div>
-                                    <div class="col-sm-2 text-right">
-                                        <div class="copy-button-container">
-                                            <button class="copy-button-home" onclick="copyText('https://download.teamviewer.com/download/TeamViewer_Setup_x64.exe', this)" title="Copiar Link">
-                                                <i class="fas fa-copy copy-icon"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  
-                        <div class="col-md-4"><br>
-                            <div class="copy-card">
-                            <div class="row align-items-center">
-                                <div class="col-sm-2 text-left">
-                                    <img src="adress/anydesk.png" alt="Ícone do AnyDesk" class="title-icon" width="45px">
-                                </div>
-                                <div class="col-sm-8 text-center">
-                                    <div class="copy-card-title">ANYDESK</div>
-                                </div>
-                                <div class="col-sm-2 text-right">
-                                    <div class="copy-button-container">
-                                        <button class="copy-button-home" onclick="copyText('https://download.secullum.com.br/SecullumAcesso-setup.exe', this)" title="Copiar Link">
-                                            <i class="fas fa-copy copy-icon"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        </div>  
-                        <div class="col-md-4"><br>
-                            <div class="copy-card">
-                                <div class="row align-items-center">
-                                    <div class="col-sm-2 text-left">
-                                        <img src="adress/Ipscanner.png" alt="Ícone do IP Scanner" class="title-icon" width="42px">
-                                    </div>
-                                    <div class="col-sm-8 text-center">
-                                        <div class="copy-card-title">IP SCANNER</div>
-                                    </div>
-                                    <div class="col-sm-2 text-right">
-                                        <div class="copy-button-container">
-                                            <button class="copy-button-home" onclick="copyText('https://www.advanced-ip-scanner.com/br/download/', this)" title="Copiar Link">
-                                                <i class="fas fa-copy copy-icon"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  
-                        <div class="col-md-4"><br>
-                            <div class="copy-card">
-                                <div class="row align-items-center">
-                                    <div class="col-sm-2 text-left">
-                                        <img src="adress/sdk.png" alt="Ícone do SDK" class="title-icon" width="45px">
-                                    </div>
-                                    <div class="col-sm-8 text-center">
-                                        <div class="copy-card-title">SDK</div>
-                                    </div>
-                                    <div class="col-sm-2 text-end">
-                                        <button class="copy-button-home" onclick="copyText('https://download.secullum.com.br/SecullumAcesso-setup.exe', this)" title="Copiar Link">
-                                            <i class="fas fa-copy copy-icon"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div><br><br>
-                        </div>  
-                    </div> 
-                    <div class="col-md-4">
-                        <h5 class="font-weight-bold">ADICIONAIS</h5>
-                        <div class="copy-card">
-                            <div class="row align-items-center">
-                                <div class="col-sm-2 text-left">
-                                    <img src="adress/L5.PNG" alt="Ícone do Call Box" class="title-icon" width="35px">
-                                </div>
-                                <div class="col-sm-8 text-center">
-                                    <div class="copy-card-title">CALL BOX</div>
-                                </div>
-                                <div class="col-sm-2 text-right">
-                                    <div class="copy-button-container">
-                                        <button class="copy-button-home" onclick="copyText('http://l5networks.com.br/arquivos/lista/Softphones/CallboxWindows/L5NetworksSetup.rar', this)" title="Copiar Link">
-                                            <i class="fas fa-copy copy-icon"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div> 
-                        </div>
-                    </div> 
-                </div> 
-                 
-                
-
-             <!-- Atualizações -->
-             <div id="atualizacoes" class="tab-pane">
-                <div class="row">
-                    <!-- Cartão Secullum Ponto Off-line -->
-                    <div class="col-md-6">
-                        <div class="copy-card">
-                            <div class="row align-items-center">
-                                <div class="col-sm-2 text-left">
-                                    <img src="adress/icone-offline.png" alt="Ícone do Ponto Off-line" class="title-icon" width="45px">
-                                </div>
-                                <div class="col-sm-8 text-center">
-                                    <div class="copy-card-title">SECULLUM PONTO OFF-LINE</div>
-                                </div>
-                                <div class="col-sm-2 text-end">
-                                    <button class="copy-button-home" onclick="copyText('https://download.secullum.com.br/at-ponto-offline.exe', this)" title="Copiar Link">
-                                        <i class="fas fa-copy copy-icon"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <!-- Cartão Secullum Academia -->
-                    <div class="col-md-6">
-                        <div class="copy-card">
-                            <div class="row align-items-center">
-                                <div class="col-sm-2 text-left">
-                                    <img src="adress/icone-academia.png" alt="Ícone do Secullum Academia" class="title-icon" width="45px">
-                                </div>
-                                <div class="col-sm-8 text-center">
-                                    <div class="copy-card-title">SECULLUM ACADEMIA</div>
-                                </div>
-                                <div class="col-sm-2 text-end">
-                                    <button class="copy-button-home" onclick="copyText('https://download.secullum.com.br/at-academianet.exe', this)" title="Copiar Link">
-                                        <i class="fas fa-copy copy-icon"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="row mt-4">
-                    <!-- Cartão Secullum Acesso -->
-                    <div class="col-md-6">
-                        <div class="copy-card">
-                            <div class="row align-items-center">
-                                <div class="col-sm-2 text-left">
-                                    <img src="adress/icone-acesso.png" alt="Ícone do Secullum Acesso" class="title-icon" width="45px">
-                                </div>
-                                <div class="col-sm-8 text-center">
-                                    <div class="copy-card-title">SECULLUM ACESSO</div>
-                                </div>
-                                <div class="col-sm-2 text-end">
-                                    <button class="copy-button-home" onclick="copyText('https://download.secullum.com.br/at-acesso.exe', this)" title="Copiar Link">
-                                        <i class="fas fa-copy copy-icon"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <!-- Cartão Agente de Comunicação -->
-                    <div class="col-md-6">
-                        <div class="copy-card">
-                            <div class="row align-items-center">
-                                <div class="col-sm-2 text-left">
-                                    <img src="adress/agente-de-comunicacao.png" alt="Ícone do Agente de Comunicação WEB" class="title-icon" width="45px">
-                                </div>
-                                <div class="col-sm-8 text-center">
-                                    <div class="copy-card-title">AGENTE DE COMUNICAÇÃO WEB</div>
-                                </div>
-                                <div class="col-sm-2 text-end">
-                                    <button class="copy-button-home" onclick="copyText('https://download.secullum.com.br/PontoWebComunicacaoSetup.exe', this)" title="Copiar Link">
-                                        <i class="fas fa-copy copy-icon"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-              <!-- Pacotes de Comunicação -->
-<div id="pacotes" class="tab-pane">
-    <div class="row">
-        <!-- Primeira coluna -->
-        <div class="col-md-6">
-            <div class="copy-card">
-                <div class="row align-items-center">
-                    <div class="col-sm-2 text-left">
-                        <img src="adress/Control id.png" alt="Ícone do Control ID" class="title-icon" width="100px">
-                    </div>
-                    <div class="col-sm-8 text-center">
-                        <div class="copy-card-title">CONTROL ID</div>
-                    </div>
-                    <div class="col-sm-2 text-end">
-                        <button class="copy-button-home" onclick="copyText('https://secullum.com.br/at-controlid.exe', this)" title="Copiar Link">
-                            <i class="fas fa-copy copy-icon"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div> 
-
-        <!-- Segunda coluna -->
-        <div class="col-md-6">
-            <div class="copy-card">
-                <div class="row align-items-center">
-                    <div class="col-sm-2 text-left">
-                        <img src="adress/Dimep.png" alt="Ícone do DIMEP" class="title-icon" width="75px">
-                    </div>
-                    <div class="col-sm-8 text-center">
-                        <div class="copy-card-title">DIMEP</div>
-                    </div>
-                    <div class="col-sm-2 text-end">
-                        <button class="copy-button-home" onclick="copyText('https://secullum.com.br/at-dimep.exe', this)" title="Copiar Link">
-                            <i class="fas fa-copy copy-icon"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div> 
+    <div class="container">
+        <h1>Sonoda Help</h1>
+        <p>
+            Pagina Web criada para auxiliar os tecnicos em seus atendimentos 😉 
+        </p>
+        <a href="Sidebar/instaladores.html" class="button"><span>Acessar Sonoda Help</span></a>
+        <footer>
+            Desenvolvido por <strong>Tec. Alexandre Mastrandea</strong> na <strong>Sonoda Ponto</strong>.
+        </footer>
     </div>
-
-    <!-- Próxima linha, se necessário -->
-    <div class="row">
-        <div class="col-md-6">
-            <div class="copy-card">
-                <div class="row align-items-center">
-                    <div class="col-sm-2 text-left">
-                        <img src="adress/madis.png" alt="Ícone do MADIS" class="title-icon" width="90px">
-                    </div>
-                    <div class="col-sm-8 text-center">
-                        <div class="copy-card-title">MADIS</div>
-                    </div>
-                    <div class="col-sm-2 text-end">
-                        <button class="copy-button-home" onclick="copyText('https://secullum.com.br/at-madis.exe', this)" title="Copiar Link">
-                            <i class="fas fa-copy copy-icon"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div> 
-        <div class="col-md-6">
-            <div class="copy-card">
-                <div class="row align-items-center">
-                    <div class="col-sm-2 text-left">
-                        <img src="adress/topdata1.png" alt="Ícone do TOPDATA" class="title-icon" width="90px">
-                    </div>
-                    <div class="col-sm-8 text-center">
-                        <div class="copy-card-title">TOP DATA</div>
-                    </div>
-                    <div class="col-sm-2 text-end">
-                        <button class="copy-button-home" onclick="copyText('https://secullum.com.br/at-top.exe', this)" title="Copiar Link">
-                            <i class="fas fa-copy copy-icon"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>            
-        </div>  
-        <div class="col-md-6">
-            <div class="copy-card">
-                <div class="row align-items-center">
-                    <div class="col-sm-2 text-left">
-                        <img src="adress/henry.png" alt="Ícone do Henry" class="title-icon" width="120px">
-                    </div>
-                    <div class="col-sm-8 text-center">
-                        <div class="copy-card-title">HENRY</div>
-                    </div>
-                    <div class="col-sm-2 text-end">
-                        <button class="copy-button-home" onclick="copyText('https://secullum.com.br/at-henry.exe', this)" title="Copiar Link">
-                            <i class="fas fa-copy copy-icon"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>            
-        </div>  
-        <div class="col-md-6">
-            <div class="copy-card">
-                <div class="row align-items-center">
-                    <div class="col-sm-2 text-left">
-                        <img src="adress/proveu.jpg" alt="Ícone do Proveu" class="title-icon" width="110px">
-                    </div>
-                    <div class="col-sm-8 text-center">
-                        <div class="copy-card-title">PROVEU</div>
-                    </div>
-                    <div class="col-sm-2 text-end">
-                        <button class="copy-button-home" onclick="copyText('https://www.secullum.com.br/at-proveu.exe', this)" title="Copiar Link">
-                            <i class="fas fa-copy copy-icon"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>            
-        </div>  
-        <div class="col-md-6">
-            <div class="copy-card">
-                <div class="row align-items-center">
-                    <div class="col-sm-2 text-left">
-                        <img src="adress/RWTECH.png" alt="Ícone do Offline" class="title-icon" width="110px">
-                    </div>
-                    <div class="col-sm-8 text-center">
-                        <div class="copy-card-title">RW</div>
-                    </div>
-                    <div class="col-sm-2 text-end">
-                        <button class="copy-button-home" onclick="copyText('https://www.secullum.com.br/at-rw.exe', this)" title="Copiar Link">
-                            <i class="fas fa-copy copy-icon"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>            
-        </div>  
-        <div class="col-md-6">
-            <div class="copy-card">
-                <div class="row align-items-center">
-                    <div class="col-sm-2 text-left">
-                        <img src="adress/ZPM.jpg" alt="Ícone do ZPM" class="title-icon" width="100px">
-                    </div>
-                    <div class="col-sm-8 text-center">
-                        <div class="copy-card-title">ZPM</div>
-                    </div>
-                    <div class="col-sm-2 text-end">
-                        <button class="copy-button-home" onclick="copyText('https://www.secullum.com.br/at-zpm.exe', this)" title="Copiar Link">
-                            <i class="fas fa-copy copy-icon"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div> 
-    </div>
-</div>
-
-<!-- SQL -->
-<div id="sql" class="tab-pane"> 
-    <div class="row"> 
-        <!-- Cartão SQL 2017 -->
-        <div class="col-md-6">
-            <div class="copy-card">
-                <div class="row align-items-center">
-                    <div class="col-sm-2 text-left">
-                        <img src="adress/sql 2014.png" alt="sql 2014" class="title-icon" width="120px">
-                    </div>
-                    <div class="col-sm-8 text-center">
-                        <div class="copy-card-title">SQL 2014</div>
-                    </div>
-                    <div class="col-sm-2 text-end">
-                        <button class="copy-button-home" onclick="copyText('https://www.microsoft.com/pt-br/download/details.aspx?id=42299', this)" title="Copiar Link">
-                            <i class="fas fa-copy copy-icon"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>            
-        </div>
-        <!-- Cartão SQL 2019 -->
-        <div class="col-md-6">
-            <div class="copy-card">
-                <div class="row align-items-center">
-                    <div class="col-sm-2 text-left">
-                        <img src="adress/sql 2019.png" alt="sql 2019" class="title-icon" width="120px">
-                    </div>
-                    <div class="col-sm-8 text-center">
-                        <div class="copy-card-title">SQL 2019</div>
-                    </div>
-                    <div class="col-sm-2 text-end">
-                        <button class="copy-button-home" onclick="copyText('https://www.microsoft.com/pt-br/download/details.aspx?id=101064', this)" title="Copiar Link">
-                            <i class="fas fa-copy copy-icon"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Cartão SQL 2022 -->
-        <div class="col-md-6">
-            <div class="copy-card">
-                <div class="row align-items-center">
-                    <div class="col-sm-2 text-left">
-                        <img src="adress/sql 2017.png" alt="sql 2017" class="title-icon" width="120px">
-                    </div>
-                    <div class="col-sm-8 text-center">
-                        <div class="copy-card-title">SQL 2017</div>
-                    </div>
-                    <div class="col-sm-2 text-end">
-                        <button class="copy-button-home" onclick="copyText('https://www.microsoft.com/pt-br/download/details.aspx?id=55994', this)" title="Copiar Link">
-                            <i class="fas fa-copy copy-icon"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Cartão SQL 2022 -->
-        <div class="col-md-6">
-            <div class="copy-card">
-                <div class="row align-items-center">
-                    <div class="col-sm-2 text-left">
-                        <img src="adress/sql 2022.png" alt="sql 2022" class="title-icon" width="90px">
-                    </div>
-                    <div class="col-sm-8 text-center">
-                        <div class="copy-card-title">SQL 2022</div>
-                    </div>
-                    <div class="col-sm-2 text-end">
-                        <button class="copy-button-home" onclick="copyText('https://www.microsoft.com/pt-br/download/details.aspx?id=104781', this)" title="Copiar Link">
-                            <i class="fas fa-copy copy-icon"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div> 
-    </div>
-</div>
 
 </body>
 </html>

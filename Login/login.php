@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Verificar login padrão
     if ($username === "alexandre" && $password === "123") {
         $_SESSION['username'] = $username;
-        header("Location: index.html"); // Redirecionar para a página inicial
+        header("Location: instaladores.html"); // Redirecionar para a página inicial
         exit();
     }
 
@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if (md5($password) === $hashed_password) { // Comparar senha
             $_SESSION['username'] = $username;
-            header("Location: index.html");
+            header("Location: instaladores.html");
             exit();
         } else {
             echo "Senha incorreta.";

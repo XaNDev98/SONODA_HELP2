@@ -317,6 +317,13 @@ body {
     #video-submenu a {
         font-size: 0.75rem; /* Ajuste o tamanho conforme necessário */
     }
+    .tab {
+        display: flex; /* Usa flexbox para organizar os elementos */
+        justify-content: space-between; /* Texto à esquerda, seta à direita */
+        align-items: center; /* Centraliza verticalmente */
+        padding-right: 60px; /* Adiciona mais espaço à direita */
+        position: relative; /* Para controlar melhor a seta */
+    }
 
     /* Estilo para o submenu de Relógios */
     #relogios-submenu a {
@@ -329,7 +336,16 @@ body {
         padding-right: 60px; /* Adiciona mais espaço à direita */
         position: relative; /* Para controlar melhor a seta */
     }
-    
+    #checklist-submenu a {
+        font-size: 0.75rem; /* Ajuste o tamanho conforme necessário */
+    }
+    .tab {
+        display: flex; /* Usa flexbox para organizar os elementos */
+        justify-content: space-between; /* Texto à esquerda, seta à direita */
+        align-items: center; /* Centraliza verticalmente */
+        padding-right: 60px; /* Adiciona mais espaço à direita */
+        position: relative; /* Para controlar melhor a seta */
+    }
    
 
 /* Quando a seta estiver em estado ativo (clicada) */
