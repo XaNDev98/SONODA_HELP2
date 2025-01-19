@@ -9,11 +9,27 @@
     <link rel="stylesheet" href="../Style/Style.css">  
     <link rel="stylesheet" href="../Style/Responsive.css">      
     <link rel="stylesheet" href="../Style/comercial.css">  
-    <script src="../JavaScript/index.js" defer></script>  
+    <link rel="stylesheet" href="../Style/efeitos.css">  
+    <link rel="stylesheet" href="../Style/darkMode.css">  
+    <script src="../JavaScript/index.js" defer></script> 
+    <script src="../JavaScript/darkMode.js" defer></script>  
     <link rel="icon" href="adress/a.png" type="image/x-icon"> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> 
 </head>
-<body> 
+<body>  
+         <!-- Partículas de fogos de artifício -->
+         <div class="fireworks">
+            <div class="firework" style="--x: 100px; --y: 100px;"></div>
+            <div class="firework" style="--x: -100px; --y: -100px;"></div>
+            <div class="firework" style="--x: 200px; --y: 200px;"></div>
+            <div class="firework" style="--x: -150px; --y: -150px;"></div>
+            <div class="firework" style="--x: 300px; --y: 50px;"></div>
+            <div class="firework" style="--x: -250px; --y: 150px;"></div>
+            <div class="firework" style="--x: 400px; --y: -200px;"></div>
+            <div class="firework" style="--x: -300px; --y: -200px;"></div>
+            <div class="firework" style="--x: 150px; --y: 300px;"></div>
+            <div class="firework" style="--x: -400px; --y: 200px;"></div>
+        </div>
     <!-- Header -->
     <div class="header d-flex justify-content-between align-items-center">
         <div class="logo">
@@ -23,8 +39,8 @@
         </div>
         <div>
             <div>
-                <span><strong></strong> | <span class="tec-alexandre">Tec Alexandre</span></span>
-            </div>            
+    <span class="name-container"><strong></strong> | <span class="tec-alexandre">Tec Alexandre</span><button id="themeToggle" class="theme-toggle" title="Alterar tema"> 
+        <i class="fas fa-sun"></i></button></span></div>            
         </div>
     </div>
 

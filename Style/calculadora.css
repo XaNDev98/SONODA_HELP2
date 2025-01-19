@@ -1,0 +1,138 @@
+strong {
+color: #0F7BDE;
+font-family: 'Poppins', sans-serif;
+}
+.container {
+    max-width: 700px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+h2 {
+    color: #080808;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.form-group label {
+    color: #555;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.form-control {
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: border 0.3s ease;
+    background-color: #fafafa;
+}
+.form-control:focus {
+    border-color: #ff6f00;
+    outline: none;
+    background-color: #fff;
+}
+.btn {
+    border-radius: 12px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.btn-primary {
+    background-color: #ff6f00;
+    color: white;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #000000;
+}
+.btn-success {
+    background-color: #28a745;
+    color: white;
+    border: none; 
+}
+.btn-success:hover {
+    background-color: #000000;
+}
+.btn i {
+    font-size: 10px;        /* Ícone menor */
+    margin-right: 8px;      /* Espaço entre o ícone e o texto */
+    padding: 0;             /* Remove padding extra */
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#entradasAdicionais {
+    margin-top: 20px;
+}
+#resultado {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e9f7ef;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #333;
+    border: 2px solid #0F7BDE;
+    text-align: center;
+    font-weight: bold;
+}
+.input-container button {
+    padding: 6px 12px;     /* Diminuindo o padding */
+    font-size: 12px;        /* Reduzindo o tamanho da fonte */
+    border-radius: 8px;     /* Bordas arredondadas */
+    font-weight: bold;
+    display: inline-flex;   /* Para alinhar o ícone e o texto de forma mais compacta */
+    align-items: center;
+}
+
+.input-container button i {
+    font-size: 20px;        /* Ícone menor */
+    margin-right: 5px;      /* Espaço entre o ícone e o texto */
+}
+
+.btn-primary {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+}
+
+.btn-success {
+    background-color: #3908eb;
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover, .btn-success:hover {
+    opacity: 0.9;          /* Leve efeito de hover */
+} 
+body.dark-mode  {
+    color: #f0f0f0; 
+    background-color: #414446;
+}  
+body.dark-mode H2 {
+    color: #f0f0f0; 
+}  
+/* Estilo para o modo escuro: fonte branca nos campos de entrada e saída */
+body.dark-mode input[type="time"] {
+    color: #fff; /* Texto branco */
+    background-color: #333; /* Fundo escuro para contrastar com o texto */
+}
+
+/* Estilo para garantir que o label tenha uma cor visível no modo escuro */
+body.dark-mode label {
+    color: #fff; /* Cor branca para os rótulos no modo escuro */
+} 
+body.dark-mode #resultado {
+    background-color: #041a33;
+    color: white;
+}
+
+
+

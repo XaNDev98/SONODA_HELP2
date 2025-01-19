@@ -1,0 +1,116 @@
+/* Contêiner que envolve o nome e o botão */
+.name-container {
+  display: flex;
+  align-items: center; /* Alinha o nome e o botão verticalmente */
+  gap: 10px; /* Espaço entre o nome e o botão */
+}
+
+/* Botão de alternância de tema */
+.theme-toggle {
+  background: linear-gradient(135deg, #007bff, #0b033a);
+  border: 2px solid #007bff;
+  border-radius: 20px;
+  padding: 5px 12px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito hover */
+.theme-toggle:hover {
+  background: linear-gradient(135deg, #0b033a, #007bff);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+}
+
+/* Remover borda no clique */
+.theme-toggle:focus {
+  outline: none; /* Remove a borda padrão de foco */
+  box-shadow: none; /* Remove sombras de foco adicionais */
+}
+
+/* Ícone dentro do botão */
+.theme-toggle i {
+  font-size: 20px;
+  margin: 0;
+  transition: transform 0.3s, color 0.3s;
+}
+
+/* Animação do ícone no hover */
+.theme-toggle:hover i {
+  transform: rotate(15deg);
+  color: #fff;
+}
+
+/* Efeito de piscar */
+@keyframes blinkEffect {
+  0% {
+      opacity: 1;
+  }
+  25% {
+      opacity: 0.5; /* Torna o botão semitransparente */
+  }
+  50% {
+      opacity: 1; /* Volta à opacidade normal */
+  }
+  75% {
+      opacity: 0.5; /* Torna o botão semitransparente novamente */
+  }
+  100% {
+      opacity: 1; /* Retorna ao estado normal */
+  }
+}
+
+/* Efeito de piscar ao clicar */
+.theme-toggle.clicked {
+  animation: blinkEffect 0.8s ease-in-out; /* Aplica o efeito de piscar */
+}
+
+/* Modo escuro */
+body.dark-mode .content {
+  background-color: #000000; /* Fundo preto */
+}
+
+body.dark-mode .content h5 {
+  color: #007bff; /* Texto azul */
+}
+
+body.dark-mode .copy-card {
+  background-color: #000000; /* Fundo preto para copy-card */
+  color: #f0f0f0; /* Texto claro dentro do card */
+}
+
+/* Modo escuro */
+body.dark-mode .content {
+  background-color: #000000; /* Fundo preto */
+}
+
+body.dark-mode .content h5 {
+  color: #007bff; /* Texto azul */
+}
+
+body.dark-mode .copy-card {
+  background-color: #000000; /* Fundo preto para copy-card */
+  color: #f0f0f0; /* Texto claro dentro do card */
+} 
+body.dark-mode .command-item {
+  background-color: #333333; /* Fundo preto para copy-card */
+} 
+body.dark-mode .checklist-container {
+  background-color: #333333; /* Fundo preto para copy-card */
+}  
+body.dark-mode .checklist li {
+  background-color: #333333; /* Fundo preto para copy-card */
+}  
+body.dark-mode .container {
+  background-color: #333333; /* Fundo preto para copy-card */
+}  
+body.dark-mode .label {
+  color: #f0f0f0;
+}
+

@@ -44,4 +44,8 @@
   border-radius: 4px;
   text-transform: uppercase;
   font-weight: bold;
+} 
+body.dark-mode td {
+  background-color: #333333;
+  color: white;
 }

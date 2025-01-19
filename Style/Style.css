@@ -4,7 +4,7 @@ body {
     background-color: #e5ebf1;
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;
+    box-sizing: border-box;  
 } 
 
 .logo img {
@@ -18,8 +18,6 @@ body {
     transform: scale(1.1); /* Aumenta a imagem suavemente */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra suave e elegante */
 }
-
-
 
 /* Header */
 .header {
@@ -198,8 +196,8 @@ body {
     padding: 20px;
     margin: 0px; /* Espaçamento entre o conteúdo e outros elementos */
     margin-left: 5px; 
-    width: 100%; 
-} 
+    width: 100%;  
+}  
 .command-item {
     background-color: #f8f9fa;
     margin: 10px 0;
@@ -352,7 +350,8 @@ body {
 .sidebar .nav-link.active .fa-chevron-down {
     color: white; /* Altera a cor da seta para branco */
     animation: blink 2.5s infinite; /* Animação de piscar */
-}
+} 
+
 /* Animação de piscar */
 @keyframes blink {
     0%, 100% {

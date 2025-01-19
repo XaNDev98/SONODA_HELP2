@@ -10,139 +10,35 @@
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       rel="stylesheet"/>
-    <link rel="stylesheet" href="../Style/Style.css" />
-    <link rel="stylesheet" href="../Style/Responsive.css" />
-    <script src="../JavaScript/index.js" defer></script> 
-    <link rel="icon" href="../adress/a.png" type="image/x-icon" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
+        <link rel="stylesheet" href="../Style/Style.css"/>
+        <link rel="stylesheet" href="../Style/Responsive.css"/> 
+        <link rel="stylesheet" href="../Style/calculadora.css"/> 
+        <link rel="stylesheet" href="../Style/efeitos.css">  
+        <link rel="stylesheet" href="../Style/darkMode.css"> 
+        <script src="../JavaScript/index.js" defer></script>  
+        <script src="../JavaScript/calculadora.js" defer></script> 
+        <script src="../JavaScript/darkMode.js" defer></script> 
+        <link rel="icon" href="../adress/a.png" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"rel="stylesheet"/>
   </head> 
-  <style>
-    strong {
-    color: #0F7BDE;
-    font-family: 'Poppins', sans-serif;
-}
-    .container {
-        max-width: 700px;
-        background-color: #ffffff;
-        padding: 40px;
-        border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        font-size: 16px;
-    }
-    h2 {
-        color: #080808;
-        text-align: center;
-        font-size: 32px;
-        margin-bottom: 20px;
-        font-weight: bold;
-    }
-    .form-group label {
-        color: #555;
-        font-weight: bold;
-        font-size: 16px;
-        margin-bottom: 8px;
-    }
-    .form-control {
-        border-radius: 10px;
-        padding: 12px;
-        font-size: 16px;
-        border: 1px solid #ddd;
-        width: 100%;
-        margin-bottom: 20px;
-        transition: border 0.3s ease;
-        background-color: #fafafa;
-    }
-    .form-control:focus {
-        border-color: #ff6f00;
-        outline: none;
-        background-color: #fff;
-    }
-    .btn {
-        border-radius: 12px;
-        padding: 12px 20px;
-        font-size: 16px;
-        font-weight: bold;
-        transition: background-color 0.3s ease;
-    }
-    .btn-primary {
-        background-color: #ff6f00;
-        color: white;
-        border: none;
-    }
-    .btn-primary:hover {
-        background-color: #000000;
-    }
-    .btn-success {
-        background-color: #28a745;
-        color: white;
-        border: none; 
-    }
-    .btn-success:hover {
-        background-color: #000000;
-    }
-    .btn i {
-        font-size: 10px;        /* Ícone menor */
-        margin-right: 8px;      /* Espaço entre o ícone e o texto */
-        padding: 0;             /* Remove padding extra */
-        font-weight: bold;
-        text-transform: uppercase;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-    #entradasAdicionais {
-        margin-top: 20px;
-    }
-    #resultado {
-        margin-top: 30px;
-        padding: 20px;
-        background-color: #e9f7ef;
-        border-radius: 10px;
-        font-size: 18px;
-        color: #333;
-        border: 2px solid #0F7BDE;
-        text-align: center;
-        font-weight: bold;
-    }
-    .input-container button {
-        padding: 6px 12px;     /* Diminuindo o padding */
-        font-size: 12px;        /* Reduzindo o tamanho da fonte */
-        border-radius: 8px;     /* Bordas arredondadas */
-        font-weight: bold;
-        display: inline-flex;   /* Para alinhar o ícone e o texto de forma mais compacta */
-        align-items: center;
-    }
 
-    .input-container button i {
-        font-size: 20px;        /* Ícone menor */
-        margin-right: 5px;      /* Espaço entre o ícone e o texto */
-    }
-
-    .btn-primary {
-        background-color: #ff0000;
-        color: white;
-        border: none;
-    }
-
-    .btn-success {
-        background-color: #3908eb;
-        color: white;
-        border: none;
-    }
-
-    .btn-primary:hover, .btn-success:hover {
-        opacity: 0.9;          /* Leve efeito de hover */
-    }
-</style>
-
-
-
-  <body>
+  <body> 
+         <!-- Partículas de fogos de artifício -->
+         <div class="fireworks">
+          <div class="firework" style="--x: 100px; --y: 100px;"></div>
+          <div class="firework" style="--x: -100px; --y: -100px;"></div>
+          <div class="firework" style="--x: 200px; --y: 200px;"></div>
+          <div class="firework" style="--x: -150px; --y: -150px;"></div>
+          <div class="firework" style="--x: 300px; --y: 50px;"></div>
+          <div class="firework" style="--x: -250px; --y: 150px;"></div>
+          <div class="firework" style="--x: 400px; --y: -200px;"></div>
+          <div class="firework" style="--x: -300px; --y: -200px;"></div>
+          <div class="firework" style="--x: 150px; --y: 300px;"></div>
+          <div class="firework" style="--x: -400px; --y: 200px;"></div>
+      </div>
     <audio autoplay loop>
       <source src="../Music/christmas-spirit-265741.mp3" type="audio/mpeg" />
-      Seu navegador não suporta o elemento <code>audio</code>.
-    </audio>
+      Seu navegador não suporta o elemento <code>audio</code>.</audio>
     <div class="header d-flex justify-content-between align-items-center px-3">
       <div class="logo">
         <h4 class="m-0">
@@ -151,7 +47,12 @@
         </h4>
       </div>
       <div>
-        <span><strong></strong> | <span class="tec-alexandre">Tec Alexandre</span></span>
+        <span class="name-container">
+          <strong></strong> | <span class="tec-alexandre">Tec Alexandre</span>
+          <button id="themeToggle" class="theme-toggle" title="Alterar tema">
+              <i class="fas fa-sun"></i>
+          </button>
+      </span>
       </div>
     </div>
 
@@ -234,136 +135,6 @@
   <div id="resultado"></div>
 </div>
     
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-      
-    <script>
-      let contadorEntradas = 1;
-  
-      // Função para adicionar novas entradas e saídas
-      function adicionarEntrada() {
-          contadorEntradas++;
-  
-          const entradasAdicionais = document.getElementById("entradasAdicionais");
-          const novaEntrada = document.createElement("div");
-          novaEntrada.classList.add("form-group", "row");
-          novaEntrada.innerHTML = `
-              <div class="col-md-5">
-                  <label for="entrada${contadorEntradas}">Entrada ${contadorEntradas}:</label>
-                  <input type="time" class="form-control" id="entrada${contadorEntradas}">
-              </div>
-              
-              <div class="col-md-5">
-                  <label for="saida${contadorEntradas}">Saída ${contadorEntradas}:</label>
-                  <input type="time" class="form-control" id="saida${contadorEntradas}">
-              </div>
-          `;
-          entradasAdicionais.appendChild(novaEntrada);
-      }
-  
-      // Evento ao submeter o formulário
-      document.getElementById("calcForm").addEventListener("submit", function(event) {
-          event.preventDefault();
-  
-          const cargaObrigatoria = document.getElementById("carga_obrigatoria").value;
-          const entradas = [];
-          const saídas = [];
-  
-          // Pega os valores das entradas e saídas
-          for (let i = 1; i <= contadorEntradas; i++) {
-              const entrada = document.getElementById(`entrada${i}`).value;
-              const saída = document.getElementById(`saida${i}`).value;
-              if (entrada && saída) {
-                  entradas.push(entrada);
-                  saídas.push(saída);
-              }
-          }
-  
-          if (entradas.length === 0 || saídas.length === 0) {
-              document.getElementById("resultado").innerHTML = "Por favor, preencha todas as entradas e saídas.";
-              return;
-          }
-  
-          calcularJornada(entradas, saídas, cargaObrigatoria);
-      });
-  
-      // Função para calcular a jornada
-      function calcularJornada(entradas, saídas, cargaObrigatoria) {
-          let totalJornadaMinutos = 0;
-  
-          // Calcula o total de jornada somando os intervalos de entrada e saída
-          for (let i = 0; i < entradas.length; i++) {
-              const entradaMinutos = converteParaMinutos(entradas[i]);
-              const saídaMinutos = converteParaMinutos(saídas[i]);
-              totalJornadaMinutos += saídaMinutos - entradaMinutos;
-          }
-  
-          // Função para converter minutos em horas e minutos
-          function converteEmHorasEMinutos(minutos) {
-              const horas = Math.abs(Math.floor(minutos / 60));
-              const minutosRestantes = Math.abs(minutos % 60);
-              return `${horas < 10 ? '0' : ''}${horas}:${minutosRestantes < 10 ? '0' : ''}${minutosRestantes}`;
-          }
-  
-          let cargaFormatada = '';
-          let horasExtras = 0;
-          let cargaEmMinutos = 0;
-  
-          if (cargaObrigatoria) {
-              const [cargaHora, cargaMinuto] = cargaObrigatoria.split(":").map(Number);
-              if (!isNaN(cargaHora) && !isNaN(cargaMinuto)) {
-                  cargaEmMinutos = (cargaHora * 60) + cargaMinuto;
-                  cargaFormatada = converteEmHorasEMinutos(cargaEmMinutos);
-                  horasExtras = totalJornadaMinutos - cargaEmMinutos;
-              }
-          }
-  
-          const jornadaFormatada = converteEmHorasEMinutos(totalJornadaMinutos);
-          const resultadoFormatado = converteEmHorasEMinutos(horasExtras);
-  
-          let resultadoHTML = `Jornada: ${jornadaFormatada}<br>`;
-  
-          if (cargaFormatada) {
-              if (horasExtras > 0) {
-                  resultadoHTML += `Carga obrigatória: ${cargaFormatada}<br>Resultado: ${resultadoFormatado}<br>Colaborador fez ${resultadoFormatado} de hora extra.`;
-              } else if (horasExtras < 0) {
-                  resultadoHTML += `Carga obrigatória: ${cargaFormatada}<br>Resultado: ${resultadoFormatado}<br>Colaborador faltou ${resultadoFormatado} para cumprir a jornada.`;
-              } else {
-                  resultadoHTML += `Carga obrigatória: ${cargaFormatada}<br>Resultado: ${resultadoFormatado}<br>Colaborador fez o horário exato.`;
-              }
-          } else {
-              resultadoHTML += `Colaborador fez ${jornadaFormatada}.`;
-          }
-  
-          document.getElementById("resultado").innerHTML = resultadoHTML;
-      }
-  
-      // Função para converter a hora em minutos
-      function converteParaMinutos(time) {
-          const [hora, minuto] = time.split(":").map(Number);
-          return (hora * 60) + minuto;
-      }
-  
-      // Função para limpar os cálculos
-      function limparCalculo() {
-          // Limpa os campos de entrada e saída
-          for (let i = 1; i <= contadorEntradas; i++) {
-              document.getElementById(`entrada${i}`).value = '';
-              document.getElementById(`saida${i}`).value = '';
-          }
-          document.getElementById("carga_obrigatoria").value = '';
-  
-          // Limpa o resultado da jornada
-          document.getElementById("resultado").innerHTML = '';
-  
-          // Limpa as entradas adicionais
-          document.getElementById("entradasAdicionais").innerHTML = '';
-          contadorEntradas = 1;  // Reseta o contador
-      }
-  </script>
-  
-      
-      
-      
-    
-  </body>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> 
+</body>
 </html>

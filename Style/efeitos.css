@@ -1,0 +1,123 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+
+/* Efeitos de partículas de fogos de artifício */
+.fireworks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.firework {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: explode 1s ease-out infinite;
+    opacity: 0;
+}
+
+/* Cores diferentes para os fogos de artifício */
+.firework:nth-child(odd) {
+    background-color: rgba(71, 129, 255, 0.8); /* Red */
+}
+
+.firework:nth-child(even) {
+    background-color: rgba(255, 215, 0, 0.8); /* Yellow */
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(0) translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4) translate(var(--x), var(--y));
+        opacity: 0;
+    }
+}
+
+/* Gerar várias explosões em posições aleatórias */
+.firework:nth-child(1) {
+    left: 5%;
+    animation-duration: 1s;
+    animation-delay: 0s;
+}
+.firework:nth-child(2) {
+    left: 15%;
+    animation-duration: 1.2s;
+    animation-delay: 0.3s;
+}
+.firework:nth-child(3) {
+    left: 25%;
+    animation-duration: 1.4s;
+    animation-delay: 0.6s;
+}
+.firework:nth-child(4) {
+    left: 35%;
+    animation-duration: 1.6s;
+    animation-delay: 0.9s;
+}
+.firework:nth-child(5) {
+    left: 45%;
+    animation-duration: 1.8s;
+    animation-delay: 1.2s;
+}
+.firework:nth-child(6) {
+    left: 55%;
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+}
+.firework:nth-child(7) {
+    left: 65%;
+    animation-duration: 2.2s;
+    animation-delay: 1.8s;
+}
+.firework:nth-child(8) {
+    left: 75%;
+    animation-duration: 2.4s;
+    animation-delay: 2.1s;
+}
+.firework:nth-child(9) {
+    left: 85%;
+    animation-duration: 2.6s;
+    animation-delay: 2.4s;
+}
+.firework:nth-child(10) {
+    left: 95%;
+    animation-duration: 2.8s;
+    animation-delay: 2.7s;
+}
+
+/* Animação de fadeInUp */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
