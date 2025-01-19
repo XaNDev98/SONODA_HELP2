@@ -99,7 +99,8 @@ body.dark-mode .copy-card {
   color: #f0f0f0; /* Texto claro dentro do card */
 } 
 body.dark-mode .command-item {
-  background-color: #333333; /* Fundo preto para copy-card */
+  background-color: #333333; /* Fundo preto para copy-card */ 
+  color: white;
 } 
 body.dark-mode .checklist-container {
   background-color: #333333; /* Fundo preto para copy-card */
@@ -112,5 +113,8 @@ body.dark-mode .container {
 }  
 body.dark-mode .label {
   color: #f0f0f0;
+} 
+body.dark-mode .command-list {
+  color: white;
 }
 
