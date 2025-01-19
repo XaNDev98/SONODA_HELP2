@@ -117,11 +117,11 @@
 
         if (cargaFormatada) {
             if (horasExtras > 0) {
-                resultadoHTML += `Carga obrigatória: ${cargaFormatada}<br>Resultado: ${resultadoFormatado}<br>Colaborador fez ${resultadoFormatado} de hora extra.`;
+                resultadoHTML += `Carga obrigatória: ${cargaFormatada}<br>Colaborador fez ${resultadoFormatado} de hora extra.`;
             } else if (horasExtras < 0) {
-                resultadoHTML += `Carga obrigatória: ${cargaFormatada}<br>Resultado: ${resultadoFormatado}<br>Colaborador faltou ${resultadoFormatado} para cumprir a jornada.`;
+                resultadoHTML += `Carga obrigatória: ${cargaFormatada}<br>Colaborador faltou ${resultadoFormatado} para cumprir a jornada.`;
             } else {
-                resultadoHTML += `Carga obrigatória: ${cargaFormatada}<br>Resultado: ${resultadoFormatado}<br>Colaborador fez o horário exato.`;
+                resultadoHTML += `Carga obrigatória: ${cargaFormatada}<br>Colaborador fez o horário exato.`;
             }
         } else {
             resultadoHTML += `Colaborador fez ${jornadaFormatada}.`;
