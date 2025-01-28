@@ -54,9 +54,11 @@ img {
     transition: transform 0.5s ease; /* Suaviza a transição do zoom */
     z-index: 1; /* Garantir o nível básico */
     position: relative; /* Necessário para controlar o zoom */
+    cursor: zoom-in;
 }
 
 img.zoomed {
     transform: scale(1.5); /* Amplia a imagem */
     z-index: 1000; /* Garante que a imagem fique em cima de outros elementos */
+    cursor: zoom-out;
 }
