@@ -14,24 +14,23 @@
     <script src="../JavaScript/darkMode.js" defer></script>
     <link rel="icon" href="../adress/a.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> 
-</head> 
-
-       
+</head>
 
 <body>  
-          <!-- Partículas de fogos de artifício -->
-          <div class="fireworks">
-            <div class="firework" style="--x: 100px; --y: 100px;"></div>
-            <div class="firework" style="--x: -100px; --y: -100px;"></div>
-            <div class="firework" style="--x: 200px; --y: 200px;"></div>
-            <div class="firework" style="--x: -150px; --y: -150px;"></div>
-            <div class="firework" style="--x: 300px; --y: 50px;"></div>
-            <div class="firework" style="--x: -250px; --y: 150px;"></div>
-            <div class="firework" style="--x: 400px; --y: -200px;"></div>
-            <div class="firework" style="--x: -300px; --y: -200px;"></div>
-            <div class="firework" style="--x: 150px; --y: 300px;"></div>
-            <div class="firework" style="--x: -400px; --y: 200px;"></div>
-        </div>
+    <!-- Partículas de fogos de artifício -->
+    <div class="fireworks">
+        <div class="firework" style="--x: 100px; --y: 100px;"></div>
+        <div class="firework" style="--x: -100px; --y: -100px;"></div>
+        <div class="firework" style="--x: 200px; --y: 200px;"></div>
+        <div class="firework" style="--x: -150px; --y: -150px;"></div>
+        <div class="firework" style="--x: 300px; --y: 50px;"></div>
+        <div class="firework" style="--x: -250px; --y: 150px;"></div>
+        <div class="firework" style="--x: 400px; --y: -200px;"></div>
+        <div class="firework" style="--x: -300px; --y: -200px;"></div>
+        <div class="firework" style="--x: 150px; --y: 300px;"></div>
+        <div class="firework" style="--x: -400px; --y: 200px;"></div>
+    </div>
+
     <!-- Header -->
     <div class="header d-flex justify-content-between align-items-center">
         <div class="logo">
@@ -40,56 +39,57 @@
             </h4>
         </div>
         <div>
-<span class="name-container"><strong></strong> | <span class="tec-alexandre">Tec Alexandre</span><button id="themeToggle" class="theme-toggle" title="Alterar tema"><i class="fas fa-sun"></i></button></span>        </div>
+            <span class="name-container"><strong></strong> | <span class="tec-alexandre">Tec Alexandre</span><button id="themeToggle" class="theme-toggle" title="Alterar tema"><i class="fas fa-sun"></i></button></span>
+        </div>
     </div>
 
     <div class="d-flex">
-    <!-- Sidebar -->
-    <div class="sidebar p-3" style="position: relative;">
-        <ul class="nav flex-column">
-            <li class="nav-item"><a href="../Sidebar/instaladores.html" class="nav-link active"><i class="fas fa-home"></i>Home</a></li> 
-                <li class="nav-item">
-                    <a href="#" class="nav-link" id="video-link" onclick="toggleMenu('video', event)"><i class="fas fa-video"></i> Vídeo <i class="fas fa-chevron-down" id="video-arrow"></i></a>
-                    <ul id="video-submenu" class="nav flex-column" style="display: none;">
-                        <li class="nav-item"><a href="../Videos/Videos_OFF.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Offline</a></li>
-                        <li class="nav-item"><a href="../Videos/Video_Web.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Web</a></li>
-                        <li class="nav-item"><a href="../Videos/Videos_AcadAcesso.html" class="nav-link" onclick="keepMenuOpen(event)">Demais Sistemas</a></li>
-                    </ul>
-                </li> 
-                <li class="nav-item">
-                    <a href="#" class="nav-link" id="relogios-link" onclick="toggleMenu('relogios', event)"><i class="fas fa-clock"></i> Relógios <i class="fas fa-chevron-down" id="relogios-arrow"></i></a>
-                    <ul id="relogios-submenu" class="nav flex-column" style="display: none;">
-                        <li class="nav-item"><a href="../Rep/Control_id.html" class="nav-link" onclick="keepMenuOpen(event)">Control ID</a></li>
-                        <li class="nav-item"><a href="../Rep/Smartpoint.html" class="nav-link" onclick="keepMenuOpen(event)">Smart Point</a></li>
-                        <li class="nav-item"><a href="../Rep/Miniprint.html" class="nav-link" onclick="keepMenuOpen(event)">Miniprint</a></li> 
-                        <li class="nav-item"><a href="../Rep/Printpoint2.html" class="nav-link" onclick="keepMenuOpen(event)">PrintPoint 2</a></li>
-                        <li class="nav-item"><a href="../Rep/Printpoint3.html" class="nav-link" onclick="keepMenuOpen(event)">PrintPoint 3</a></li>
-                    </ul>
-                </li> 
-                <li class="nav-item">
-                    <a href="#" class="nav-link" id="checklist-link" onclick="toggleMenu('checklist', event)"><i class="fas  fa-check"></i> Checklist <i class="fas fa-chevron-down" id="video-arrow"></i></a>
-                    <ul id="checklist-submenu" class="nav flex-column" style="display: none;">
-                        <li class="nav-item"><a href="../Treinamento/Sistema_OFF.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Offline</a></li>
-                        <li class="nav-item"><a href="../Treinamento/Sistema_WEB.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Web</a></li>
-                        <li class="nav-item"><a href="../Treinamento/Sistema_acad_acess_escola.html" class="nav-link" onclick="keepMenuOpen(event)">Demais Sistemas</a></li>
-                        <li class="nav-item"><a href="../Treinamento/treinamento_geral.html" class="nav-link" onclick="keepMenuOpen(event)">Treinamento Geral</a></li>
-                    </ul>
-                </li>  
-                <li class="nav-item"><a href="../Sidebar/Resoluçao.html" class="nav-link"><i class="fas fa-lightbulb"></i> Resoluções</a></li> 
-                <li class="nav-item"><a href="../Sidebar/comercial.html" class="nav-link"><i class="fas fa-coins"></i> Comercial</a></li>
-                <li class="nav-item"><a href="../Sidebar/calculadora.html" class="nav-link"><i class="fas fa-calculator"></i> Calculadora</a></li> 
-                <li class="nav-item"><a href="https://sonodaponto.com.br/pis/" target="_blank" class="nav-link"><i class="fas fa-file-alt"></i> Gerar PIS</a></li> 
-            </li>
-        </ul>
-        
-        <!-- "Mensagens " fixado na parte inferior da sidebar -->
-        <div class="position-absolute" style="bottom: 5px; margin-right: -5px;">
+        <!-- Sidebar -->
+        <div class="sidebar p-3" style="position: relative;">
             <ul class="nav flex-column">
-                <li class="nav-item"><a href="../Sidebar/Mensagens.html" class="nav-link"><i class="fas fa-comment"></i> Mensagens</a></li>
+                <li class="nav-item"><a href="../Sidebar/instaladores.html" class="nav-link active"><i class="fas fa-home"></i>Home</a></li> 
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="video-link" onclick="toggleMenu('video', event)"><i class="fas fa-video"></i> Vídeo <i class="fas fa-chevron-down" id="video-arrow"></i></a>
+                        <ul id="video-submenu" class="nav flex-column" style="display: none;">
+                            <li class="nav-item"><a href="../Videos/Videos_OFF.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Offline</a></li>
+                            <li class="nav-item"><a href="../Videos/Video_Web.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Web</a></li>
+                            <li class="nav-item"><a href="../Videos/Videos_AcadAcesso.html" class="nav-link" onclick="keepMenuOpen(event)">Demais Sistemas</a></li>
+                        </ul>
+                    </li> 
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="relogios-link" onclick="toggleMenu('relogios', event)"><i class="fas fa-clock"></i> Relógios <i class="fas fa-chevron-down" id="relogios-arrow"></i></a>
+                        <ul id="relogios-submenu" class="nav flex-column" style="display: none;">
+                            <li class="nav-item"><a href="../Rep/Control_id.html" class="nav-link" onclick="keepMenuOpen(event)">Control ID</a></li>
+                            <li class="nav-item"><a href="../Rep/Smartpoint.html" class="nav-link" onclick="keepMenuOpen(event)">Smart Point</a></li>
+                            <li class="nav-item"><a href="../Rep/Miniprint.html" class="nav-link" onclick="keepMenuOpen(event)">Miniprint</a></li> 
+                            <li class="nav-item"><a href="../Rep/Printpoint2.html" class="nav-link" onclick="keepMenuOpen(event)">PrintPoint 2</a></li>
+                            <li class="nav-item"><a href="../Rep/Printpoint3.html" class="nav-link" onclick="keepMenuOpen(event)">PrintPoint 3</a></li>
+                            <li class="nav-item"><a href="../Rep/Outros.html" class="nav-link" onclick="keepMenuOpen(event)">Outros</a></li>
+                        </ul>
+                    </li> 
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="checklist-link" onclick="toggleMenu('checklist', event)"><i class="fas  fa-check"></i> Checklist <i class="fas fa-chevron-down" id="video-arrow"></i></a>
+                        <ul id="checklist-submenu" class="nav flex-column" style="display: none;">
+                            <li class="nav-item"><a href="../Treinamento/Sistema_OFF.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Offline</a></li>
+                            <li class="nav-item"><a href="../Treinamento/Sistema_WEB.html" class="nav-link" onclick="keepMenuOpen(event)">Sistema Web</a></li>
+                            <li class="nav-item"><a href="../Treinamento/Sistema_acad_acess_escola.html" class="nav-link" onclick="keepMenuOpen(event)">Demais Sistemas</a></li>
+                            <li class="nav-item"><a href="../Treinamento/treinamento_geral.html" class="nav-link" onclick="keepMenuOpen(event)">Treinamento Geral</a></li>
+                        </ul>
+                    </li>  
+                    <li class="nav-item"><a href="../Sidebar/Resoluçao.html" class="nav-link"><i class="fas fa-lightbulb"></i> Resoluções</a></li> 
+                    <li class="nav-item"><a href="../Sidebar/comercial.html" class="nav-link"><i class="fas fa-coins"></i> Comercial</a></li>
+                    <li class="nav-item"><a href="../Sidebar/calculadora.html" class="nav-link"><i class="fas fa-calculator"></i> Calculadora</a></li> 
+                    <li class="nav-item"><a href="https://sonodaponto.com.br/pis/" target="_blank" class="nav-link"><i class="fas fa-file-alt"></i> Gerar PIS</a></li> 
+                </li>
             </ul>
+            
+            <!-- "Mensagens " fixado na parte inferior da sidebar -->
+            <div class="position-absolute" style="bottom: 5px; margin-right: -5px;">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="../Sidebar/Mensagens.html" class="nav-link"><i class="fas fa-comment"></i> Mensagens</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-    
 
         <!-- Main Content -->
         <div class="content container-fluid">
@@ -102,47 +102,52 @@
                     <a class="nav-link" href="#" id="Marca_ponto" data-toggle="tab" onclick="showTab('marcacaoponto')">MARCAÇÃO DE PONTO</a>
                 </li>
             </ul>
-<!-- Barra de Pesquisa dentro da aba OFF -->
-<div class="tab-content">
-    <div id="prob_WEB" class="tab-pane active">
-        <div class="d-flex justify-content-center mb-4">
-            <input type="text" class="form-control w-50" id="search-input" placeholder="Buscar..." aria-label="Search">
-            <button class="btn btn-primary ml-2" onclick="searchContent()">
-                <i class="fas fa-search"></i>
-            </button>
-        </div>
-        <div id="search-result"></div>
-        <div id="web" class="tab-pane active"> 
-            <div class="command-item" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-                <span style="text-align: center; flex: 1;"><strong>APRESENTAÇÃO SISTEMA WEB</strong></span>
-                <div class="d-flex justify-content-end mt-2">
-                    <button class="btn btn-primary btn-sm" onclick="copyText('https://www.youtube.com/watch?v=SyJWv-8hkAs', this)"> 
-                        <i class="fas fa-copy copy-icon"></i>
-                    </button>
-                    <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://www.youtube.com/watch?v=SyJWv-8hkAs', '_blank')"> 
-                        <i class="fas fa-play"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="command-list"> 
-                <div class="command-item">
-                    <span><strong>HOLERITE VISÃO GESTOR</strong></span>
-                    <div class="d-flex">
-                        <button class="btn btn-primary btn-sm" onclick="copyText('https://youtu.be/H6rDR4Suc1U?si=3_phGgjEuuTXwVna', this)"> 
-                            <i class="fas fa-copy copy-icon"></i></button>
-                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://youtu.be/H6rDR4Suc1U?si=3_phGgjEuuTXwVna', '_blank')"> 
-                            <i class="fas fa-play"></i></button>
+
+            <!-- Barra de Pesquisa dentro da aba OFF -->
+            <div class="tab-content">
+                <div id="prob_WEB" class="tab-pane active">
+                    <div class="d-flex justify-content-center mb-4">
+                        <input type="text" class="form-control w-50" id="search-input" placeholder="Buscar..." aria-label="Search">
+                        <button class="btn btn-primary ml-2" onclick="searchContent()">
+                            <i class="fas fa-search"></i>
+                        </button>
                     </div>
-                </div> 
-                <div class="command-item">
-                    <span><strong>HOLERITE VISÃO FUNCIONARIO</strong></span>
-                    <div class="d-flex">
-                        <button class="btn btn-primary btn-sm" onclick="copyText('https://youtu.be/tDsyYufof1c?si=cwcwvO0gXfl2O-1Q', this)"> 
-                            <i class="fas fa-copy copy-icon"></i></button>
-                        <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://youtu.be/tDsyYufof1c?si=cwcwvO0gXfl2O-1Q', '_blank')"> 
-                            <i class="fas fa-play"></i></button>
-                    </div>
-                </div>
+                    <div id="search-result"></div>
+                    <div id="web" class="tab-pane active"> 
+                        <div class="command-item" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                            <span style="text-align: center; flex: 1;"><strong>APRESENTAÇÃO SISTEMA WEB</strong></span>
+                            <div class="d-flex justify-content-end mt-2">
+                                <button class="btn btn-primary btn-sm" onclick="copyText('https://www.youtube.com/watch?v=SyJWv-8hkAs', this)"> 
+                                    <i class="fas fa-copy copy-icon"></i>
+                                </button>
+                                <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://www.youtube.com/watch?v=SyJWv-8hkAs', '_blank')"> 
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="command-list"> 
+                            <div class="command-item">
+                                <span><strong>HOLERITE VISÃO GESTOR</strong></span>
+                                <div class="d-flex">
+                                    <button class="btn btn-primary btn-sm" onclick="copyText('https://youtu.be/H6rDR4Suc1U?si=3_phGgjEuuTXwVna', this)"> 
+                                        <i class="fas fa-copy copy-icon"></i>
+                                    </button>
+                                    <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://youtu.be/H6rDR4Suc1U?si=3_phGgjEuuTXwVna', '_blank')"> 
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                            </div> 
+                            <div class="command-item">
+                                <span><strong>HOLERITE VISÃO FUNCIONARIO</strong></span>
+                                <div class="d-flex">
+                                    <button class="btn btn-primary btn-sm" onclick="copyText('https://youtu.be/tDsyYufof1c?si=cwcwvO0gXfl2O-1Q', this)"> 
+                                        <i class="fas fa-copy copy-icon"></i>
+                                    </button>
+                                    <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://youtu.be/tDsyYufof1c?si=cwcwvO0gXfl2O-1Q', '_blank')"> 
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                </div>
+                            </div>
                 <div class="command-item">
                     <span><strong>AJUSTAR BANCO DE HORAS</strong></span>
                     <div class="d-flex">

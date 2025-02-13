@@ -121,106 +121,195 @@
 
         <!-- Main Content -->
         <div class="content">
-            <img src="../adress/Rep/miniprint.png" alt="Ícone" style="width: 130px; height: 130px; float: right; margin-top: -20px; margin-left: 10px;">
-            <h5 class="font-weight-bold">DIMEP - MINIPRINT</h5> <br>
+            <h5 class="font-weight-bold">CÓDIGO E SENHA DOS RELÓGIOS</h5> <br>
             <ul class="nav nav-tabs mb-4">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#" id="comando-tab" data-toggle="tab" onclick="showTab('comando')">COMANDOS</a>
+                    <a class="nav-link active" href="#" id="controlid-tab" data-toggle="tab" onclick="showTab('controlid')">CONTROL ID</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" id="videos-tab" data-toggle="tab" onclick="showTab('videos')"></a>
+                    <a class="nav-link" href="#" id="dimep-tab" data-toggle="tab" onclick="showTab('dimep')">DIMEP</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" id="videosface-tab" data-toggle="tab" onclick="showTab('videos_face')"></a>
-                </li>
-                
-                <!-- Botão de Impressora ao lado direito -->
-                <li class="nav-item ml-auto">
-                    <button onclick="downloadPDF_Miniprint()" class="btn btn-danger btn-sm">
-                        <i class="fas fa-file-pdf"></i>
-                    </button>
+                    <a class="nav-link" href="#" id="henry-tab" data-toggle="tab" onclick="showTab('henry')">HENRY/DIXI</a>
                 </li>
             </ul>
 
             <!-- Tab Content -->
             <div class="tab-content">
-                <!-- Comando -->
-                <div id="comando" class="tab-pane active">
+                <!-- CONTROL ID -->
+                <div id="controlid" class="tab-pane active"> <br>
                     <div class="command-list">
+                        <h5 class="font-weight-bold">RELÓGIO</h5>
                         <div class="command-item">
-                            <span><strong>E > 45 > E: </strong> EXPORTAR RSA NO PENDRIVE</span>
-                            <button class="btn btn-primary btn-sm" onclick="copyText('E > 45 > E – EXPORTAR RSA NO PENDRIVE', this)">
+                            <span>
+                                <strong>Código: </strong> 1000 <br>
+                                <strong>Senha: </strong> 1234
+                            </span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('Código: 1000 e Senha: 1234', this)">
                                 <i class="fas fa-copy copy-icon"></i>
                             </button>
                         </div>
                         <div class="command-item">
-                            <span><strong>E > 46 > E: </strong> GERAR NOVA CHAVE RSA</span>
-                            <button class="btn btn-primary btn-sm" onclick="copyText('E > 46 > E – GERAR NOVA CHAVE RSA', this)">
+                            <span>
+                                <strong>Código: </strong> 182377 <br>
+                                <strong>Senha: </strong> 001818
+                            </span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('Código: 182377 e Senha: 001818', this)">
                                 <i class="fas fa-copy copy-icon"></i>
                             </button>
                         </div>
+
+                        <br><br>
+                        <h5 class="font-weight-bold">WEB SERVICE</h5>
                         <div class="command-item">
-                            <span><strong>E > 80 > E: </strong> GERAR ESPELHO AFD NO PENDRIVE</span>
-                            <button class="btn btn-primary btn-sm" onclick="copyText('E > 80 > E – GERAR ESPELHO AFD NO PENDRIVE', this)">
+                            <span>
+                                <strong>Login: </strong> admin <br>
+                                <strong>Senha: </strong> admin
+                            </span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('Login: admin e Senha: admin', this)">
                                 <i class="fas fa-copy copy-icon"></i>
                             </button>
                         </div>
+
+                        <br><br>
+                        <h5 class="font-weight-bold">CATRACA</h5>
                         <div class="command-item">
-                            <span><strong>E > 88 > E: </strong> COMANDO DE TROCA DE BATERIA (SOMENTE COM REP EM MANUTENÇÃO)</span>
-                            <button class="btn btn-primary btn-sm" onclick="copyText('E > 88 > E – COMANDO DE TROCA DE BATERIA (SOMENTE COM REP EM MANUTENÇÃO)', this)">
-                                <i class="fas fa-copy copy-icon"></i>
-                            </button>
-                        </div>
-                        <div class="command-item">
-                            <span><strong>E > 89 > E: </strong> COMANDO DE TROCA DEBATERIA</span>
-                            <button class="btn btn-primary btn-sm" onclick="copyText('E > 89 > E – COMANDO DE TROCA DE BATERIA', this)">
-                                <i class="fas fa-copy copy-icon"></i>
-                            </button>
-                        </div>
-                        <div class="command-item">
-                            <span><strong>E > 90 > E: </strong> ENVIAR COMANDO DE IMPRESSÃO TESTE PARA IMPRESSORA</span>
-                            <button class="btn btn-primary btn-sm" onclick="copyText('E > 90 > E – ENVIAR COMANDO DE IMPRESSÃO TESTE PARA IMPRESSORA', this)">
-                                <i class="fas fa-copy copy-icon"></i>
-                            </button>
-                        </div>
-                        <div class="command-item">
-                            <span><strong>E > 91 > E: </strong> CADASTRAR NOVA DIGITAL</span>
-                            <button class="btn btn-primary btn-sm" onclick="copyText('E > 91 > E – CADASTRAR NOVA DIGITAL', this)">
-                                <i class="fas fa-copy copy-icon"></i>
-                            </button>
-                        </div>
-                        <div class="command-item">
-                            <span><strong>E > 92 > E: </strong> EXCLUIR DIGITAL</span>
-                            <button class="btn btn-primary btn-sm" onclick="copyText('E > 92 > E – EXCLUIR DIGITAL', this)">
-                                <i class="fas fa-copy copy-icon"></i>
-                            </button>
-                        </div>
-                        <div class="command-item">
-                            <span><strong>E > 94 > E: </strong> PROGRAMAÇÃO POR PENDRIVE</span>
-                            <button class="btn btn-primary btn-sm" onclick="copyText('E > 94 > E – PROGRAMAÇÃO POR PENDRIVE', this)">
-                                <i class="fas fa-copy copy-icon"></i>
-                            </button>
-                        </div>
-                        <div class="command-item">
-                            <span><strong>E > 95 > E: </strong> COLETA POR PENDRIVE</span>
-                            <button class="btn btn-primary btn-sm" onclick="copyText('E > 95 > E – COLETA POR PENDRIVE', this)">
-                                <i class="fas fa-copy copy-icon"></i>
-                            </button>
-                        </div>
-                        <div class="command-item">
-                            <span><strong>E > 97 > E: </strong> VERSÃO, DATA E HORA E PROGRAMAÇÕES TÉCNICAS (REDE)</span>
-                            <button class="btn btn-primary btn-sm" onclick="copyText('E > 97 > E – VERSÃO, DATA E HORA E PROGRAMAÇÕES TÉCNICAS (REDE)', this)">
-                                <i class="fas fa-copy copy-icon"></i>
-                            </button>
-                        </div>
-                        <div class="command-item">
-                            <span><strong>E > 98 > E: </strong> TESTE DE PERIFÉRICOS (SOMENTECOM REP EM MANUTENÇÃO)</span>
-                            <button class="btn btn-primary btn-sm" onclick="copyText('E > 98 > E – TESTE DE PERIFÉRICOS (SOMENTE COM REP EM MANUTENÇÃO)', this)">
+                            <span>
+                                <strong>Login: </strong> admin <br>
+                                <strong>Senha: </strong> 000123
+                            </span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('Login: admin e Senha: 000123', this)">
                                 <i class="fas fa-copy copy-icon"></i>
                             </button>
                         </div>
                     </div>
+
+                    <br><br>
+                    <p style="color: red; font-size: 20px;"><strong>ATENÇÃO!!!</strong></p>
+                    <p style="font-size: 16px;">
+                        CASO NENHUM FUNCIONE, PODE TER SIDO ALTERADO PELO CLIENTE <strong>(VERIFIQUEM COM O CLIENTE!!)</strong>.
+                    </p>
                 </div>
+
+                <!-- DIMEP -->
+                <div id="dimep" class="tab-pane"> <br>
+                    <div class="command-list">
+                        <h5 class="font-weight-bold">RELÓGIO</h5>
+                        <div class="command-item">
+                            <span>
+                                <strong>Código: </strong> 1000 <br>
+                                <strong>Senha: </strong> 1234
+                            </span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('Código: 1000 e Senha: 1234', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                        <div class="command-item">
+                            <span>
+                                <strong>Código: </strong> 1 <br>
+                                <strong>Senha: </strong> 1
+                            </span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('Código: 1 e Senha: 1', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+
+                        <br><br>
+                        <h5 class="font-weight-bold">WEB SERVICE</h5>
+                        <div class="command-item">
+                            <span>
+                                <strong>Login: </strong> 1000 <br>
+                                <strong>Senha: </strong> 1234
+                            </span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('Login: 1000 e Senha: 1234', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+
+                        <br><br>
+                        <h5 class="font-weight-bold">CATRACA</h5>
+                        <div class="command-item">
+                            <span>
+                                <strong>Login: </strong> 1000 <br>
+                                <strong>Senha: </strong> 1234
+                            </span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('Login: 1000 e Senha: 1234', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <br><br>
+                    <p style="color: red; font-size: 20px;"><strong>ATENÇÃO!!!</strong></p>
+                    <p style="font-size: 16px;">
+                        CASO NENHUM FUNCIONE, PODE TER SIDO ALTERADO PELO CLIENTE <strong>(VERIFIQUEM COM O CLIENTE!!)</strong>.
+                    </p>
+                </div>
+
+                <!-- HENRY -->
+                <div id="henry" class="tab-pane"> <br>
+                    <div class="command-list">
+                        <h5 class="font-weight-bold">RELÓGIO</h5>
+                        <div class="command-item">
+                            <span>
+                                <strong>CPF: </strong> 265 <br>
+                                <strong>Senha: </strong> 111111 ou 121313 ou 123456
+                            </span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('CPF: 265 e Senha: 111111', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                        
+                        <br><br>
+                        <h5 class="font-weight-bold">WEB SERVICE</h5>
+                        <div class="command-item">
+                            <span>
+                                <strong>Login: </strong> teste fabrica <br>
+                                <strong>Senha: </strong> 111111 ou 121314
+                            </span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('Login: teste fabrica e Senha: 111111', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                        <div class="command-item">
+                            <span>
+                                <strong>Login: </strong> rep <br>
+                                <strong>Senha: </strong> 111111 ou 121314
+                            </span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('Login: rep e Senha: 111111', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                        <div class="command-item">
+                            <span>
+                                <strong>Login: </strong> primmesf <br>
+                                <strong>Senha: </strong> 121314
+                            </span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('Login: primmesf e Senha: 121314', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+
+                        <br><br>
+                        <h5 class="font-weight-bold">CATRACA</h5>
+                        <div class="command-item">
+                            <span>
+                                <strong>Login: </strong> primmesf <br>
+                                <strong>Senha: </strong> 121314
+                            </span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('Login: primmesf e Senha: 121314', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <br><br>
+                    <p style="color: red; font-size: 20px;"><strong>ATENÇÃO!!!</strong></p>
+                    <p style="font-size: 16px;">
+                        CASO NENHUM FUNCIONE, PODE TER SIDO ALTERADO PELO CLIENTE <strong>(VERIFIQUEM COM O CLIENTE!!)</strong>.
+                    </p>
+                </div>
+
             </div>
         </div>
     </div>
