@@ -15,7 +15,8 @@
     <script src="../JavaScript/index.js" defer></script> 
     <script src="../JavaScript/PDF-smartpoint.js" defer></script>  
     <link rel="icon" href="../adress/a.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style> 
         .none {
             border: none;
@@ -31,22 +32,24 @@
             transform: scale(1.5); /* Amplia a imagem */
             z-index: 1000; /* Garante que a imagem fique em cima de outros elementos */
         }
-        </style>
+    </style>
 </head>
-<body> 
-         <!-- Partículas de fogos de artifício -->
-         <div class="fireworks">
-            <div class="firework" style="--x: 100px; --y: 100px;"></div>
-            <div class="firework" style="--x: -100px; --y: -100px;"></div>
-            <div class="firework" style="--x: 200px; --y: 200px;"></div>
-            <div class="firework" style="--x: -150px; --y: -150px;"></div>
-            <div class="firework" style="--x: 300px; --y: 50px;"></div>
-            <div class="firework" style="--x: -250px; --y: 150px;"></div>
-            <div class="firework" style="--x: 400px; --y: -200px;"></div>
-            <div class="firework" style="--x: -300px; --y: -200px;"></div>
-            <div class="firework" style="--x: 150px; --y: 300px;"></div>
-            <div class="firework" style="--x: -400px; --y: 200px;"></div>
-        </div>
+
+<body>
+    <!-- Partículas de fogos de artifício -->
+    <div class="fireworks">
+        <div class="firework" style="--x: 100px; --y: 100px;"></div>
+        <div class="firework" style="--x: -100px; --y: -100px;"></div>
+        <div class="firework" style="--x: 200px; --y: 200px;"></div>
+        <div class="firework" style="--x: -150px; --y: -150px;"></div>
+        <div class="firework" style="--x: 300px; --y: 50px;"></div>
+        <div class="firework" style="--x: -250px; --y: 150px;"></div>
+        <div class="firework" style="--x: 400px; --y: -200px;"></div>
+        <div class="firework" style="--x: -300px; --y: -200px;"></div>
+        <div class="firework" style="--x: 150px; --y: 300px;"></div>
+        <div class="firework" style="--x: -400px; --y: 200px;"></div>
+    </div>
+
     <!-- Header -->
     <div class="header d-flex justify-content-between align-items-center">
         <div class="logo">
@@ -55,14 +58,15 @@
             </h4>
         </div>
         <div>
-<span class="name-container"><strong></strong> | <span class="tec-alexandre">Tec Alexandre</span><button id="themeToggle" class="theme-toggle" title="Alterar tema"><i class="fas fa-sun"></i></button></span>        </div>
+            <span class="name-container"><strong></strong> | <span class="tec-alexandre">Tec Alexandre</span><button id="themeToggle" class="theme-toggle" title="Alterar tema"><i class="fas fa-sun"></i></button></span>
+        </div>
     </div>
 
     <div class="d-flex">
-    <!-- Sidebar -->
-    <div class="sidebar p-3" style="position: relative;">
-        <ul class="nav flex-column">
-            <li class="nav-item"><a href="../Sidebar/instaladores.html" class="nav-link active"><i class="fas fa-home"></i>Home</a></li> 
+        <!-- Sidebar -->
+        <div class="sidebar p-3" style="position: relative;">
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="../Sidebar/instaladores.html" class="nav-link active"><i class="fas fa-home"></i>Home</a></li> 
                 <li class="nav-item">
                     <a href="#" class="nav-link" id="video-link" onclick="toggleMenu('video', event)"><i class="fas fa-video"></i> Vídeo <i class="fas fa-chevron-down" id="video-arrow"></i></a>
                     <ul id="video-submenu" class="nav flex-column" style="display: none;">
@@ -95,200 +99,224 @@
                 <li class="nav-item"><a href="../Sidebar/comercial.html" class="nav-link"><i class="fas fa-coins"></i> Comercial</a></li>
                 <li class="nav-item"><a href="../Sidebar/calculadora.html" class="nav-link"><i class="fas fa-calculator"></i> Calculadora</a></li> 
                 <li class="nav-item"><a href="https://sonodaponto.com.br/pis/" target="_blank" class="nav-link"><i class="fas fa-file-alt"></i> Gerar PIS</a></li> 
-            </li>
-        </ul>
-        
-        <!-- "Mensagens " fixado na parte inferior da sidebar -->
-        <div class="position-absolute" style="bottom: 5px; margin-right: -5px;">
-            <ul class="nav flex-column">
-                <li class="nav-item"><a href="../Sidebar/Mensagens.html" class="nav-link"><i class="fas fa-comment"></i> Mensagens</a></li>
             </ul>
+        
+            <!-- "Mensagens " fixado na parte inferior da sidebar -->
+            <div class="position-absolute" style="bottom: 5px; margin-right: -5px;">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="../Sidebar/Mensagens.html" class="nav-link"><i class="fas fa-comment"></i> Mensagens</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <img src="../adress/Rep/Smartpoint.png" alt="Ícone" style="width: 130px; height: 130px; float: right; margin-top: -20px; margin-left: 10px;">
+            <h5 class="font-weight-bold">DIMEP – SMARTPOINT</h5><br>
+            <ul class="nav nav-tabs mb-4">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" id="comando-tab" data-toggle="tab" onclick="showTab('comando')">COMANDOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="videos-tab" data-toggle="tab" onclick="showTab('videos')">VÍDEOS</a>
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="videosface-tab" data-toggle="tab" onclick="showTab('videos_face')"></a>
+                </li>
+
+                <!-- Botão de Impressora ao lado direito -->
+                <li class="nav-item ml-auto">
+                    <button onclick="downloadPDF_smartpoint()" class="btn btn-danger btn-sm">
+                        <i class="fas fa-file-pdf"></i>
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- Comandos -->
+                <div id="comando" class="tab-pane active">
+                    <div class="command-list">
+                        <div class="command-item">
+                            <span><strong>F1:</strong> MENU DE CONFIGURAÇÃO DO EQUIPAMENTO</span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('F1 – MENU DE CONFIGURAÇÃO DO EQUIPAMENTO', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                        <div class="command-item">
+                            <span><strong>F2:</strong> MENU DE STATUS DO EQUIPAMENTO</span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('F2 – MENU DE STATUS DO EQUIPAMENTO', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                        <div class="command-item">
+                            <span><strong>F3:</strong> DESTRAVAR GUILHOTINA DA IMPRESSORA (SOMENTE SMART PRINT E MD EVO III)</span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('F3 – DESTRAVAR GUILHOTINA DA IMPRESSORA (SOMENTE SMART PRINT E MD EVO III)', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                        <div class="command-item">
+                            <span><strong>F4:</strong> CONEXÃO WIFI</span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('F4 - CONEXÃO WIFI', this)"> 
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                        <div class="command-item">
+                            <span><strong>F1 > 45 > E:</strong> EXPORTAR RSA NO PENDRIVE</span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 45 > E – EXPORTAR RSA NO PENDRIVE', this)"> 
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                        <div class="command-item">
+                            <span><strong>F1 > 46 > E:</strong> GERAR NOVA CHAVE RSA</span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 46 > E – GERAR NOVA CHAVE RSA', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                        <div class="command-item">
+                            <span><strong>F1 > 97 > E:</strong> VERSÃO, DATA E HORA PROGRAMAÇÕES TÉCNICAS (REDE)</span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 97 > E – VERSÃO, DATA E HORA PROGRAMAÇÕES TÉCNICAS (REDE)', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                        <div class="command-item">
+                            <span><strong>F1 > 98 > E:</strong> TESTE DE PERIFÉRICOS (SOMENTE COM O REP EM MANUTENÇÃO)</span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 98 > E – TESTE DE PERIFÉRICOS (SOMENTE COM O REP EM MANUTENÇÃO)', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                        <div class="command-item">
+                            <span><strong>F1 > 70 > E:</strong> FORÇAR CONEXÃO COM O SERVIDOR</span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 70 > E – FORÇAR CONEXÃO COM O SERVIDOR', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                        <div class="command-item">
+                            <span><strong>F1 > 71 > E:</strong> DESCONECTAR CONEXÃO COM O SERVIDOR</span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 71 > E – DESCONECTAR CONEXÃO COM O SERVIDOR', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                        <div class="command-item">
+                            <span><strong>F1 > 74 > E:</strong> CONFIGURAÇÃO CONEXÃO COM O SERVIDOR NA NUVEM</span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 74 > E – CONFIGURAÇÃO CONEXÃO COM O SERVIDOR NA NUVEM', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                        <div class="command-item">
+                            <span><strong>F1 > 80 > E:</strong> GERAR ESPELHO AFD NO PENDRIVE</span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 80 > E – GERAR ESPELHO AFD NO PENDRIVE', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                        <div class="command-item">
+                            <span><strong>F1 > 88 > E:</strong> COMANDO DE TROCA DE BATERIA</span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 88 > E – COMANDO DE TROCA DE BATERIA', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                        <div class="command-item">
+                            <span><strong>F1 > 90 > E:</strong> ENVIAR COMANDO DE CORTE PARA IMPRESSORA</span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 90 > E – ENVIAR COMANDO DE CORTE PARA IMPRESSORA', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                        <div class="command-item">
+                            <span><strong>F1 > 91 > E:</strong> CADASTRAR NOVA DIGITAL</span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 91 > E – CADASTRAR NOVA DIGITAL', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                        <div class="command-item">
+                            <span><strong>F1 > 92 > E:</strong> EXCLUIR DIGITAL</span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 92 > E – EXCLUIR DIGITAL', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                        <div class="command-item">
+                            <span><strong>F1 > 94 > E:</strong> PROGRAMAÇÃO POR PENDRIVE</span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 94 > E – PROGRAMAÇÃO POR PENDRIVE', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                        <div class="command-item">
+                            <span><strong>F1 > 95 > E:</strong> COLETA POR PENDRIVE</span>
+                            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 95 > E – COLETA POR PENDRIVE', this)">
+                                <i class="fas fa-copy copy-icon"></i>
+                            </button>
+                        </div>
+                    </div>  
+                </div>
+
+                <!-- Vídeos -->
+                <div id="videos" class="tab-pane">
+                    <div class="command-list">
+                        <div class="command-item">
+                            <span><strong>CADASTRAR BIOMETRIA</strong></span>
+                            <div class="d-flex">
+                                <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1OQ-ma8QldTFD9SLZgIwKuawbdXTyGwJm/view?usp=sharing',this)">
+                                    <i class="fas fa-copy copy-icon"></i>
+                                </button>
+                                <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1OQ-ma8QldTFD9SLZgIwKuawbdXTyGwJm/view?usp=sharing')">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="command-item">
+                            <span><strong>DESABILITAR CONEXÃO CLIENTE E REST</strong></span>
+                            <div class="d-flex">
+                                <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1-KjIsK9tQYPgjxndDu4xMGW5STc3wcVn/view?usp=sharing',this)">
+                                    <i class="fas fa-copy copy-icon"></i>
+                                </button>
+                                <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1-KjIsK9tQYPgjxndDu4xMGW5STc3wcVn/view?usp=sharing',this)">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="command-item">
+                            <span><strong>TROCAR IP</strong></span>
+                            <div class="d-flex">
+                                <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1IRYT5_o0jgzUmBGDBzXe6MUtAJUEAgo1/view?usp=sharing',this)">
+                                    <i class="fas fa-copy copy-icon"></i>
+                                </button>
+                                <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1IRYT5_o0jgzUmBGDBzXe6MUtAJUEAgo1/view?usp=sharing')">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="command-item">
+                            <span><strong>ENVIAR SUPERVISOR AO RELÓGIO:</strong></span>
+                            <div class="d-flex">
+                                <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1FVQ52Y7ht1bhe58KeLcGJq5g1dQ6J4ZS/view?usp=sharing',this)">
+                                    <i class="fas fa-copy copy-icon"></i>
+                                </button>
+                                <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1FVQ52Y7ht1bhe58KeLcGJq5g1dQ6J4ZS/view?usp=sharing')">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1PCChK-HXqzBrSuq26R9edvQU2kG9hu26/view?usp=drive_link')">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    
-        <!-- Main Content -->
-     <div class="content">
-        <img src="../adress/Rep/Smartpoint.png" alt="Ícone" style="width: 130px; height: 130px; float: right; margin-top: -20px; margin-left: 10px;">
-        <h5 class="font-weight-bold">DIMEP – SMARTPOINT</h5><br>
-        <ul class="nav nav-tabs mb-4">
-            <li class="nav-item">
-                <a class="nav-link active" href="#" id="comando-tab" data-toggle="tab" onclick="showTab('comando')">COMANDOS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" id="videos-tab" data-toggle="tab" onclick="showTab('videos')">VÍDEOS</a>
-            </li> 
-            <li class="nav-item">
-                <a class="nav-link" href="#" id="videosface-tab" data-toggle="tab" onclick="showTab('videos_face')"></a>
-            </li>
-            <!-- Botão de Impressora ao lado direito -->
-            <li class="nav-item ml-auto">
-                <button onclick="downloadPDF_smartpoint()" class="btn btn-danger btn-sm">
-                    <i class="fas fa-file-pdf"></i>
-                </button>        
-        </ul>
 
-<!-- Tab Content -->
-<div class="tab-content">
-<!-- Comando -->
-<div id="comando" class="tab-pane active">
-    <div class="command-list">
-        <div class="command-item">
-            <span><strong>F1 > 45 > E:</strong> EXPORTAR RSA NO PENDRIVE</span>
-            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 45 > E – EXPORTAR RSA NO PENDRIVE', this)"> 
-                <i class="fas fa-copy copy-icon"></i></button>
-        </div>
-        <div class="command-item">
-            <span><strong>F1 > 46 > E:</strong> GERAR NOVA CHAVE RSA</span>
-            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 46 > E – GERAR NOVA CHAVE RSA', this)">
-                <i class="fas fa-copy copy-icon"></i></button>
-        </div>
-        <div class="command-item">
-            <span><strong>F1 > 97 > E:</strong> VERSÃO, DATA E HORA PROGRAMAÇÕES TÉCNICAS (REDE)</span>
-            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 97 > E – VERSÃO, DATA E HORA PROGRAMAÇÕES TÉCNICAS (REDE)', this)">
-                <i class="fas fa-copy copy-icon"></i></button>
-        </div>
-        <div class="command-item">
-            <span><strong>F1 > 98 > E:</strong> TESTE DE PERIFÉRICOS (SOMENTE COM O REP EM MANUTENÇÃO)</span>
-            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 98 > E – TESTE DE PERIFÉRICOS (SOMENTE COM O REP EM MANUTENÇÃO)', this)">
-                <i class="fas fa-copy copy-icon"></i></button>
-        </div>
-        <div class="command-item">
-            <span><strong>F1:</strong> MENU DE CONFIGURAÇÃO DO EQUIPAMENTO</span>
-            <button class="btn btn-primary btn-sm" onclick="copyText('F1 – MENU DE CONFIGURAÇÃO DO EQUIPAMENTO', this)">
-                <i class="fas fa-copy copy-icon"></i></button>
-        </div>
-        <div class="command-item">
-            <span><strong>F2:</strong> MENU DE STATUS DO EQUIPAMENTO</span>
-            <button class="btn btn-primary btn-sm" onclick="copyText('F2 – MENU DE STATUS DO EQUIPAMENTO', this)">
-                <i class="fas fa-copy copy-icon"></i></button>
-        </div>
-        <div class="command-item">
-            <span><strong>F3:</strong> DESTRAVAR GUILHOTINA DA IMPRESSORA (SOMENTE SMART PRINT E MD EVO III)</span>
-            <button class="btn btn-primary btn-sm" onclick="copyText('F3 – DESTRAVAR GUILHOTINA DA IMPRESSORA (SOMENTE SMART PRINT E MD EVO III)', this)">
-                <i class="fas fa-copy copy-icon"></i></button>
-        </div>
-        <div class="command-item">
-            <span><strong>F4:</strong> CONEXÃO WIFI</span>
-            <button class="btn btn-primary btn-sm" onclick="copyText('F4 - CONEXÃO WIFI', this)"> 
-                <i class="fas fa-copy copy-icon"></i></button>
-        </div>
-        <div class="command-item">
-            <span><strong>F1 > 70 > E:</strong> FORÇAR CONEXÃO COM O SERVIDOR</span>
-            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 70 > E – FORÇAR CONEXÃO COM O SERVIDOR', this)">
-                <i class="fas fa-copy copy-icon"></i></button>
-        </div>
-        <div class="command-item">
-            <span><strong>F1 > 71 > E:</strong> DESCONECTAR CONEXÃO COM O SERVIDOR</span>
-            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 71 > E – DESCONECTAR CONEXÃO COM O SERVIDOR', this)">
-                <i class="fas fa-copy copy-icon"></i></button>
-        </div>
-        <div class="command-item">
-            <span><strong>F1 > 74 > E:</strong> CONFIGURAÇÃO CONEXÃO COM O SERVIDOR NA NUVEM</span>
-            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 74 > E – CONFIGURAÇÃO CONEXÃO COM O SERVIDOR NA NUVEM', this)">
-                <i class="fas fa-copy copy-icon"></i></button>
-        </div>
-        <div class="command-item">
-            <span><strong>F1 > 80 > E:</strong> GERAR ESPELHO AFD NO PENDRIVE</span>
-            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 80 > E – GERAR ESPELHO AFD NO PENDRIVE', this)">
-                <i class="fas fa-copy copy-icon"></i></button>
-        </div>
-        <div class="command-item">
-            <span><strong>F1 > 88 > E:</strong> COMANDO DE TROCA DE BATERIA</span>
-            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 88 > E – COMANDO DE TROCA DE BATERIA', this)">
-                <i class="fas fa-copy copy-icon"></i></button>
-        </div>
-        <div class="command-item">
-            <span><strong>F1 > 90 > E:</strong> ENVIAR COMANDO DE CORTE PARA IMPRESSORA</span>
-            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 90 > E – ENVIAR COMANDO DE CORTE PARA IMPRESSORA', this)">
-                <i class="fas fa-copy copy-icon"></i></button>
-        </div>
-        <div class="command-item">
-            <span><strong>F1 > 91 > E:</strong> CADASTRAR NOVA DIGITAL</span>
-            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 91 > E – CADASTRAR NOVA DIGITAL', this)">
-                <i class="fas fa-copy copy-icon"></i></button>
-        </div>
-        <div class="command-item">
-            <span><strong>F1 > 92 > E:</strong> EXCLUIR DIGITAL</span>
-            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 92 > E – EXCLUIR DIGITAL', this)">
-                <i class="fas fa-copy copy-icon"></i></button>
-        </div>
-        <div class="command-item">
-            <span><strong>F1 > 94 > E:</strong> PROGRAMAÇÃO POR PENDRIVE</span>
-            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 94 > E – PROGRAMAÇÃO POR PENDRIVE', this)">
-                <i class="fas fa-copy copy-icon"></i></button>
-        </div>
-        <div class="command-item">
-            <span><strong>F1 > 95 > E:</strong> COLETA POR PENDRIVE</span>
-            <button class="btn btn-primary btn-sm" onclick="copyText('F1 > 95 > E – COLETA POR PENDRIVE', this)">
-                <i class="fas fa-copy copy-icon"></i></button>
-        </div>
-    </div>  
-</div>
-
-    <div id="videos" class="tab-pane">
-        <div class="command-list">
-            <div class="command-item">
-                <span><strong>CADASTRAR BIOMETRIA</strong></span>
-                <div class="d-flex">
-                    <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1OQ-ma8QldTFD9SLZgIwKuawbdXTyGwJm/view?usp=sharing',this)">
-                        <i class="fas fa-copy copy-icon"></i>
-                    </button>
-                    <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1OQ-ma8QldTFD9SLZgIwKuawbdXTyGwJm/view?usp=sharing')">
-                        <i class="fas fa-play"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="command-item">
-                <span><strong>DESABILITAR CONEXÃO CLIENTE E REST</strong></span>
-                <div class="d-flex">
-                    <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1-KjIsK9tQYPgjxndDu4xMGW5STc3wcVn/view?usp=sharing',this)">
-                        <i class="fas fa-copy copy-icon"></i>
-                    </button>
-                    <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1-KjIsK9tQYPgjxndDu4xMGW5STc3wcVn/view?usp=sharing',this)">
-                        <i class="fas fa-play"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="command-item">
-                <span><strong>TROCAR IP</strong></span>
-                <div class="d-flex">
-                    <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1IRYT5_o0jgzUmBGDBzXe6MUtAJUEAgo1/view?usp=sharing',this)">
-                        <i class="fas fa-copy copy-icon"></i>
-                    </button>
-                    <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1IRYT5_o0jgzUmBGDBzXe6MUtAJUEAgo1/view?usp=sharing')">
-                        <i class="fas fa-play"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="command-item">
-                <span><strong>ENVIAR SUPERVISOR AO RELÓGIO:</strong></span>
-                <div class="d-flex">
-                    <button class="btn btn-primary btn-sm" onclick="copyText('https://drive.google.com/file/d/1FVQ52Y7ht1bhe58KeLcGJq5g1dQ6J4ZS/view?usp=sharing',this)">
-                        <i class="fas fa-copy copy-icon"></i>
-                    </button>
-                    <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1FVQ52Y7ht1bhe58KeLcGJq5g1dQ6J4ZS/view?usp=sharing')">
-                        <i class="fas fa-play"></i>
-                    </button>
-                    <button class="btn btn-primary btn-sm ml-2" onclick="window.open('https://drive.google.com/file/d/1PCChK-HXqzBrSuq26R9edvQU2kG9hu26/view?usp=drive_link')">
-                        <i class="fas fa-download"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div> 
     <script> 
-          document.querySelectorAll("img").forEach((img) => {
-        img.addEventListener("click", () => {
-          // Alterna a classe 'zoomed' ao clicar
-          if (img.classList.contains("zoomed")) {
-            img.classList.remove("zoomed"); // Remove o zoom
-          } else {
-            img.classList.add("zoomed"); // Adiciona o zoom
-          }
+        document.querySelectorAll("img").forEach((img) => {
+            img.addEventListener("click", () => {
+            // Alterna a classe 'zoomed' ao clicar
+                if (img.classList.contains("zoomed")) {
+                    img.classList.remove("zoomed"); // Remove o zoom
+                } else {
+                    img.classList.add("zoomed"); // Adiciona o zoom
+                }
+            });
         });
-      });    
-            </script>
     </script>
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
