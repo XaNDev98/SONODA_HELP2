@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../Style/Style.css">   
     <link rel="stylesheet" href="../Style/Responsive.css">  
     <link rel="stylesheet" href="../Style/efeitos.css">  
-    <link rel="stylesheet" href="../Style/darkMode.css"> 
+    <link rel="stylesheet" href="../Style/darkMode.css">  
     <script src="../JavaScript/darkMode.js" defer></script>  
     <script src="../index.js" defer></script> 
     <script src="../JavaScript/PDF-mensagens.js" defer></script>
@@ -23,7 +23,29 @@
     body.dark-mode .command-item {
         background-color: #333333;
         color: white;
-    }
+    } 
+    /* Estilo para o campo de input */
+.styled-input {
+    width: auto;
+    padding: 12px 15px;
+    font-size: 12px;
+    border-radius: 25px;
+    border: 2px solid #007bff;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Efeito de foco */
+.styled-input:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Efeito de placeholder */
+.styled-input::placeholder {
+    color: #7a7a7a;
+    font-style: italic;
+}
 </style>
 <body> 
 
