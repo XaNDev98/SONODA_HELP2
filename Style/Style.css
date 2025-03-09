@@ -443,3 +443,25 @@ body {
     transition: background-color 0.3s ease-in-out;
 } 
 
+/* Estilo para o campo de input */
+.styled-input {
+    width: auto;
+    padding: 12px 15px;
+    font-size: 12px;
+    border-radius: 25px;
+    border: 2px solid #007bff;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Efeito de foco */
+.styled-input:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Efeito de placeholder */
+.styled-input::placeholder {
+    color: #7a7a7a;
+    font-style: italic;
+}

@@ -26,19 +26,6 @@
     }
 </style>
 <body> 
-    <!-- Partículas de fogos de artifício -->
-    <div class="fireworks">
-        <div class="firework" style="--x: 100px; --y: 100px;"></div>
-        <div class="firework" style="--x: -100px; --y: -100px;"></div>
-        <div class="firework" style="--x: 200px; --y: 200px;"></div>
-        <div class="firework" style="--x: -150px; --y: -150px;"></div>
-        <div class="firework" style="--x: 300px; --y: 50px;"></div>
-        <div class="firework" style="--x: -250px; --y: 150px;"></div>
-        <div class="firework" style="--x: 400px; --y: -200px;"></div>
-        <div class="firework" style="--x: -300px; --y: -200px;"></div>
-        <div class="firework" style="--x: 150px; --y: 300px;"></div>
-        <div class="firework" style="--x: -400px; --y: 200px;"></div>
-    </div>
 
     <!-- Header -->
     <div class="header d-flex justify-content-between align-items-center">
@@ -90,6 +77,7 @@
                     <li class="nav-item"><a href="../Sidebar/Resoluçao.html" class="nav-link"><i class="fas fa-lightbulb"></i> Resoluções</a></li> 
                     <li class="nav-item"><a href="../Sidebar/comercial.html" class="nav-link"><i class="fas fa-coins"></i> Comercial</a></li>
                     <li class="nav-item"><a href="../Sidebar/calculadora.html" class="nav-link"><i class="fas fa-calculator"></i> Calculadora</a></li> 
+                    <li class="nav-item"><a href="../Sidebar/atualizações.html" class="nav-link"><i class="fas fa-sync"></i> Atualizações</a></li>  
                     <li class="nav-item"><a href="https://sonodaponto.com.br/pis/" target="_blank" class="nav-link"><i class="fas fa-file-alt"></i> Gerar PIS</a></li> 
                 </li>
             </ul>
@@ -127,11 +115,16 @@
                 <div id="Chamado" class="tab-pane active"> <!-- ABA DE CHAMADO -->
                     <div class="command-list" id="ChamadoContent">
                         <div class="command-item">
-                            <span><strong>INICIO: </strong> Olá, tudo bem, Aqui é o Alexandre, como posso te ajudar? :)</span>
-                            <button class="btn btn-primary btn-sm" onclick="copyText('Olá, tudo bem, Aqui é o Alexandre, como posso te ajudar? :)', this)">
+                            <span><strong>INICIO: </strong> Olá, tudo bem? Aqui é o <span id="nome-tecnico">Alexandre</span>, como posso te ajudar? :)</span>
+                            
+                            <!-- Campo de input para alterar o nome do técnico -->
+                            <input type="text" id="nome-input" placeholder="Digite o nome do técnico" class="styled-input" />
+
+                        
+                            <button id="copy-button" class="btn btn-primary btn-sm" onclick="copyTextWithName()">
                                 <i class="fas fa-copy copy-icon"></i>
                             </button>
-                        </div> 
+                        </div>
                         <div class="command-item">
                             <span><strong>ALMOÇO: </strong>Estou em meu intervalo de almoço, mas assim que retornar, respondo sua mensagem. Fique tranquilo, logo volto para te ajudar! </span>
                             <button class="btn btn-primary btn-sm" onclick="copyText('Estou em meu intervalo de almoço, mas assim que retornar, respondo sua mensagem. Fique tranquilo, logo volto para te ajudar!', this)">
@@ -346,7 +339,38 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <script> 
+    <script>  
+            // Quando a página carregar, recuperar o nome do técnico do localStorage
+        window.onload = function() {
+            const savedName = localStorage.getItem('nome-tecnico');
+            if (savedName) {
+                document.getElementById("nome-tecnico").innerText = savedName;
+                document.getElementById("nome-input").value = savedName;
+            }
+        };
+        function copyTextWithName() {
+            // Pega o nome do técnico a partir do input ou usa "Alexandre" como valor padrão
+            var nomeTecnico = document.getElementById("nome-input").value || "Alexandre";
+            
+            // Atualiza o texto com o nome
+            var texto = "INICIO: Olá, tudo bem? Aqui é o " + nomeTecnico + ", como posso te ajudar? :)";
+
+            // Cria um elemento de área de transferência invisível para copiar o texto
+            var tempInput = document.createElement("textarea");
+            tempInput.value = texto;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+
+            // Aplica a animação de quicar e piscar ao botão
+            var copyButton = document.getElementById("copy-button");
+            copyButton.classList.add("blink");
+            // Remove a animação após ela ser concluída (para permitir que o efeito aconteça novamente)
+            setTimeout(function() {
+                copyButton.classList.remove("blink");
+            }, 1000); // Tempo suficiente para a animação (1 segundo)
+        }
         function searchContent() {
             // Obtém o valor da pesquisa e converte para minúsculo
             const searchQuery = document.getElementById('search-input').value.toLowerCase();

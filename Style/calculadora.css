@@ -136,3 +136,79 @@ body.dark-mode #resultado {
 
 
 
+/* Estilo para o bloco de resultados */
+#resultados {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f4f9ff;  /* Fundo suave e agradável */
+    border-radius: 15px;
+    border: 2px solid #0F7BDE;  /* Borda azul vibrante */
+    font-size: 18px;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;  /* Suavizando a transição */
+}
+
+/* Estilo para cada item de resultado */
+.result-item {
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Efeito de hover para os itens de resultado */
+.result-item:hover {
+    background-color: #e1f3ff;
+    border-color: #0F7BDE;
+}
+
+/* Estilo para o título do resultado */
+h3 {
+    font-size: 24px;
+    color: #0F7BDE;  /* Cor vibrante para o título */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para o texto em strong dentro dos resultados */
+.result-item strong {
+    color: #0F7BDE;  /* Cor destacada para o texto em negrito */
+    font-size: 20px;
+}
+
+/* Estilo para os valores das horas */
+#resultados span {
+    color: #333;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+/* Modificação para modo escuro */
+body.dark-mode #resultados {
+    background-color: #1c1c1c;  /* Fundo mais escuro */
+    color: white;  /* Texto branco */
+    border-color: #ff6f00;  /* Borda dourada */
+}
+
+body.dark-mode .result-item {
+    background-color: #2c2c2c;  /* Fundo escuro para os itens */
+    border-color: #444;
+}
+
+body.dark-mode h3 {
+    color: #ff6f00;  /* Título laranja no modo escuro */
+}
+
+body.dark-mode .result-item:hover {
+    background-color: #3c3c3c;
+    border-color: #ff6f00;  /* Cor dourada no hover */
+}
+
+body.dark-mode .result-item strong {
+    color: #ff6f00;  /* Texto em negrito laranja no modo escuro */
+}
