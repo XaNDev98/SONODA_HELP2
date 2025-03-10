@@ -138,11 +138,15 @@
                     <div class="command-list" id="ChamadoContent">
                         <div class="command-item">
                             <span><strong>INICIO: </strong> Olá, tudo bem? Aqui é o <span id="nome-tecnico">Alexandre</span>, como posso te ajudar? :)</span>
-                            
-                            <!-- Campo de input para alterar o nome do técnico -->
-                            <input type="text" id="nome-input" placeholder="Digite o nome do técnico" class="styled-input" />
-
                         
+                            <!-- Dropdown para selecionar o técnico -->
+                            <select id="tecnico-select" class="styled-input" onchange="atualizarNomeTecnico()"> 
+                                <option value="Alexandre">Alexandre</option>
+                                <option value="Neymar">Neymar</option>
+                                <option value="Carlos">Carlos</option>
+                                <option value="Fernanda">Fernanda</option>
+                                <option value="Juliana">Juliana</option>
+                            </select>
                             <button id="copy-button" class="btn btn-primary btn-sm" onclick="copyTextWithName()">
                                 <i class="fas fa-copy copy-icon"></i>
                             </button>
@@ -362,36 +366,43 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>  
-            // Quando a página carregar, recuperar o nome do técnico do localStorage
-        window.onload = function() {
-            const savedName = localStorage.getItem('nome-tecnico');
-            if (savedName) {
-                document.getElementById("nome-tecnico").innerText = savedName;
-                document.getElementById("nome-input").value = savedName;
-            }
-        };
-        function copyTextWithName() {
-            // Pega o nome do técnico a partir do input ou usa "Alexandre" como valor padrão
-            var nomeTecnico = document.getElementById("nome-input").value || "Alexandre";
-            
-            // Atualiza o texto com o nome
-            var texto = "Olá, tudo bem? Aqui é o " + nomeTecnico + ", como posso te ajudar? :)";
+        document.addEventListener("DOMContentLoaded", function () {
+            const tecnicoSelect = document.getElementById("tecnico-select");
+            const nomeTecnicoSpan = document.getElementById("nome-tecnico");
 
-            // Cria um elemento de área de transferência invisível para copiar o texto
-            var tempInput = document.createElement("textarea");
+            // Recuperar o nome salvo no localStorage e atualizar tudo
+            const savedName = localStorage.getItem("nome-tecnico");
+            if (savedName) {
+                tecnicoSelect.value = savedName;
+                nomeTecnicoSpan.textContent = savedName; // Atualiza no texto
+            }
+
+            // Quando mudar o técnico, atualizar no localStorage e no texto
+            tecnicoSelect.addEventListener("change", function () {
+                const selectedName = tecnicoSelect.value;
+                nomeTecnicoSpan.textContent = selectedName;
+                localStorage.setItem("nome-tecnico", selectedName);
+            });
+        });
+
+        function copyTextWithName() {
+            const nomeTecnico = document.getElementById("tecnico-select").value;
+            const texto = `Olá, tudo bem? Aqui é o ${nomeTecnico}, como posso te ajudar? :)`;
+
+            // Criar um campo temporário para copiar o texto
+            const tempInput = document.createElement("textarea");
             tempInput.value = texto;
             document.body.appendChild(tempInput);
             tempInput.select();
             document.execCommand("copy");
             document.body.removeChild(tempInput);
 
-            // Aplica a animação de quicar e piscar ao botão
-            var copyButton = document.getElementById("copy-button");
+            // Efeito de "piscar" no botão
+            const copyButton = document.getElementById("copy-button");
             copyButton.classList.add("blink");
-            // Remove a animação após ela ser concluída (para permitir que o efeito aconteça novamente)
-            setTimeout(function() {
+            setTimeout(() => {
                 copyButton.classList.remove("blink");
-            }, 1000); // Tempo suficiente para a animação (1 segundo)
+            }, 1000);
         }
         function searchContent() {
             // Obtém o valor da pesquisa e converte para minúsculo

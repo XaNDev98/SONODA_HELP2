@@ -3,13 +3,17 @@ color: #0F7BDE;
 font-family: 'Poppins', sans-serif;
 }
 .container {
-    max-width: 700px;
+    min-width: 100%; /* A largura máxima será 100% */
+    width: auto; /* Largura definida para não ultrapassar */
     background-color: #ffffff;
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     font-size: 16px;
+    margin: 0 auto; /* Centraliza a container */ 
+    margin-left: 50%;
 }
+
 h2 {
     color: #080808;
     text-align: center;
