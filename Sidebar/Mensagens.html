@@ -19,33 +19,34 @@
     <link rel="icon" href="../adress/a.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> 
 </head> 
+
 <style> 
     body.dark-mode .command-item {
         background-color: #333333;
         color: white;
     } 
     /* Estilo para o campo de input */
-.styled-input {
-    width: auto;
-    padding: 12px 15px;
-    font-size: 12px;
-    border-radius: 25px;
-    border: 2px solid #007bff;
-    outline: none;
-    transition: all 0.3s ease;
-}
+    .styled-input {
+        width: auto;
+        padding: 12px 15px;
+        font-size: 12px;
+        border-radius: 25px;
+        border: 2px solid #007bff;
+        outline: none;
+        transition: all 0.3s ease;
+    }
 
-/* Efeito de foco */
-.styled-input:focus {
-    border-color: #0056b3;
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
-}
+    /* Efeito de foco */
+    .styled-input:focus {
+        border-color: #0056b3;
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    }
 
-/* Efeito de placeholder */
-.styled-input::placeholder {
-    color: #7a7a7a;
-    font-style: italic;
-}
+    /* Efeito de placeholder */
+    .styled-input::placeholder {
+        color: #7a7a7a;
+        font-style: italic;
+    }
 </style>
 <body> 
 
@@ -142,10 +143,14 @@
                             <!-- Dropdown para selecionar o técnico -->
                             <select id="tecnico-select" class="styled-input" onchange="atualizarNomeTecnico()"> 
                                 <option value="Alexandre">Alexandre</option>
-                                <option value="Neymar">Neymar</option>
-                                <option value="Carlos">Carlos</option>
-                                <option value="Fernanda">Fernanda</option>
-                                <option value="Juliana">Juliana</option>
+                                <option value="Alexandre">Andressa</option>
+                                <option value="Caroline">Caroline</option>
+                                <option value="Diovana">DJovana</option>
+                                <option value="Fellip">Fellip</option>
+                                <option value="Gabriel">Gabriel</option>
+                                <option value="Tamara">Tamara</option>
+                                <option value="Tiago">Tiago</option>
+                                <option value="Vitor">Vitor Goto</option>
                             </select>
                             <button id="copy-button" class="btn btn-primary btn-sm" onclick="copyTextWithName()">
                                 <i class="fas fa-copy copy-icon"></i>
